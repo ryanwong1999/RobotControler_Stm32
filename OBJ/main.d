@@ -38,7 +38,7 @@
 ..\obj\main.o: ..\SYSTEM\delay\delay.h
 ..\obj\main.o: ..\SYSTEM\usart\usart.h
 ..\obj\main.o: C:\AAAAAAAAPP\Keil5\ARM\ARMCC\Bin\..\include\stdio.h
-..\obj\main.o: ..\HARDWARE\LED\led.h
+..\obj\main.o: ..\APP\Inc\led.h
 ..\obj\main.o: ..\FreeRTOS\include\FreeRTOS.h
 ..\obj\main.o: C:\AAAAAAAAPP\Keil5\ARM\ARMCC\Bin\..\include\stddef.h
 ..\obj\main.o: ..\FreeRTOS\include\FreeRTOSConfig.h

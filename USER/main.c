@@ -57,6 +57,11 @@ int main(void)
 	uart_init(115200);     	//初始化串口
 	LED_Init();		        //初始化LED端口
 	
+	
+	
+	
+	
+	
 	//创建开始任务
     xTaskCreate((TaskFunction_t )start_task,            //任务函数
                 (const char*    )"start_task",          //任务名称
