@@ -1,10 +1,4 @@
 #include "includes.h"
-#include "sys.h"
-#include "delay.h"
-#include "usart.h"
-#include "led.h"
-#include "FreeRTOS.h"
-#include "task.h"
 /************************************************
  ALIENTEK 探索者STM32F407开发板 FreeRTOS实验2-1
  FreeRTOS移植实验-库函数版本

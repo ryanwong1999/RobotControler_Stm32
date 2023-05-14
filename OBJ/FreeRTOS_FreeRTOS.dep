@@ -1,7 +1,7 @@
 Dependencies for Project 'FreeRTOS', Target 'FreeRTOS': (DO NOT MODIFY !)
 CompilerVersion: 5060960::V5.06 update 7 (build 960)::.\ARMCC
-F (.\main.c)(0x645F95DF)(-c --cpu Cortex-M4.fp.sp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\USER -I ..\HARDWARE\LED -I ..\FWLIB\inc -I ..\FreeRTOS\include -I ..\FreeRTOS\portable\RVDS\ARM_CM4F -I ..\APP\Inc -I ..\BSP\Inc-ID:\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-ID:\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Device\Include-D__UVISION_VERSION="538" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\main.o --omf_browse ..\obj\main.crf --depend ..\obj\main.d)
-I (includes.h)(0x645F9980)
+F (.\main.c)(0x646061BC)(-c --cpu Cortex-M4.fp.sp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\USER -I ..\HARDWARE\LED -I ..\FWLIB\inc -I ..\FreeRTOS\include -I ..\FreeRTOS\portable\RVDS\ARM_CM4F -I ..\APP\Inc -I ..\BSP\Inc-ID:\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-ID:\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Device\Include-D__UVISION_VERSION="538" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\main.o --omf_browse ..\obj\main.crf --depend ..\obj\main.d)
+I (includes.h)(0x64606174)
 I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
 I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x6025237E)
 I (D:\Keil_v5\ARM\ARMCC\include\ctype.h)(0x60252376)
@@ -45,10 +45,17 @@ I (..\FWLIB\inc\stm32f4xx_dac.h)(0x645E1545)
 I (..\FWLIB\inc\stm32f4xx_dcmi.h)(0x645E1545)
 I (..\FWLIB\inc\stm32f4xx_fsmc.h)(0x645E1545)
 I (..\SYSTEM\usart\usart.h)(0x645E1545)
-I (..\APP\Inc\App_Task.h)(0x645E1545)
-I (..\APP\Inc\App_TIM.h)(0x645E1545)
-I (..\APP\Inc\App_Pms.h)(0x645E1545)
-I (..\APP\Inc\App_System.h)(0x645E1545)
+I (..\FreeRTOS\include\FreeRTOS.h)(0x645E1545)
+I (D:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x6025237E)
+I (..\FreeRTOS\include\FreeRTOSConfig.h)(0x645E1545)
+I (..\FreeRTOS\include\projdefs.h)(0x645E1545)
+I (..\FreeRTOS\include\portable.h)(0x645E1545)
+I (..\FreeRTOS\include\deprecated_definitions.h)(0x645E1545)
+I (..\FreeRTOS\portable\RVDS\ARM_CM4F\portmacro.h)(0x645E1545)
+I (..\FreeRTOS\include\mpu_wrappers.h)(0x645E1545)
+I (..\FreeRTOS\include\task.h)(0x645E1545)
+I (..\FreeRTOS\include\list.h)(0x645E1545)
+I (..\APP\Inc\led.h)(0x645E1545)
 F (.\stm32f4xx_it.c)(0x645E1545)(-c --cpu Cortex-M4.fp.sp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\USER -I ..\HARDWARE\LED -I ..\FWLIB\inc -I ..\FreeRTOS\include -I ..\FreeRTOS\portable\RVDS\ARM_CM4F -I ..\APP\Inc -I ..\BSP\Inc-ID:\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-ID:\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Device\Include-D__UVISION_VERSION="538" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\stm32f4xx_it.o --omf_browse ..\obj\stm32f4xx_it.crf --depend ..\obj\stm32f4xx_it.d)
 I (stm32f4xx_it.h)(0x645E1545)
 I (stm32f4xx.h)(0x645E1545)
