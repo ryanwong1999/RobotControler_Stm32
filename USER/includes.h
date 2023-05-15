@@ -1,43 +1,56 @@
-#ifndef  INCLUDES_MODULES_PRESENT
-#define  INCLUDES_MODULES_PRESENT
-
+#ifndef  INCLUDES
+#define  INCLUDES
 
 /*
 *********************************************************************************************************
 *                                         STANDARD LIBRARIES
 *********************************************************************************************************
 */
-#include  <stdio.h>
-#include  <string.h>
-#include  <ctype.h>
-#include  <stdlib.h>
-#include  <stdarg.h>
-#include  <math.h>
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+#include <stdlib.h>
+#include <stdarg.h>
+#include <stdbool.h>
+#include <math.h>
+
+/*********************************************************************************************************
+                                         FreeRTOS include 
+*********************************************************************************************************/
+#include "FreeRTOS.h"
+#include "task.h"
 
 /*
 *********************************************************************************************************
 *                                            STM32  SYSTEM
 *********************************************************************************************************
 */
+#include "stm32f4xx.h"
 #include "delay.h"
 #include "sys.h"
 #include "usart.h"	
 //#include "malloc.h"	 
-#include "FreeRTOS.h"
-#include "task.h"
+
 /*
 *********************************************************************************************************
 *                                            STM32  BSP
 *********************************************************************************************************
 */
-
+#include "bsp_adc.h"
+#include "bsp_cap.h"
+#include "bsp_gpio.h"
+#include "bsp_iic.h"
+#include "bsp_iwdg.h"
+#include "bsp_pwm.h"
+#include "bsp_rs485.h"
+#include "bsp_tim.h"
+#include "bsp_usart.h"
 
 /*
 *********************************************************************************************************
 *                                            STM32  APP
 *********************************************************************************************************
 */
-
 #include "led.h"
 #include "app_task.h" 
 #include "app_24cxx.h"
