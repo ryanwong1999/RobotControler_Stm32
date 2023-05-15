@@ -326,7 +326,7 @@
             <wLevel>0</wLevel>
             <uThumb>0</uThumb>
             <uSurpInc>0</uSurpInc>
-            <uC99>1</uC99>
+            <uC99>0</uC99>
             <uGnu>0</uGnu>
             <useXO>0</useXO>
             <v6Lang>1</v6Lang>
@@ -555,9 +555,24 @@
           <GroupName>FWLIB</GroupName>
           <Files>
             <File>
-              <FileName>misc.c</FileName>
+              <FileName>stm32f4xx_adc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\FWLIB\src\misc.c</FilePath>
+              <FilePath>..\FWLIB\src\stm32f4xx_adc.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f4xx_dac.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\FWLIB\src\stm32f4xx_dac.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f4xx_dma.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\FWLIB\src\stm32f4xx_dma.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f4xx_exti.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\FWLIB\src\stm32f4xx_exti.c</FilePath>
             </File>
             <File>
               <FileName>stm32f4xx_gpio.c</FileName>
@@ -565,14 +580,24 @@
               <FilePath>..\FWLIB\src\stm32f4xx_gpio.c</FilePath>
             </File>
             <File>
-              <FileName>stm32f4xx_rcc.c</FileName>
+              <FileName>stm32f4xx_i2c.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\FWLIB\src\stm32f4xx_rcc.c</FilePath>
+              <FilePath>..\FWLIB\src\stm32f4xx_i2c.c</FilePath>
             </File>
             <File>
-              <FileName>stm32f4xx_syscfg.c</FileName>
+              <FileName>stm32f4xx_iwdg.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\FWLIB\src\stm32f4xx_syscfg.c</FilePath>
+              <FilePath>..\FWLIB\src\stm32f4xx_iwdg.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f4xx_spi.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\FWLIB\src\stm32f4xx_spi.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f4xx_tim.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\FWLIB\src\stm32f4xx_tim.c</FilePath>
             </File>
             <File>
               <FileName>stm32f4xx_usart.c</FileName>
@@ -580,14 +605,24 @@
               <FilePath>..\FWLIB\src\stm32f4xx_usart.c</FilePath>
             </File>
             <File>
-              <FileName>stm32f4xx_adc.c</FileName>
+              <FileName>misc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\FWLIB\src\stm32f4xx_adc.c</FilePath>
+              <FilePath>..\FWLIB\src\misc.c</FilePath>
             </File>
             <File>
-              <FileName>stm32f4xx_dma.c</FileName>
+              <FileName>stm32f4xx_syscfg.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\FWLIB\src\stm32f4xx_dma.c</FilePath>
+              <FilePath>..\FWLIB\src\stm32f4xx_syscfg.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f4xx_rcc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\FWLIB\src\stm32f4xx_rcc.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f4xx_rtc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\FWLIB\src\stm32f4xx_rtc.c</FilePath>
             </File>
           </Files>
         </Group>
