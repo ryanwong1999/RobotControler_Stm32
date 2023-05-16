@@ -1,5 +1,6 @@
 #include "includes.h" 
 
+
 //TIM2初始化
 void TIM2_Cfg_Init(uint16_t iArr, uint16_t iPsc)
 {
@@ -19,6 +20,7 @@ void TIM2_Cfg_Init(uint16_t iArr, uint16_t iPsc)
 	TIM_ITConfig(BASIC_TIM,TIM_IT_Update,ENABLE);										//开启定时器更新中断
 	TIM_Cmd(BASIC_TIM, ENABLE);			                								//使能定时器
 }
+
 
 //TIM初始化，该函数适用所有的定时器初始化
 void TIMx_Cfg_Init(uint32_t rcc_periph, TIM_TypeDef* TIMx,uint16_t iArr, uint16_t iPsc)
@@ -42,6 +44,7 @@ void TIMx_Cfg_Init(uint32_t rcc_periph, TIM_TypeDef* TIMx,uint16_t iArr, uint16_
 	TIM_ITConfig(TIMx, TIM_IT_Update,ENABLE);												//开启定时器更新中断
 	TIM_Cmd(TIMx, ENABLE);			                										//使能定时器
 }
+
 
 //TIM7初始化
 void TIM7_Cfg_Init(u16 arr,u16 psc)

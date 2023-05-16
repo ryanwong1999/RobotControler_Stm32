@@ -3,6 +3,7 @@
 uint16_t ADC_Filter_Value[CHAN_NUM];      //存放处理后的数
 uint16_t AD_Value[SAMPLE_NUM][CHAN_NUM]; //用来存放ADC转换结果，也是DMA的目标地址
 
+
 //ADC GPIO初始化配置
 static void ADC_GOIO_Cfg_Init(void)
 {
@@ -22,6 +23,7 @@ static void ADC_GOIO_Cfg_Init(void)
   GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_NOPULL;                  
 	GPIO_Init(ADC1_PORT, &GPIO_InitStructure);  
 }
+
 
 //ADC DMA初始化配置
 void ADC_DMA_Cfg_Init(void)
@@ -52,6 +54,7 @@ void ADC_DMA_Cfg_Init(void)
   DMA_ClearFlag(DMA2_Stream0, DMA_IT_TC);    			//清中断标志位
   DMA_ITConfig(DMA2_Stream0, DMA_IT_TC,ENABLE); 	//使能中断
 }
+
 
 //ADC初始化配置
 void ADC_Cfg_Init(void)
@@ -95,6 +98,7 @@ void ADC_Cfg_Init(void)
   ADC_DMACmd(ADC1, ENABLE);   		//使能ADC DMA传输
 }
 
+
 //ADC采样值处理
 void filter(void)
 {
@@ -112,6 +116,7 @@ void filter(void)
     sum=0;
 	}
 }
+
 
 //ADC DMA中断值处理
 void DMA2_Stream0_IRQHandler(void) 

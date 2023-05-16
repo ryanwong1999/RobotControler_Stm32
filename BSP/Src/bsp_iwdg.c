@@ -1,5 +1,6 @@
 #include "includes.h" 
 
+
 //初始化独立看门狗
 //prer:分频数:0~7(只有低3位有效!)
 //rlr:自动重装载值,0~0XFFF.
@@ -14,6 +15,7 @@ void IWDG_Init(u8 prer,u16 rlr)
 	IWDG_ReloadCounter(); 		//reload
 	IWDG_Enable();       			//使能看门狗
 }
+
 
 //喂独立看门狗
 void IWDG_Feed(void)

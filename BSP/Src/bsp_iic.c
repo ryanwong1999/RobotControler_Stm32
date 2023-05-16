@@ -1,5 +1,6 @@
 #include "includes.h" 
 
+
 //初始化IIC
 void IIC_Init(void)
 {			
@@ -17,6 +18,7 @@ void IIC_Init(void)
 	IIC_SDA = 1;
 }
 
+
 //产生IIC起始信号
 void IIC_Start(void)
 {
@@ -29,6 +31,7 @@ void IIC_Start(void)
 	IIC_SCL = 0;		//钳住I2C总线，准备发送或接收数据 
 }	  
 
+
 //产生IIC停止信号
 void IIC_Stop(void)
 {
@@ -39,6 +42,7 @@ void IIC_Stop(void)
 	IIC_SDA = 1;		//发送I2C总线结束信号
 	delay_us(4);	
 }
+
 
 //等待应答信号到来
 //返回值： 1，接收应答失败
@@ -65,6 +69,7 @@ u8 IIC_Wait_Ack(void)
 	return 0;  
 } 
 
+
 //产生ACK应答
 void IIC_Ack(void)
 {
@@ -78,6 +83,7 @@ void IIC_Ack(void)
 	IIC_SDA = 1;
 }
 
+
 //不产生ACK应答		    
 void IIC_NAck(void)
 {
@@ -89,6 +95,7 @@ void IIC_NAck(void)
 	IIC_SCL = 0;
 	delay_us(2);
 }					 				
+
 
 //IIC发送一个字节
 //返回从机有无应答
@@ -112,6 +119,7 @@ void IIC_Send_Byte(u8 txd)
 			IIC_SDA = 1;
 	}	 
 } 	    
+
 
 //读1个字节，ack=1时，发送ACK，ack=0，发送nACK   
 u8 IIC_Read_Byte(unsigned char ack)

@@ -1,5 +1,6 @@
 #include "includes.h" 
 
+
 //LED指示灯GPIO初始化
 void LED_GPIO_Cfg_Init(void)
 {
@@ -40,6 +41,7 @@ void LED_GPIO_Cfg_Init(void)
 	LED_TEST_OFF;
 }
 
+
 //指示灯GPIO初始化
 void Lamp_GPIO_Cfg_Init(void)
 {
@@ -64,6 +66,7 @@ void Lamp_GPIO_Cfg_Init(void)
 	LAMP_BEEP_OFF;
 }
 
+
 //蜂鸣器GPIO初始化
 void BEEP_GPIO_Cfg_Init(void)
 {
@@ -81,6 +84,7 @@ void BEEP_GPIO_Cfg_Init(void)
 	
 	BEEP_DISABLE ;
 }
+
 
 //系统控制输入输出GPIO口初始化
 void PowerSys_Gpio_Cfg_Init(void)
@@ -174,6 +178,7 @@ void PowerSys_Gpio_Cfg_Init(void)
 	PC_EN_ENABLE;
 }
 
+
 //系统开关机GPIO初始化
 void PC_Power_Cfg_Init(uint8_t on_off)
 {
@@ -204,6 +209,7 @@ void PC_Power_Cfg_Init(uint8_t on_off)
 			break;
 	}
 }
+
 
 //超声模块GPIO初始化，ECHO口定义为外部中断输入初始化
 void Ultrasonic_Exti_Init(void)
@@ -306,6 +312,7 @@ void Ultrasonic_Exti_Init(void)
   EXTI_Init(&EXTI_InitStructure); 
 }
 
+
 //自动充电红外解码GPIO初始化，定义为外部中断
 void IR_Decoding_GPIO_Cfg_Init(void)
 {
@@ -336,6 +343,7 @@ void IR_Decoding_GPIO_Cfg_Init(void)
   EXTI_Init(&EXTI_InitStructure); 
 }
 
+
 //碰撞GPIO初始化
 void Crash_Gpio_Cfg_Init(void)
 {
@@ -357,6 +365,7 @@ void Crash_Gpio_Cfg_Init(void)
   GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;	 
   GPIO_Init(CRASH_BACK_PORT, &GPIO_InitStructure);	
 }
+
 
 //升降电机GPIO初始化
 void LiftMoto_Gpio_Cfg_Init(void)
@@ -391,6 +400,7 @@ void LiftMoto_Gpio_Cfg_Init(void)
 	LIFTMOTO_PWM_EN;   
 	#endif
 }
+
 
 //升降电机限位开关GPIO初始化
 void LimitSwitch_Gpio_Cfg_Init(void)

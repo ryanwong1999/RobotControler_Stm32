@@ -1,5 +1,6 @@
 #include "includes.h" 
 
+
 //USART1初始化
 static void USART1_Cfg_Init(uint32_t lBaudrate)
 {
@@ -38,6 +39,7 @@ static void USART1_Cfg_Init(uint32_t lBaudrate)
 	USART_ClearFlag(USART1, USART_FLAG_TC);				/* 清发送完成标志，Transmission Complete flag */
 	//USART1 NVIC 统一配置
 }
+
 
 //USART2初始化
 static void USART2_Cfg_Init(uint32_t lBaudrate)
@@ -79,6 +81,7 @@ static void USART2_Cfg_Init(uint32_t lBaudrate)
 	//USART1 NVIC 统一配置
 }
 
+
 //USART3初始化
 static void USART3_Cfg_Init(uint32_t lBaudrate)
 {
@@ -117,6 +120,7 @@ static void USART3_Cfg_Init(uint32_t lBaudrate)
 	USART_ClearFlag(USART3, USART_FLAG_TC);     /* 清发送完成标志，Transmission Complete flag */
 	//USART1 NVIC 统一配置
 }
+
 
 //USART4初始化
 static void UART4_Cfg_Init(uint32_t lBaudrate)
@@ -157,6 +161,7 @@ static void UART4_Cfg_Init(uint32_t lBaudrate)
 	USART_ClearFlag(UART4, USART_FLAG_TC);     /* 清发送完成标志，Transmission Complete flag */
 	//USART1 NVIC 统一配置
 }
+
 
 //USART5初始化
 static void UART5_Cfg_Init(uint32_t lBaudrate)
@@ -204,6 +209,7 @@ static void UART5_Cfg_Init(uint32_t lBaudrate)
 	//USART1 NVIC 统一配置
 }
 
+
 //USART8初始化
 void USART8_Cfg_Init(uint32_t lBaudrate)
 {
@@ -242,6 +248,7 @@ void USART8_Cfg_Init(uint32_t lBaudrate)
 	//USART1 NVIC 统一配置
 }
 
+
 //USART初始化
 void USARTx_Cfg_Init(USART_TypeDef* pUSARTx, uint32_t iBaudrate)
 {
@@ -253,6 +260,7 @@ void USARTx_Cfg_Init(USART_TypeDef* pUSARTx, uint32_t iBaudrate)
 	else if(pUSARTx == UART8) USART8_Cfg_Init(iBaudrate);
 }
 
+
 //串口发送一个字节函数
 void USARTx_SendOneByte(USART_TypeDef* pUSARTx, uint8_t cDat)
 {
@@ -261,6 +269,7 @@ void USARTx_SendOneByte(USART_TypeDef* pUSARTx, uint8_t cDat)
 	/* Loop until the end of transmission */
 	while(USART_GetFlagStatus(pUSARTx, USART_FLAG_TXE) == RESET);	
 }
+
 
 //串口发送多个字节函数
 void USARTx_SendMultibyte(USART_TypeDef* pUSARTx, uint8_t *pBuf, uint32_t lLength)
@@ -273,6 +282,7 @@ void USARTx_SendMultibyte(USART_TypeDef* pUSARTx, uint8_t *pBuf, uint32_t lLengt
 	}
 }
 
+
 //串口发送字符串
 void USARTx_SendString(USART_TypeDef* pUSARTx, uint8_t *pStr)
 {
@@ -284,6 +294,5 @@ void USARTx_SendString(USART_TypeDef* pUSARTx, uint8_t *pStr)
   } 
 	while(*(pStr + i)!='\0');
   /* 等待发送完成 */
-  while(USART_GetFlagStatus(pUSARTx, USART_FLAG_TC) == RESET)
-  {}	
+  while(USART_GetFlagStatus(pUSARTx, USART_FLAG_TC) == RESET){}	
 }

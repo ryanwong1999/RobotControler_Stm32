@@ -1,5 +1,6 @@
 #include "includes.h" 
 
+
 //电机驱动控制PWM GPIO初始化
 void PWM_Wheel_Cfg_Init(uint16_t iArr, uint16_t iPsc)
 {
@@ -58,6 +59,7 @@ void PWM_Wheel_Cfg_Init(uint16_t iArr, uint16_t iPsc)
 	PWM_Output_Set( PWM_RIGHT_CH, 0);
 }
 
+
 //设置通道N的PWM输出
 void PWM_Output_Set(uint8_t ucChx, uint16_t  uiPWM_Val)
 {	
@@ -85,6 +87,7 @@ void PWM_Output_Set(uint8_t ucChx, uint16_t  uiPWM_Val)
 			break;
 	}	
 }
+
 
 //云台舵机控制PWM 初始化
 void PWM_Head_Cfg_Init(uint16_t iArr, uint16_t iPsc)
@@ -144,6 +147,7 @@ void PWM_Head_Cfg_Init(uint16_t iArr, uint16_t iPsc)
 	TIM_CtrlPWMOutputs(PWM_HEAD_TIM, ENABLE);															//PWM 输出使能                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
 }
 
+
 //设置云台的PWM输出
 void Head_PWM_Set(uint8_t _usChannel, uint16_t _usPWM_Val)
 {
@@ -160,12 +164,14 @@ void Head_PWM_Set(uint8_t _usChannel, uint16_t _usPWM_Val)
 	}
 }
 
+
 //设置云台俯仰角
 void SetHeadPitchPosition(float pos, float offset)
 {
 	uint16_t tmp ;
 	Head_PWM_Set(PWM_PITCH_CH, (uint16_t)(500+((pos+offset)*2000/270)));				//对应270度舵机                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
 }
+
 
 //设置云台水平转动角度
 void SetHeadLevelPosition(float pos, float offset)
