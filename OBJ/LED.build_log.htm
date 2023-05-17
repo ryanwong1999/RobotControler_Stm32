@@ -42,17 +42,16 @@ compiling app_task.c...
   #endif 
 ..\BSP\Inc\bsp_usart.h(10): warning:  #1-D: last line of file ends without a newline
   #endif
-..\APP\Inc\app_task.h(5): warning:  #1-D: last line of file ends without a newline
+..\APP\Inc\app_task.h(83): warning:  #1-D: last line of file ends without a newline
   #endif
 ..\APP\Inc\app_24cxx.h(5): warning:  #1-D: last line of file ends without a newline
   #endif
-..\APP\Src\app_task.c(61): warning:  #1-D: last line of file ends without a newline
-  //void Environ_Query_task(void *p_arg);
-..\APP\Src\app_task.c: 10 warnings, 0 errors
-linking...
-Program Size: Code=15200 RO-data=600 RW-data=188 ZI-data=23364  
-FromELF: creating hex file...
-"..\OBJ\LED.axf" - 0 Error(s), 10 Warning(s).
+..\APP\Src\app_task.c(12): error:  #20: identifier "Pmu_Task_Handler" is undefined
+  							(TaskHandle_t*  )&Pmu_Task_Handler);   //ÈÎÎñ¾ä±ú
+..\APP\Src\app_task.c(20): warning:  #1-D: last line of file ends without a newline
+  }
+..\APP\Src\app_task.c: 10 warnings, 1 error
+"..\OBJ\LED.axf" - 1 Error(s), 10 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -65,6 +64,7 @@ Package Vendor: Keil
   D:/Arm/Packs/Keil/STM32F4xx_DFP/2.16.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include
 
 <h2>Collection of Component Files used:</h2>
+Target not created.
 Build Time Elapsed:  00:00:01
 </pre>
 </body>
