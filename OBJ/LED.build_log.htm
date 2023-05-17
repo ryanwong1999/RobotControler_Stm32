@@ -5,11 +5,11 @@
 <h2>Tool Versions:</h2>
 IDE-Version: ¦ÌVision V5.38.0.0
 Copyright (C) 2022 ARM Ltd and ARM Germany GmbH. All rights reserved.
-License Information: 1 wangshenyou@hotmail.com, 1, LIC=IK1BF-6VZZV-HL3CL-0F5XJ-W0ZQ1-YSNPT
+License Information: 1 1, 1, LIC=21E4T-RYZB2-8TC3P-MAIDK-HCEL6-VWJQH
  
 Tool Versions:
 Toolchain:       MDK-ARM Plus  Version: 5.36.0.0
-Toolchain Path:  C:\AAAAAAAAPP\Keil5\ARM\ARMCC\Bin
+Toolchain Path:  D:\Keil_v5\ARM\ARMCC\Bin
 C Compiler:      Armcc.exe V5.06 update 7 (build 960)
 Assembler:       Armasm.exe V5.06 update 7 (build 960)
 Linker/Locator:  ArmLink.exe V5.06 update 7 (build 960)
@@ -21,13 +21,13 @@ Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.9.0
 Dialog DLL:      TCM.DLL V1.53.0.0
  
 <h2>Project:</h2>
-D:\Desktop\KGH_Project\RobotController_Stm32\USER\FreeRTOS.uvprojx
-Project File Date:  05/16/2023
+D:\Desktop\Project\RobotController_Stm32\USER\FreeRTOS.uvprojx
+Project File Date:  05/15/2023
 
 <h2>Output:</h2>
-*** Using Compiler 'V5.06 update 7 (build 960)', folder: 'C:\AAAAAAAAPP\Keil5\ARM\ARMCC\Bin'
+*** Using Compiler 'V5.06 update 7 (build 960)', folder: 'D:\Keil_v5\ARM\ARMCC\Bin'
 Build target 'FreeRTOS'
-compiling bsp_usart.c...
+compiling app_task.c...
 ..\BSP\Inc\bsp_adc.h(38): warning:  #1-D: last line of file ends without a newline
   #endif
 ..\BSP\Inc\bsp_cap.h(28): warning:  #1-D: last line of file ends without a newline
@@ -46,11 +46,13 @@ compiling bsp_usart.c...
   #endif
 ..\APP\Inc\app_24cxx.h(5): warning:  #1-D: last line of file ends without a newline
   #endif
-..\BSP\Src\bsp_usart.c: 9 warnings, 0 errors
+..\APP\Src\app_task.c(61): warning:  #1-D: last line of file ends without a newline
+  //void Environ_Query_task(void *p_arg);
+..\APP\Src\app_task.c: 10 warnings, 0 errors
 linking...
 Program Size: Code=15200 RO-data=600 RW-data=188 ZI-data=23364  
 FromELF: creating hex file...
-"..\OBJ\LED.axf" - 0 Error(s), 9 Warning(s).
+"..\OBJ\LED.axf" - 0 Error(s), 10 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -60,7 +62,7 @@ Package Vendor: Keil
                 STMicroelectronics STM32F4 Series Device Support, Drivers and Examples
 
 <h2>Collection of Component include folders:</h2>
-  C:/Users/wangs/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.16.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include
+  D:/Arm/Packs/Keil/STM32F4xx_DFP/2.16.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include
 
 <h2>Collection of Component Files used:</h2>
 Build Time Elapsed:  00:00:01
