@@ -68,6 +68,7 @@ int main(void)
 
 	taskEXIT_CRITICAL();            //退出临界区	
   vTaskStartScheduler();          //开启任务调度			
+	while(1);
 }
  
 ////开始任务任务函数

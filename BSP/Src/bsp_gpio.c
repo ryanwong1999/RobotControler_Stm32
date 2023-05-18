@@ -1,7 +1,12 @@
 #include "includes.h" 
 
 
-//LED指示灯GPIO初始化
+/************************************************/
+//函数功能：LED指示灯GPIO初始化
+//输入参数：
+//返回值：
+//备注：
+/************************************************/
 void LED_GPIO_Cfg_Init(void)
 {
 	/*定义一个GPIO_InitTypeDef类型的结构体*/
@@ -42,7 +47,12 @@ void LED_GPIO_Cfg_Init(void)
 }
 
 
-//指示灯GPIO初始化
+/************************************************/
+//函数功能：指示灯GPIO初始化
+//输入参数：
+//返回值：
+//备注：
+/************************************************/
 void Lamp_GPIO_Cfg_Init(void)
 {
 	/*定义一个GPIO_InitTypeDef类型的结构体*/
@@ -67,7 +77,12 @@ void Lamp_GPIO_Cfg_Init(void)
 }
 
 
-//蜂鸣器GPIO初始化
+/************************************************/
+//函数功能：蜂鸣器GPIO初始化
+//输入参数：
+//返回值：
+//备注：
+/************************************************/
 void BEEP_GPIO_Cfg_Init(void)
 {
 	/*定义一个GPIO_InitTypeDef类型的结构体*/
@@ -86,7 +101,12 @@ void BEEP_GPIO_Cfg_Init(void)
 }
 
 
-//系统控制输入输出GPIO口初始化
+/************************************************/
+//函数功能：系统控制输入输出GPIO口初始化
+//输入参数：
+//返回值：
+//备注：
+/************************************************/
 void PowerSys_Gpio_Cfg_Init(void)
 {
 	/*定义一个GPIO_InitTypeDef类型的结构体*/
@@ -179,7 +199,12 @@ void PowerSys_Gpio_Cfg_Init(void)
 }
 
 
-//系统开关机GPIO初始化
+/************************************************/
+//函数功能：系统开关机GPIO初始化
+//输入参数：
+//返回值：
+//备注：
+/************************************************/
 void PC_Power_Cfg_Init(uint8_t on_off)
 {
 	/*定义一个GPIO_InitTypeDef类型的结构体*/
@@ -211,7 +236,12 @@ void PC_Power_Cfg_Init(uint8_t on_off)
 }
 
 
-//超声模块GPIO初始化，ECHO口定义为外部中断输入初始化
+/************************************************/
+//函数功能：超声模块GPIO初始化，ECHO口定义为外部中断输入初始化
+//输入参数：
+//返回值：
+//备注：
+/************************************************/
 void Ultrasonic_Exti_Init(void)
 {
 	GPIO_InitTypeDef GPIO_InitStructure;
@@ -313,7 +343,12 @@ void Ultrasonic_Exti_Init(void)
 }
 
 
-//自动充电红外解码GPIO初始化，定义为外部中断
+/************************************************/
+//函数功能：自动充电红外解码GPIO初始化，定义为外部中断
+//输入参数：
+//返回值：
+//备注：
+/************************************************/
 void IR_Decoding_GPIO_Cfg_Init(void)
 {
   GPIO_InitTypeDef GPIO_InitStructure;    
@@ -344,7 +379,12 @@ void IR_Decoding_GPIO_Cfg_Init(void)
 }
 
 
-//碰撞GPIO初始化
+/************************************************/
+//函数功能：碰撞GPIO初始化
+//输入参数：
+//返回值：
+//备注：
+/************************************************/
 void Crash_Gpio_Cfg_Init(void)
 {
 	GPIO_InitTypeDef GPIO_InitStructure;    
@@ -367,7 +407,12 @@ void Crash_Gpio_Cfg_Init(void)
 }
 
 
-//升降电机GPIO初始化
+/************************************************/
+//函数功能：升降电机GPIO初始化
+//输入参数：
+//返回值：
+//备注：
+/************************************************/
 void LiftMoto_Gpio_Cfg_Init(void)
 {
 	GPIO_InitTypeDef GPIO_InitStructure;								//定义一个GPIO_InitTypeDef类型的结构体
@@ -402,7 +447,12 @@ void LiftMoto_Gpio_Cfg_Init(void)
 }
 
 
-//升降电机限位开关GPIO初始化
+/************************************************/
+//函数功能：升降电机限位开关GPIO初始化
+//输入参数：
+//返回值：
+//备注：
+/************************************************/
 void LimitSwitch_Gpio_Cfg_Init(void)
 {
 	GPIO_InitTypeDef GPIO_InitStructure;    

@@ -1,6 +1,15 @@
 #ifndef __INCLUDES_H
 #define __INCLUDES_H
 
+#ifdef   MAIN_GLOBALS  
+#define  MAIN_EXT
+#else
+#define  MAIN_EXT  extern
+#endif
+
+#define  Sys_Soft_Reset(void)  {SCB->AIRCR =0X05FA0000|(u32)0x04;}  
+#define  SYS_CLK_FRE           108000000u
+
 /*
 *********************************************************************************************************
 *                                         STANDARD LIBRARIES
