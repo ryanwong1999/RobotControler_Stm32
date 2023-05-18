@@ -31,10 +31,10 @@ extern void xPortSysTickHandler(void);
 //systick中断服务函数,使用OS时用到
 void SysTick_Handler(void)
 {	
-    if(xTaskGetSchedulerState()!=taskSCHEDULER_NOT_STARTED)//系统已经运行
-    {
-        xPortSysTickHandler();	
-    }
+	if(xTaskGetSchedulerState()!=taskSCHEDULER_NOT_STARTED)//系统已经运行
+	{
+			xPortSysTickHandler();	
+	}
 }
 			   
 //初始化延迟函数

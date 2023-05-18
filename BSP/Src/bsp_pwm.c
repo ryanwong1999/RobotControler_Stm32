@@ -82,7 +82,7 @@ void PWM_Output_Set(uint8_t ucChx, uint16_t  uiPWM_Val)
 			TIM_SetCompare4(PWM_WHEEL_TIM, uiPWM_Val);
 		  //TIM_OC4PreloadConfig(PWM_TIMx, TIM_OCPreload_Enable);
 			break;	
-*/
+		*/
 		default:  
 			break;
 	}	

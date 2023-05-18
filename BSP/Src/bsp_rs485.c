@@ -82,6 +82,7 @@ void RS485_SendString(USART_TypeDef* pUSARTx, uint8_t *pStr)
 	RS485_RX_ENABLE; //485发送禁止，进入接收模式	
 }
 
+
 //发送固定长度的字符数组
 void RS485_SendMultibyte(USART_TypeDef* pUSARTx, uint8_t *pBuf, uint16_t lLength)
 {

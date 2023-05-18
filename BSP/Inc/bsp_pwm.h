@@ -14,7 +14,6 @@
 	
 #define PWM_LEFT_CH          	2			//ÓÒ²à PWM	 
 #define PWM_RIGHT_CH         	1			//×ó²à PWM	 
-
 	 
 #define PWM_HEAD_PORT_CLK 		RCC_AHB1Periph_GPIOB
 #define PWM_HEAD_PORT 				GPIOB
@@ -33,8 +32,6 @@ void PWM_Wheel_Cfg_Init(uint16_t iArr, uint16_t iPsc);				//ÂÖ×Óµç»ú¿ØÖÆPWM³õÊ¼»
 void PWM_Output_Set(uint8_t ucChx, uint16_t  uiPWM_Val); 			//ÉèÖÃÂÖ×ÓPWMÖµ
 void PWM_Head_Cfg_Init(uint16_t iArr, uint16_t iPsc);   			//Í·²¿µç»ú(¶æ»ú)PWM³õÊ¼»¯
 void PWM_Head_Set(uint8_t _usChannel, uint16_t _usPWM_Val);		//ÉèÖÃPWMÖµ
-//void SetHeadPitchPosition(float pos);												//ÉèÖÃ¸©Ñö½Ç¶È
-//void SetHeadLevelPosition(float pos);  											//ÉèÖÃË®Æ½½Ç¶È	
 void SetHeadPitchPosition(float pos, float offset); 					//ÉèÖÃ¸©Ñö½Ç¶È
 void SetHeadLevelPosition(float pos, float offset);						//ÉèÖÃË®Æ½½Ç¶È
 
