@@ -435,11 +435,6 @@
           <GroupName>APP</GroupName>
           <Files>
             <File>
-              <FileName>led.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\APP\Src\led.c</FilePath>
-            </File>
-            <File>
               <FileName>app_task.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\APP\Src\app_task.c</FilePath>

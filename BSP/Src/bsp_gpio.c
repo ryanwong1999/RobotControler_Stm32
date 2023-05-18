@@ -61,7 +61,7 @@ void Lamp_GPIO_Cfg_Init(void)
 	RCC_AHB1PeriphClockCmd (LAMP_PORT_CLK, ENABLE); 	
 
 	/*选择要控制的GPIO引脚*/															   
-	GPIO_InitStructure.GPIO_Pin 		= LAMP_RED_PIN | LAMP_GREEN_PIN |LAMP_YELLOW_PIN | LAMP_BEEP_PIN;
+	GPIO_InitStructure.GPIO_Pin 		= LAMP_RED_PIN | LAMP_GREEN_PIN | LAMP_YELLOW_PIN | LAMP_BEEP_PIN;
 	GPIO_InitStructure.GPIO_Mode 		= GPIO_Mode_OUT;		/* 设置引脚模式为输出模式       */
 	GPIO_InitStructure.GPIO_OType 	= GPIO_OType_PP;		/* 设置引脚的输出类型为推挽输出 */
 	GPIO_InitStructure.GPIO_PuPd 		= GPIO_PuPd_UP;			/* 设置引脚为上拉模式          */

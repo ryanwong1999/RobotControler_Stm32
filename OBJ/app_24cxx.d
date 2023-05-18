@@ -64,7 +64,6 @@
 ..\obj\app_24cxx.o: ..\BSP\Inc\bsp_rs485.h
 ..\obj\app_24cxx.o: ..\BSP\Inc\bsp_tim.h
 ..\obj\app_24cxx.o: ..\BSP\Inc\bsp_usart.h
-..\obj\app_24cxx.o: ..\APP\Inc\led.h
 ..\obj\app_24cxx.o: ..\APP\Inc\app_task.h
 ..\obj\app_24cxx.o: ..\USER\includes.h
 ..\obj\app_24cxx.o: ..\APP\Inc\app_24cxx.h

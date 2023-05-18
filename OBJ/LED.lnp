@@ -8,7 +8,6 @@
 "..\obj\bsp_rs485.o"
 "..\obj\bsp_tim.o"
 "..\obj\bsp_usart.o"
-"..\obj\led.o"
 "..\obj\app_task.o"
 "..\obj\app_24cxx.o"
 "..\obj\app_usart.o"
