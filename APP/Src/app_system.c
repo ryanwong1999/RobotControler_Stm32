@@ -11,29 +11,29 @@ void NVIC_Configuration(void)
 {
 	NVIC_InitTypeDef NVIC_InitStructure; 
 	//设置中断组为1
-	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_1);	   					// 中断分组
+//	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_1);	   					// 中断分组
 	//USART1
 	NVIC_InitStructure.NVIC_IRQChannel = USART1_IRQn;           // 配置USART为中断源 
 	NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 1;   // 抢占优先级为0
-	NVIC_InitStructure.NVIC_IRQChannelSubPriority = 7;          // 子优先级为1
+	NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0;          // 子优先级为1
 	NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;             // 使能中断 
 	NVIC_Init(&NVIC_InitStructure);	                            // 初始化配置NVIC 	
 	//USART2
 	NVIC_InitStructure.NVIC_IRQChannel = USART2_IRQn;           // 配置USART为中断源 
 	NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 1;   // 抢占优先级为0
-	NVIC_InitStructure.NVIC_IRQChannelSubPriority = 6;          // 子优先级为1
+	NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0;          // 子优先级为1
 	NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;             // 使能中断 
 	NVIC_Init(&NVIC_InitStructure);	   
 	//USART3
 	NVIC_InitStructure.NVIC_IRQChannel = USART3_IRQn;           // 配置USART为中断源 
 	NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 0;   // 抢占优先级为0
-	NVIC_InitStructure.NVIC_IRQChannelSubPriority = 4;          // 子优先级为1
+	NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0;          // 子优先级为1
 	NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;             // 使能中断 
 	NVIC_Init(&NVIC_InitStructure);	                            // 初始化配置NVIC 	
 	//UART4
 	NVIC_InitStructure.NVIC_IRQChannel = UART4_IRQn;           	// 配置USART为中断源 
 	NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 0;   // 抢占优先级为0
-	NVIC_InitStructure.NVIC_IRQChannelSubPriority = 5;          // 子优先级为1
+	NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0;          // 子优先级为1
 	NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;             // 使能中断 
 	NVIC_Init(&NVIC_InitStructure);	        
 	//UART5
@@ -42,60 +42,60 @@ void NVIC_Configuration(void)
 	NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0;          // 子优先级为1
 	NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;             // 使能中断 
 	NVIC_Init(&NVIC_InitStructure);	                            // 初始化配置NVIC 	
-  //10us基本定时器
-	NVIC_InitStructure.NVIC_IRQChannel = TIM1_UP_TIM10_IRQn;
-	NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 0;   // 抢占优先级3
-	NVIC_InitStructure.NVIC_IRQChannelSubPriority = 6;	        // 子优先级3
-	NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;			        // IRQ通道使能
-	NVIC_Init(&NVIC_InitStructure);	  
-	//输入捕获
-	NVIC_InitStructure.NVIC_IRQChannel = TIM8_CC_IRQn;
-	NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 0;   // 抢占优先级3
-	NVIC_InitStructure.NVIC_IRQChannelSubPriority = 7;	        // 子优先级3
-	NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;			        // IRQ通道使能
-	NVIC_Init(&NVIC_InitStructure);	 
-  //1ms基本定时器
-	NVIC_InitStructure.NVIC_IRQChannel = TIM2_IRQn;             // 配置USART为中断源 
-	NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 1;   // 抢占优先级为0
-	NVIC_InitStructure.NVIC_IRQChannelSubPriority = 7;          // 子优先级为1
-	NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;             // 使能中断 
-	NVIC_Init(&NVIC_InitStructure);	
-	
-	NVIC_InitStructure.NVIC_IRQChannel = TIM7_IRQn;
-	NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 1 ;		//抢占优先级0
-	NVIC_InitStructure.NVIC_IRQChannelSubPriority = 6;					//子优先级1
-	NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;							//IRQ通道使能
-	NVIC_Init(&NVIC_InitStructure);	//根据指定的参数初始化NVIC寄存器
-	                               
- 	NVIC_InitStructure.NVIC_IRQChannel = DMA2_Stream0_IRQn;     // 配置DMA为中断源 
-	NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 1;   // 抢占优先级为0
-	NVIC_InitStructure.NVIC_IRQChannelSubPriority = 5;          // 子优先级为1
-	NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;             // 使能中断 
-	NVIC_Init(&NVIC_InitStructure);	
-  //外部中断
-	NVIC_InitStructure.NVIC_IRQChannel = EXTI0_IRQn;            // 外部中断
-	NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 0;   // 抢占优先级为0
-	NVIC_InitStructure.NVIC_IRQChannelSubPriority = 2;          // 子优先级为1
-	NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;             // 使能中断 
-	NVIC_Init(&NVIC_InitStructure);	  
-	//外部中断
-	NVIC_InitStructure.NVIC_IRQChannel = EXTI1_IRQn;            // 外部中断
-	NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 0;   // 抢占优先级为0
-	NVIC_InitStructure.NVIC_IRQChannelSubPriority = 3;          // 子优先级为1
-	NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;             // 使能中断 
-	NVIC_Init(&NVIC_InitStructure);	  
-	//外部中断
-	NVIC_InitStructure.NVIC_IRQChannel = EXTI9_5_IRQn;          // 外部中断
-	NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 1;   // 抢占优先级为0
-	NVIC_InitStructure.NVIC_IRQChannelSubPriority = 3;          // 子优先级为1
-	NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;             // 使能中断 
-	NVIC_Init(&NVIC_InitStructure);	                            // 初始化配置NVIC 	
-  //外部中断
-  NVIC_InitStructure.NVIC_IRQChannel = EXTI15_10_IRQn;        // 外部中断
-  NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 1;   // 抢占优先级3
-  NVIC_InitStructure.NVIC_IRQChannelSubPriority = 4;          // 子优先级2
-  NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;             // 使能外部中断通道
-  NVIC_Init(&NVIC_InitStructure);                             // 初始化配置NVIC 	
+//  //10us基本定时器
+//	NVIC_InitStructure.NVIC_IRQChannel = TIM1_UP_TIM10_IRQn;
+//	NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 0;   // 抢占优先级3
+//	NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0;	        // 子优先级3
+//	NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;			        // IRQ通道使能
+//	NVIC_Init(&NVIC_InitStructure);	                            // 初始化配置NVIC 
+//	//输入捕获
+//	NVIC_InitStructure.NVIC_IRQChannel = TIM8_CC_IRQn;
+//	NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 0;   // 抢占优先级3
+//	NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0;	        // 子优先级3
+//	NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;			        // IRQ通道使能
+//	NVIC_Init(&NVIC_InitStructure);	                            // 初始化配置NVIC 
+//  //1ms基本定时器
+//	NVIC_InitStructure.NVIC_IRQChannel = TIM2_IRQn;             // 配置USART为中断源 
+//	NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 1;   // 抢占优先级为0
+//	NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0;          // 子优先级为1
+//	NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;             // 使能中断 
+//	NVIC_Init(&NVIC_InitStructure);	                            // 初始化配置NVIC 
+//	
+//	NVIC_InitStructure.NVIC_IRQChannel = TIM7_IRQn;
+//	NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 1 ;	// 抢占优先级0
+//	NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0;					// 子优先级1
+//	NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;							// IRQ通道使能
+//	NVIC_Init(&NVIC_InitStructure);	                            // 初始化配置NVIC 
+//	                               
+// 	NVIC_InitStructure.NVIC_IRQChannel = DMA2_Stream0_IRQn;     // 配置DMA为中断源 
+//	NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 1;   // 抢占优先级为0
+//	NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0;          // 子优先级为1
+//	NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;             // 使能中断 
+//	NVIC_Init(&NVIC_InitStructure);	                            // 初始化配置NVIC 
+//  //外部中断
+//	NVIC_InitStructure.NVIC_IRQChannel = EXTI0_IRQn;            // 外部中断
+//	NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 0;   // 抢占优先级为0
+//	NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0;          // 子优先级为1
+//	NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;             // 使能中断 
+//	NVIC_Init(&NVIC_InitStructure);	                            // 初始化配置NVIC 
+//	//外部中断
+//	NVIC_InitStructure.NVIC_IRQChannel = EXTI1_IRQn;            // 外部中断
+//	NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 0;   // 抢占优先级为0
+//	NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0;          // 子优先级为1
+//	NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;             // 使能中断 
+//	NVIC_Init(&NVIC_InitStructure);	                            // 初始化配置NVIC 
+//	//外部中断
+//	NVIC_InitStructure.NVIC_IRQChannel = EXTI9_5_IRQn;          // 外部中断
+//	NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 1;   // 抢占优先级为0
+//	NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0;          // 子优先级为1
+//	NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;             // 使能中断 
+//	NVIC_Init(&NVIC_InitStructure);	                            // 初始化配置NVIC 	
+//  //外部中断
+//  NVIC_InitStructure.NVIC_IRQChannel = EXTI15_10_IRQn;        // 外部中断
+//  NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 1;   // 抢占优先级3
+//  NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0;          // 子优先级2
+//  NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;             // 使能外部中断通道
+//  NVIC_Init(&NVIC_InitStructure);                             // 初始化配置NVIC 	
 }
 
 
@@ -122,7 +122,6 @@ void System_Board_Init(void)
 	LimitSwitch_Gpio_Cfg_Init();				//限位开关初始化
 	ADC_Cfg_Init();    									//ADC初始化
 	AT24CXX_Init();											//AT24C02初始化
-	NVIC_Configuration();  							//中断优先级配置
 //	IWDG_Init(4,500); 									//与分频数为64,重载值为500,溢出时间为1s	
 	
 	//定时器初始化

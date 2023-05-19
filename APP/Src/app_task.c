@@ -105,7 +105,7 @@ void Err_Handle_Task(void *pvParameters)
 	while(1)
 	{
 		IWDG_Feed();//Î¹¹·
-		
+		printf(" ********************!!\r\n");
 		vTaskDelay(100);
 	}
 }

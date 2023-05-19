@@ -5,22 +5,27 @@
 int main(void)
 { 
 	System_Board_Init();		//初始化系统硬件资源
+	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_4);//设置系统中断优先级分组4
+	NVIC_Configuration();  							//中断优先级配置
 	delay_ms(200);
 	EN_OUT_ENABLE;					//硬开软关使能VCC-OUT
-	System_StartTips();			//系统启动蜂鸣器提示
+//	System_StartTips();			//系统启动蜂鸣器提示
+	
+
+
 	
 	
 	taskENTER_CRITICAL();		//进入临界区
 	
 	//创建开始任务
 	#ifdef ROBOT_YZ01	
-	 printf(" ROBOT_YZ01 Sys starting!!\r\n"); 
+		printf(" ROBOT_YZ01 Sys starting!!\r\n"); 
 	#endif
 	#ifdef ROBOT_M100	
-	 printf(" ROBOT_M100 Sys starting!!\r\n"); 
+		printf(" ROBOT_M100 Sys starting!!\r\n"); 
 	#endif
 	#ifdef ROBOT_MR9	
-	 printf(" ROBOT_MR9 Sys starting!!\r\n"); 
+		printf(" ROBOT_MR9 Sys starting!!\r\n"); 
 	#endif
 	
 	xTaskCreate((TaskFunction_t )Start_Task,            	//任务函数
@@ -32,7 +37,7 @@ int main(void)
 
 	taskEXIT_CRITICAL();		//退出临界区	
   vTaskStartScheduler();	//开启任务调度			
-	while(1);
+//	while(1);
 }
  
 
