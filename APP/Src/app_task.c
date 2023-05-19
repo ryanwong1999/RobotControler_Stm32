@@ -106,7 +106,7 @@ void Err_Handle_Task(void *pvParameters)
 	{
 		IWDG_Feed();//Î¹¹·
 		
-		delay_ms(100);
+		vTaskDelay(100);
 	}
 }
 
@@ -121,7 +121,7 @@ void Poweroff_Task(void *pvParameters)
 {
 	while(1)
 	{
-		delay_ms(200);
+		vTaskDelay(200);
 	}
 }
 
@@ -136,7 +136,7 @@ void Pmu_Task(void *pvParameters)
 {
 	while(1)
 	{
-		delay_ms(1000);
+		vTaskDelay(1000);
 	}
 }
 
@@ -151,7 +151,7 @@ void Chg_Task(void *pvParameters)
 {
 	while(1)
 	{
-		delay_ms(200);
+		vTaskDelay(200);
 	}
 }
 
@@ -166,7 +166,7 @@ void AutoCharge_Task(void *pvParameters)
 {
 	while(1)
 	{
-		delay_ms(100);
+		vTaskDelay(100);
 	}
 }
 
@@ -181,7 +181,7 @@ void Cammand_Task(void *pvParameters)
 {
 	while(1)
 	{
-		delay_ms(3);
+		vTaskDelay(3);
 	}
 }
 
@@ -196,7 +196,7 @@ void Test_Task(void *pvParameters)
 {
 	while(1)
 	{
-		delay_ms(100);
+		vTaskDelay(100);
 	}
 }
 
@@ -211,7 +211,7 @@ void Head_Ctrl_Task(void *pvParameters)
 {
 	while(1)
 	{
-		delay_ms(20);
+		vTaskDelay(20);
 	}
 }
 
@@ -226,7 +226,7 @@ void LiftMoto_Task(void *pvParameters)
 {
 	while(1)
 	{
-		delay_ms(10);
+		vTaskDelay(10);
 	}
 }
 
@@ -241,7 +241,7 @@ void Send_Mdrv_Task(void *pvParameters)
 {
 	while(1)
 	{
-		delay_ms(25);
+		vTaskDelay(25);
 	}
 }
 
@@ -256,7 +256,7 @@ void Mdrv_Task(void *pvParameters)
 {
 	while(1)
 	{
-		delay_ms(5);
+		vTaskDelay(5);
 	}
 }
 
@@ -273,7 +273,7 @@ void LED_Task(void *pvParameters)
 	{
 		LED_TEST_TOGGLE;
 		
-		delay_ms(500);
+		vTaskDelay(500);
 	}
 }
 

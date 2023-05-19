@@ -1,4 +1,6 @@
+#define MAIN_GLOBALS
 #include "includes.h"
+
 
 int main(void)
 { 
@@ -11,6 +13,16 @@ int main(void)
 	taskENTER_CRITICAL();		//进入临界区
 	
 	//创建开始任务
+	#ifdef ROBOT_YZ01	
+	 printf(" ROBOT_YZ01 Sys starting!!\r\n"); 
+	#endif
+	#ifdef ROBOT_M100	
+	 printf(" ROBOT_M100 Sys starting!!\r\n"); 
+	#endif
+	#ifdef ROBOT_MR9	
+	 printf(" ROBOT_MR9 Sys starting!!\r\n"); 
+	#endif
+	
 	xTaskCreate((TaskFunction_t )Start_Task,            	//任务函数
 							(const char*    )"Start_Task",          	//任务名称
 							(uint16_t       )START_STK_SIZE,        	//任务堆栈大小

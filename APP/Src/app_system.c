@@ -10,7 +10,7 @@
 void NVIC_Configuration(void)
 {
 	NVIC_InitTypeDef NVIC_InitStructure; 
-	// 设置中断组为1
+	//设置中断组为1
 	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_1);	   					// 中断分组
 	//USART1
 	NVIC_InitStructure.NVIC_IRQChannel = USART1_IRQn;           // 配置USART为中断源 
@@ -65,7 +65,7 @@ void NVIC_Configuration(void)
 	NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 1 ;		//抢占优先级0
 	NVIC_InitStructure.NVIC_IRQChannelSubPriority = 6;					//子优先级1
 	NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;							//IRQ通道使能
-	NVIC_Init(&NVIC_InitStructure);	//根据指定的参数初始化VIC寄存器
+	NVIC_Init(&NVIC_InitStructure);	//根据指定的参数初始化NVIC寄存器
 	                               
  	NVIC_InitStructure.NVIC_IRQChannel = DMA2_Stream0_IRQn;     // 配置DMA为中断源 
 	NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 1;   // 抢占优先级为0
@@ -108,7 +108,8 @@ void NVIC_Configuration(void)
 void System_Board_Init(void)
 {
 	taskENTER_CRITICAL();           		//进入临界区
-	SystemInit();		        						//配置系统时钟为72M
+	
+//	SystemInit();		        						//配置系统时钟为72M
 	delay_init(168);  									//时钟初始化
 	LED_GPIO_Cfg_Init();								//LED初始化
 	BEEP_GPIO_Cfg_Init();								//蜂鸣器初始化
@@ -122,6 +123,7 @@ void System_Board_Init(void)
 	ADC_Cfg_Init();    									//ADC初始化
 	AT24CXX_Init();											//AT24C02初始化
 	NVIC_Configuration();  							//中断优先级配置
+//	IWDG_Init(4,500); 									//与分频数为64,重载值为500,溢出时间为1s	
 	
 	//定时器初始化
 	TIMx_Cfg_Init(RCC_APB2Periph_TIM1, TIM1, 10, 168);   	//1ms timer
@@ -139,7 +141,7 @@ void System_Board_Init(void)
 	
 	//内存初始化
 	my_mem_init(SRAMIN);								//初始化内部内存池 
-	//my_mem_init(SRAMEX);								//初始化外部内存池
+//	my_mem_init(SRAMEX);								//初始化外部内存池
 	my_mem_init(SRAMCCM);								//初始化CCM内存池 
 
 	taskEXIT_CRITICAL();            //退出临界区	 

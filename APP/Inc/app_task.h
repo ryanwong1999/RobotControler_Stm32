@@ -28,19 +28,19 @@ APP_TASK_EXT TaskHandle_t LED_Task_Handler;
 
 
 /**********************************设置任务优先级***********************************/
-#define START_TASK_PRIO		   		3 
-#define PMU_TASK_PRIO	     	 		3   
-#define CAMMAND_TASK_PRIO    		4
-#define ERR_TASK_PRIO        		5
-#define POWEROFF_TASK_PRIO   		6    
-#define CHG_TASK_PRIO        		7
-#define TEST_TASK_PRIO    			8
-#define HEAD_CTRL_TASK_PRIO  		10
-#define AUTOCHARGE_TASK_PRIO		11
-#define SEND_MDRV_TASK_PRIO   	13
-#define MDRV_TASK_PRIO    			14
-#define LIFTMOTO_TASK_PRIO			17
-#define LED_TASK_PRIO		     		30  
+#define START_TASK_PRIO		   		1 
+#define PMU_TASK_PRIO	     	 		2   
+#define CAMMAND_TASK_PRIO    		3
+#define ERR_TASK_PRIO        		4
+#define POWEROFF_TASK_PRIO   		5    
+#define CHG_TASK_PRIO        		6
+#define TEST_TASK_PRIO    			7
+#define HEAD_CTRL_TASK_PRIO  		8
+#define AUTOCHARGE_TASK_PRIO		9
+#define SEND_MDRV_TASK_PRIO   	10
+#define MDRV_TASK_PRIO    			11
+#define LIFTMOTO_TASK_PRIO			12
+#define LED_TASK_PRIO		     		13  
 //#define ULTRA_TASK_PRIO      		12
 //#define MOVE_SPEED_TASK_PRIO 		4
 //#define ENVIRON_TASK_PRIO				8
@@ -48,7 +48,7 @@ APP_TASK_EXT TaskHandle_t LED_Task_Handler;
 
 
 /**********************************设置任务堆栈大小*********************************/
-#define START_STK_SIZE 		   		128  
+#define START_STK_SIZE 		   		64  
 #define PMU_STK_SIZE 		     		128 
 #define ERR_STK_SIZE 		     		128 
 #define POWEROFF_STK_SIZE    		128  
