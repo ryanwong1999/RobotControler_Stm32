@@ -107,6 +107,8 @@ void NVIC_Configuration(void)
 /************************************************/
 void System_Board_Init(void)
 {
+	taskENTER_CRITICAL();           		//进入临界区
+	SystemInit();		        						//配置系统时钟为72M
 	delay_init(168);  									//时钟初始化
 	LED_GPIO_Cfg_Init();								//LED初始化
 	BEEP_GPIO_Cfg_Init();								//蜂鸣器初始化
@@ -119,6 +121,7 @@ void System_Board_Init(void)
 	LimitSwitch_Gpio_Cfg_Init();				//限位开关初始化
 	ADC_Cfg_Init();    									//ADC初始化
 	AT24CXX_Init();											//AT24C02初始化
+	NVIC_Configuration();  							//中断优先级配置
 	
 	//定时器初始化
 	TIMx_Cfg_Init(RCC_APB2Periph_TIM1, TIM1, 10, 168);   	//1ms timer
@@ -139,6 +142,7 @@ void System_Board_Init(void)
 	//my_mem_init(SRAMEX);								//初始化外部内存池
 	my_mem_init(SRAMCCM);								//初始化CCM内存池 
 
+	taskEXIT_CRITICAL();            //退出临界区	 
 	printf("Bsp init OK!\r\n");
 }
 

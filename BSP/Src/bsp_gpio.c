@@ -16,9 +16,9 @@ void LED_GPIO_Cfg_Init(void)
 
 	/*选择要控制的GPIO引脚*/															   
 	GPIO_InitStructure.GPIO_Pin 		= LED_GREEN_PIN;
-	GPIO_InitStructure.GPIO_Mode 		= GPIO_Mode_OUT;		/* 设置引脚模式为输出模式       */
-	GPIO_InitStructure.GPIO_OType 	= GPIO_OType_PP;		/* 设置引脚的输出类型为推挽输出 */
-	GPIO_InitStructure.GPIO_PuPd 		= GPIO_PuPd_UP;			/* 设置引脚为上拉模式          */
+	GPIO_InitStructure.GPIO_Mode 		= GPIO_Mode_OUT;		/*设置引脚模式为输出模式       */
+	GPIO_InitStructure.GPIO_OType 	= GPIO_OType_PP;		/*设置引脚的输出类型为推挽输出 */
+	GPIO_InitStructure.GPIO_PuPd 		= GPIO_PuPd_UP;			/*设置引脚为上拉模式          */
 	GPIO_InitStructure.GPIO_Speed 	= GPIO_Speed_2MHz;	/*设置引脚速率为2MHz */  
 	GPIO_Init(LEDG_PORT, &GPIO_InitStructure);					/*调用库函数，使用上面配置的GPIO_InitStructure初始化GPIO*/
 
@@ -26,18 +26,18 @@ void LED_GPIO_Cfg_Init(void)
 
 	/*选择要控制的GPIO引脚*/															   
 	GPIO_InitStructure.GPIO_Pin 		= LED_RED_PIN;
-	GPIO_InitStructure.GPIO_Mode 		= GPIO_Mode_OUT;		/* 设置引脚模式为输出模式       */
-	GPIO_InitStructure.GPIO_OType 	= GPIO_OType_PP;		/* 设置引脚的输出类型为推挽输出 */
-	GPIO_InitStructure.GPIO_PuPd 		= GPIO_PuPd_UP;			/* 设置引脚为上拉模式          */
+	GPIO_InitStructure.GPIO_Mode 		= GPIO_Mode_OUT;		/*设置引脚模式为输出模式       */
+	GPIO_InitStructure.GPIO_OType 	= GPIO_OType_PP;		/*设置引脚的输出类型为推挽输出 */
+	GPIO_InitStructure.GPIO_PuPd 		= GPIO_PuPd_UP;			/*设置引脚为上拉模式          */
 	GPIO_InitStructure.GPIO_Speed 	= GPIO_Speed_2MHz;	/*设置引脚速率为2MHz */  
 	GPIO_Init(LEDR_PORT, &GPIO_InitStructure);					/*调用库函数，使用上面配置的GPIO_InitStructure初始化GPIO*/
 
 	RCC_AHB1PeriphClockCmd (LED_TEST_PORT_CLK , ENABLE); 	
 
 	GPIO_InitStructure.GPIO_Pin 		= LED_TEST_PIN;
-	GPIO_InitStructure.GPIO_Mode 		= GPIO_Mode_OUT;		/* 设置引脚模式为输出模式       */
-	GPIO_InitStructure.GPIO_OType 	= GPIO_OType_PP;		/* 设置引脚的输出类型为推挽输出 */
-	GPIO_InitStructure.GPIO_PuPd 		= GPIO_PuPd_UP;			/* 设置引脚为上拉模式          */
+	GPIO_InitStructure.GPIO_Mode 		= GPIO_Mode_OUT;		/*设置引脚模式为输出模式       */
+	GPIO_InitStructure.GPIO_OType 	= GPIO_OType_PP;		/*设置引脚的输出类型为推挽输出 */
+	GPIO_InitStructure.GPIO_PuPd 		= GPIO_PuPd_UP;			/*设置引脚为上拉模式          */
 	GPIO_InitStructure.GPIO_Speed 	= GPIO_Speed_2MHz;	/*设置引脚速率为2MHz */  
 	GPIO_Init(LED_TEST_PORT, &GPIO_InitStructure);			/*调用库函数，使用上面配置的GPIO_InitStructure初始化GPIO*/
      
@@ -62,9 +62,9 @@ void Lamp_GPIO_Cfg_Init(void)
 
 	/*选择要控制的GPIO引脚*/															   
 	GPIO_InitStructure.GPIO_Pin 		= LAMP_RED_PIN | LAMP_GREEN_PIN | LAMP_YELLOW_PIN | LAMP_BEEP_PIN;
-	GPIO_InitStructure.GPIO_Mode 		= GPIO_Mode_OUT;		/* 设置引脚模式为输出模式       */
-	GPIO_InitStructure.GPIO_OType 	= GPIO_OType_PP;		/* 设置引脚的输出类型为推挽输出 */
-	GPIO_InitStructure.GPIO_PuPd 		= GPIO_PuPd_UP;			/* 设置引脚为上拉模式          */
+	GPIO_InitStructure.GPIO_Mode 		= GPIO_Mode_OUT;		/*设置引脚模式为输出模式       */
+	GPIO_InitStructure.GPIO_OType 	= GPIO_OType_PP;		/*设置引脚的输出类型为推挽输出 */
+	GPIO_InitStructure.GPIO_PuPd 		= GPIO_PuPd_UP;			/*设置引脚为上拉模式          */
 	GPIO_InitStructure.GPIO_Speed 	= GPIO_Speed_2MHz;	/*设置引脚速率为2MHz */  
 	GPIO_Init(LAMP_PORT, &GPIO_InitStructure);					/*调用库函数，使用上面配置的GPIO_InitStructure初始化GPIO*/
 
@@ -91,9 +91,9 @@ void BEEP_GPIO_Cfg_Init(void)
   RCC_AHB1PeriphClockCmd(BEEP_PORT_CLK, ENABLE); 
 
   GPIO_InitStructure.GPIO_Pin 		=	BEEP_PIN;
-  GPIO_InitStructure.GPIO_Mode 		= GPIO_Mode_OUT;		// 输出
-	GPIO_InitStructure.GPIO_OType 	= GPIO_OType_PP;		// 推挽输出
-	GPIO_InitStructure.GPIO_PuPd 		= GPIO_PuPd_NOPULL;	// 不上拉 ,也不下拉
+  GPIO_InitStructure.GPIO_Mode 		= GPIO_Mode_OUT;		//输出
+	GPIO_InitStructure.GPIO_OType 	= GPIO_OType_PP;		//推挽输出
+	GPIO_InitStructure.GPIO_PuPd 		= GPIO_PuPd_NOPULL;	//不上拉 ,也不下拉
   GPIO_InitStructure.GPIO_Speed 	= GPIO_Speed_100MHz;	 
   GPIO_Init(BEEP_PORT, &GPIO_InitStructure);	
 	

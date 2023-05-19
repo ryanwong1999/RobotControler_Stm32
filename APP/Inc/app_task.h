@@ -24,7 +24,7 @@ APP_TASK_EXT TaskHandle_t Ultra_Task_Handler;
 APP_TASK_EXT TaskHandle_t Send_Mdrv_Task_Handler;
 APP_TASK_EXT TaskHandle_t Mdrv_Task_Handler;
 APP_TASK_EXT TaskHandle_t LiftMoto_Task_Handler;
-APP_TASK_EXT TaskHandle_t Led_Task_Handler;
+APP_TASK_EXT TaskHandle_t LED_Task_Handler;
 
 
 /**********************************设置任务优先级***********************************/
@@ -83,23 +83,24 @@ APP_TASK_EXT StackType_t LIFTMOTO_TASK_STK[LIFTMOTO_STK_SIZE];
 APP_TASK_EXT StackType_t LED_TASK_STK[LED_STK_SIZE];
 //APP_TASK_EXT StackType_t ULTRA_TASK_STK[ULTRA_STK_SIZE];
 
+
 /***********************************任务函数声明*************************************/
-void Start_Task(void *p_arg);	
-void Err_Handle_Task(void *p_arg);    //异常任务处理函数
-void Poweroff_Task(void *p_arg);    	//关机任务处理函数
-void Pmu_Task(void *p_arg);     			//电源管理函数
-void Chg_Task(void *p_arg);    				//充电任务处理函数
-void AutoCharge_Task(void *p_arg);    //自动充电处理
-void Cammand_Task(void *p_arg);    		//命令处理函数
-void Test_Task(void *p_arg);					//测试任务
-void Head_Ctrl_Task(void *p_arg);     //手动头部控制
-void LiftMoto_Task(void *p_arg);			//升降处理
-void Send_Mdrv_Task(void *p_arg);			//发送伺服驱动器命令
-void Mdrv_Task(void *p_arg);					//伺服驱动器处理
-void LED_Task(void *p_arg);     			//led测试函数
-//void Ultrasonic_Task(void *p_arg);    //超声处理
-//void Move_Speed_task(void *p_arg);   	//速度处理
-//void Environ_task(void *p_arg);				//环境处理
-//void Environ_Query_task(void *p_arg);	//环境数据请求
+void Start_Task(void *pvParameters);	
+void Err_Handle_Task(void *pvParameters);		//异常任务处理函数
+void Poweroff_Task(void *pvParameters);    	//关机任务处理函数
+void Pmu_Task(void *pvParameters);     			//电源管理函数
+void Chg_Task(void *pvParameters);    			//充电任务处理函数
+void AutoCharge_Task(void *pvParameters);   //自动充电处理
+void Cammand_Task(void *pvParameters);    	//命令处理函数
+void Test_Task(void *pvParameters);					//测试任务
+void Head_Ctrl_Task(void *pvParameters);    //手动头部控制
+void LiftMoto_Task(void *pvParameters);			//升降处理
+void Send_Mdrv_Task(void *pvParameters);		//发送伺服驱动器命令
+void Mdrv_Task(void *pvParameters);					//伺服驱动器处理
+void LED_Task(void *pvParameters);     			//led测试函数
+//void Ultrasonic_Task(void *pvParameters);			//超声处理
+//void Move_Speed_task(void *pvParameters);			//速度处理
+//void Environ_task(void *pvParameters);				//环境处理
+//void Environ_Query_task(void *pvParameters);	//环境数据请求
 
 #endif

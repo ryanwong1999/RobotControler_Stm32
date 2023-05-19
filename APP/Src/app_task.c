@@ -3,14 +3,14 @@
 
 void Start_Task(void *pvParameters)
 {
-	taskENTER_CRITICAL();           //进入临界区
+	taskENTER_CRITICAL();           												//进入临界区
 	
-	xTaskCreate((TaskFunction_t )Pmu_Task,            //任务函数
-							(const char*    )"Pmu_Task",          //任务名称
-							(uint16_t       )PMU_STK_SIZE,        //任务堆栈大小
-							(void*          )NULL,                //传递给任务函数的参数
-							(UBaseType_t    )PMU_TASK_PRIO,       //任务优先级
-							(TaskHandle_t*  )&Pmu_Task_Handler);	//任务句柄  
+	xTaskCreate((TaskFunction_t )Pmu_Task,            			//任务函数
+							(const char*    )"Pmu_Task",          			//任务名称
+							(uint16_t       )PMU_STK_SIZE,        			//任务堆栈大小
+							(void*          )NULL,                			//传递给任务函数的参数
+							(UBaseType_t    )PMU_TASK_PRIO,       			//任务优先级
+							(TaskHandle_t*  )&Pmu_Task_Handler);				//任务句柄  
 
 	xTaskCreate((TaskFunction_t )Cammand_Task,            	//任务函数
 							(const char*    )"Cammand_Task",          	//任务名称
@@ -87,11 +87,12 @@ void Start_Task(void *pvParameters)
 							(uint16_t       )LED_STK_SIZE,        			//任务堆栈大小
 							(void*          )NULL,                			//传递给任务函数的参数
 							(UBaseType_t    )LED_TASK_PRIO,       			//任务优先级
-							(TaskHandle_t*  )&Led_Task_Handler);				//任务句柄
+							(TaskHandle_t*  )&LED_Task_Handler);				//任务句柄
 							
-	vTaskDelete(Start_Task_Handler);	//删除开始任务
-	taskEXIT_CRITICAL();            	//退出临界区
+	vTaskDelete(Start_Task_Handler);												//删除开始任务
+	taskEXIT_CRITICAL();            												//退出临界区
 }
+
 
 /************************************************/
 //函数功能：异常任务处理任务
@@ -99,9 +100,14 @@ void Start_Task(void *pvParameters)
 //返回值：
 //备注：
 /************************************************/
-void Err_Handle_Task(void *p_arg)
+void Err_Handle_Task(void *pvParameters)
 {
-
+	while(1)
+	{
+		IWDG_Feed();//喂狗
+		
+		delay_ms(100);
+	}
 }
 
 
@@ -111,9 +117,12 @@ void Err_Handle_Task(void *p_arg)
 //返回值：
 //备注：
 /************************************************/
-void Poweroff_Task(void *p_arg)
+void Poweroff_Task(void *pvParameters)
 {
-
+	while(1)
+	{
+		delay_ms(200);
+	}
 }
 
 
@@ -123,9 +132,12 @@ void Poweroff_Task(void *p_arg)
 //返回值：
 //备注：
 /************************************************/
-void Pmu_Task(void *p_arg)
+void Pmu_Task(void *pvParameters)
 {
-
+	while(1)
+	{
+		delay_ms(1000);
+	}
 }
 
 
@@ -135,9 +147,12 @@ void Pmu_Task(void *p_arg)
 //返回值：
 //备注：
 /************************************************/
-void Chg_Task(void *p_arg)
+void Chg_Task(void *pvParameters)
 {
-
+	while(1)
+	{
+		delay_ms(200);
+	}
 }
 
 
@@ -147,9 +162,12 @@ void Chg_Task(void *p_arg)
 //返回值：
 //备注：
 /************************************************/
-void AutoCharge_Task(void *p_arg)
+void AutoCharge_Task(void *pvParameters)
 {
-	
+	while(1)
+	{
+		delay_ms(100);
+	}
 }
 
 
@@ -159,9 +177,12 @@ void AutoCharge_Task(void *p_arg)
 //返回值：
 //备注：
 /************************************************/
-void Cammand_Task(void *p_arg)
+void Cammand_Task(void *pvParameters)
 {
-
+	while(1)
+	{
+		delay_ms(3);
+	}
 }
 
 
@@ -171,9 +192,12 @@ void Cammand_Task(void *p_arg)
 //返回值：
 //备注：
 /************************************************/
-void Test_Task(void *p_arg)
+void Test_Task(void *pvParameters)
 {
-
+	while(1)
+	{
+		delay_ms(100);
+	}
 }
 
 
@@ -183,9 +207,12 @@ void Test_Task(void *p_arg)
 //返回值：
 //备注：
 /************************************************/
-void Head_Ctrl_Task(void *p_arg)
+void Head_Ctrl_Task(void *pvParameters)
 {
-
+	while(1)
+	{
+		delay_ms(20);
+	}
 }
 
 
@@ -195,9 +222,12 @@ void Head_Ctrl_Task(void *p_arg)
 //返回值：
 //备注：
 /************************************************/
-void LiftMoto_Task(void *p_arg)
+void LiftMoto_Task(void *pvParameters)
 {
-
+	while(1)
+	{
+		delay_ms(10);
+	}
 }
 
 
@@ -207,9 +237,12 @@ void LiftMoto_Task(void *p_arg)
 //返回值：
 //备注：
 /************************************************/
-void Send_Mdrv_Task(void *p_arg)
+void Send_Mdrv_Task(void *pvParameters)
 {
-
+	while(1)
+	{
+		delay_ms(25);
+	}
 }
 
 
@@ -219,9 +252,12 @@ void Send_Mdrv_Task(void *p_arg)
 //返回值：
 //备注：
 /************************************************/
-void Mdrv_Task(void *p_arg)
+void Mdrv_Task(void *pvParameters)
 {
-	
+	while(1)
+	{
+		delay_ms(5);
+	}
 }
 
 
@@ -231,8 +267,13 @@ void Mdrv_Task(void *p_arg)
 //返回值：
 //备注：
 /************************************************/
-void LED_Task(void *p_arg)
+void LED_Task(void *pvParameters)
 {
-
+	while(1)
+	{
+		LED_TEST_TOGGLE;
+		
+		delay_ms(500);
+	}
 }
 
