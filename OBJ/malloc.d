@@ -2,7 +2,7 @@
 ..\obj\malloc.o: ..\SYSTEM\malloc\malloc.h
 ..\obj\malloc.o: ..\USER\stm32f4xx.h
 ..\obj\malloc.o: ..\CORE\core_cm4.h
-..\obj\malloc.o: C:\AAAAAAAAPP\Keil5\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\malloc.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 ..\obj\malloc.o: ..\CORE\core_cmInstr.h
 ..\obj\malloc.o: ..\CORE\core_cmFunc.h
 ..\obj\malloc.o: ..\CORE\core_cm4_simd.h
