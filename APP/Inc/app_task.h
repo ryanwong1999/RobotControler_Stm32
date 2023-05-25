@@ -9,6 +9,9 @@
 #define  APP_TASK_EXT  extern
 #endif
 
+#define CHG_TASK    1
+#define AGV_TASK    2
+#define REMOTE_TASK 3
 
 /**************************************ÈÎÎñ¾ä±ú*************************************/
 APP_TASK_EXT TaskHandle_t Start_Task_Handler;

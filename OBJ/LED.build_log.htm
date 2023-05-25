@@ -27,6 +27,50 @@ Project File Date:  05/22/2023
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 7 (build 960)', folder: 'D:\Keil_v5\ARM\ARMCC\Bin'
 Build target 'FreeRTOS'
+compiling bsp_cap.c...
+..\BSP\Inc\bsp_adc.h(38): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\BSP\Inc\bsp_cap.h(28): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\BSP\Inc\bsp_gpio.h(319): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\BSP\Inc\bsp_iic.h(24): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\BSP\Inc\bsp_pwm.h(38): warning:  #1-D: last line of file ends without a newline
+  #endif 
+..\BSP\Inc\bsp_rs485.h(19): warning:  #1-D: last line of file ends without a newline
+  #endif 
+..\BSP\Inc\bsp_usart.h(10): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\APP\Inc\app_task.h(109): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\APP\Inc\app_24cxx.h(30): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\APP\Inc\app_usart.h(28): warning:  #1-D: last line of file ends without a newline
+  #endif 
+..\APP\Inc\app_analysisCMD.h(60): error:  #20: identifier "MAX_TX_LEN" is undefined
+  	uint8_t Send_BUF[MAX_TX_LEN];
+..\APP\Inc\app_analysisCMD.h(61): error:  #20: identifier "MAX_RX_LEN" is undefined
+  	uint8_t Recv_BUF[MAX_RX_LEN];
+..\APP\Inc\app_analysisCMD.h(97): warning:  #1-D: last line of file ends without a newline
+  #endif 
+..\APP\Inc\app_autoCharge.h(73): warning:  #1-D: last line of file ends without a newline
+  #endif 
+..\APP\Inc\app_cap.h(6): warning:  #1-D: last line of file ends without a newline
+  #endif 
+..\APP\Inc\app_exit.h(6): warning:  #1-D: last line of file ends without a newline
+  #endif 
+..\APP\Inc\app_headDone.h(6): warning:  #1-D: last line of file ends without a newline
+  #endif 
+..\APP\Inc\app_liftMoto.h(6): warning:  #1-D: last line of file ends without a newline
+  #endif 
+..\APP\Inc\app_pms.h(6): warning:  #1-D: last line of file ends without a newline
+  #endif 
+..\APP\Inc\app_system.h(75): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\APP\Inc\app_tim.h(6): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\BSP\Src\bsp_cap.c: 19 warnings, 2 errors
 compiling app_analysisCMD.c...
 ..\BSP\Inc\bsp_adc.h(38): warning:  #1-D: last line of file ends without a newline
   #endif
@@ -42,15 +86,19 @@ compiling app_analysisCMD.c...
   #endif 
 ..\BSP\Inc\bsp_usart.h(10): warning:  #1-D: last line of file ends without a newline
   #endif
-..\APP\Inc\app_task.h(106): warning:  #1-D: last line of file ends without a newline
+..\APP\Inc\app_task.h(109): warning:  #1-D: last line of file ends without a newline
   #endif
 ..\APP\Inc\app_24cxx.h(30): warning:  #1-D: last line of file ends without a newline
   #endif
 ..\APP\Inc\app_usart.h(28): warning:  #1-D: last line of file ends without a newline
   #endif 
-..\APP\Inc\app_analysisCMD.h(12): warning:  #1-D: last line of file ends without a newline
+..\APP\Inc\app_analysisCMD.h(60): error:  #20: identifier "MAX_TX_LEN" is undefined
+  	uint8_t Send_BUF[MAX_TX_LEN];
+..\APP\Inc\app_analysisCMD.h(61): error:  #20: identifier "MAX_RX_LEN" is undefined
+  	uint8_t Recv_BUF[MAX_RX_LEN];
+..\APP\Inc\app_analysisCMD.h(97): warning:  #1-D: last line of file ends without a newline
   #endif 
-..\APP\Inc\app_autoCharge.h(6): warning:  #1-D: last line of file ends without a newline
+..\APP\Inc\app_autoCharge.h(73): warning:  #1-D: last line of file ends without a newline
   #endif 
 ..\APP\Inc\app_cap.h(6): warning:  #1-D: last line of file ends without a newline
   #endif 
@@ -66,127 +114,93 @@ compiling app_analysisCMD.c...
   #endif
 ..\APP\Inc\app_tim.h(6): warning:  #1-D: last line of file ends without a newline
   #endif
-..\APP\Src\app_analysisCMD.c: 19 warnings, 0 errors
-compiling bsp_tim.c...
-..\BSP\Inc\bsp_adc.h(38): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\BSP\Inc\bsp_cap.h(28): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\BSP\Inc\bsp_gpio.h(319): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\BSP\Inc\bsp_iic.h(24): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\BSP\Inc\bsp_pwm.h(38): warning:  #1-D: last line of file ends without a newline
-  #endif 
-..\BSP\Inc\bsp_rs485.h(19): warning:  #1-D: last line of file ends without a newline
-  #endif 
-..\BSP\Inc\bsp_usart.h(10): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\APP\Inc\app_task.h(106): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\APP\Inc\app_24cxx.h(30): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\APP\Inc\app_usart.h(28): warning:  #1-D: last line of file ends without a newline
-  #endif 
-..\APP\Inc\app_analysisCMD.h(12): warning:  #1-D: last line of file ends without a newline
-  #endif 
-..\APP\Inc\app_autoCharge.h(6): warning:  #1-D: last line of file ends without a newline
-  #endif 
-..\APP\Inc\app_cap.h(6): warning:  #1-D: last line of file ends without a newline
-  #endif 
-..\APP\Inc\app_exit.h(6): warning:  #1-D: last line of file ends without a newline
-  #endif 
-..\APP\Inc\app_headDone.h(6): warning:  #1-D: last line of file ends without a newline
-  #endif 
-..\APP\Inc\app_liftMoto.h(6): warning:  #1-D: last line of file ends without a newline
-  #endif 
-..\APP\Inc\app_pms.h(6): warning:  #1-D: last line of file ends without a newline
-  #endif 
-..\APP\Inc\app_system.h(75): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\APP\Inc\app_tim.h(6): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\BSP\Src\bsp_tim.c: 19 warnings, 0 errors
-compiling bsp_rs485.c...
-..\BSP\Inc\bsp_adc.h(38): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\BSP\Inc\bsp_cap.h(28): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\BSP\Inc\bsp_gpio.h(319): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\BSP\Inc\bsp_iic.h(24): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\BSP\Inc\bsp_pwm.h(38): warning:  #1-D: last line of file ends without a newline
-  #endif 
-..\BSP\Inc\bsp_rs485.h(19): warning:  #1-D: last line of file ends without a newline
-  #endif 
-..\BSP\Inc\bsp_usart.h(10): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\APP\Inc\app_task.h(106): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\APP\Inc\app_24cxx.h(30): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\APP\Inc\app_usart.h(28): warning:  #1-D: last line of file ends without a newline
-  #endif 
-..\APP\Inc\app_analysisCMD.h(12): warning:  #1-D: last line of file ends without a newline
-  #endif 
-..\APP\Inc\app_autoCharge.h(6): warning:  #1-D: last line of file ends without a newline
-  #endif 
-..\APP\Inc\app_cap.h(6): warning:  #1-D: last line of file ends without a newline
-  #endif 
-..\APP\Inc\app_exit.h(6): warning:  #1-D: last line of file ends without a newline
-  #endif 
-..\APP\Inc\app_headDone.h(6): warning:  #1-D: last line of file ends without a newline
-  #endif 
-..\APP\Inc\app_liftMoto.h(6): warning:  #1-D: last line of file ends without a newline
-  #endif 
-..\APP\Inc\app_pms.h(6): warning:  #1-D: last line of file ends without a newline
-  #endif 
-..\APP\Inc\app_system.h(75): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\APP\Inc\app_tim.h(6): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\BSP\Src\bsp_rs485.c: 19 warnings, 0 errors
-compiling app_task.c...
-..\BSP\Inc\bsp_adc.h(38): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\BSP\Inc\bsp_cap.h(28): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\BSP\Inc\bsp_gpio.h(319): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\BSP\Inc\bsp_iic.h(24): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\BSP\Inc\bsp_pwm.h(38): warning:  #1-D: last line of file ends without a newline
-  #endif 
-..\BSP\Inc\bsp_rs485.h(19): warning:  #1-D: last line of file ends without a newline
-  #endif 
-..\BSP\Inc\bsp_usart.h(10): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\APP\Inc\app_task.h(106): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\APP\Inc\app_24cxx.h(30): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\APP\Inc\app_usart.h(28): warning:  #1-D: last line of file ends without a newline
-  #endif 
-..\APP\Inc\app_analysisCMD.h(12): warning:  #1-D: last line of file ends without a newline
-  #endif 
-..\APP\Inc\app_autoCharge.h(6): warning:  #1-D: last line of file ends without a newline
-  #endif 
-..\APP\Inc\app_cap.h(6): warning:  #1-D: last line of file ends without a newline
-  #endif 
-..\APP\Inc\app_exit.h(6): warning:  #1-D: last line of file ends without a newline
-  #endif 
-..\APP\Inc\app_headDone.h(6): warning:  #1-D: last line of file ends without a newline
-  #endif 
-..\APP\Inc\app_liftMoto.h(6): warning:  #1-D: last line of file ends without a newline
-  #endif 
-..\APP\Inc\app_pms.h(6): warning:  #1-D: last line of file ends without a newline
-  #endif 
-..\APP\Inc\app_system.h(75): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\APP\Inc\app_tim.h(6): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\APP\Src\app_task.c: 19 warnings, 0 errors
+..\APP\Src\app_analysisCMD.c(8): error:  #20: identifier "LiftMoto_Type" is undefined
+  void Send_LiftMoto_Mess(uint8_t index, uint8_t addr, LiftMoto_Type *_liftmoto);
+..\APP\Src\app_analysisCMD.c(72): warning:  #223-D: function "Send_code_disk_query" declared implicitly
+  					else Send_code_disk_query();
+..\APP\Src\app_analysisCMD.c(79): warning:  #223-D: function "t_ntohs" declared implicitly
+  					rx_lear = (short int)t_ntohs(lear_tmp);
+..\APP\Src\app_analysisCMD.c(96): error:  #20: identifier "Moto" is undefined
+  					if(Robot_Sys.Mergency_Stop_flag == true || Moto.over_cur_flag == true)
+..\APP\Src\app_analysisCMD.c(102): warning:  #223-D: function "Send_speed_set" declared implicitly
+  							Send_speed_set(Moto.set_lear, Moto.set_angle);
+..\APP\Src\app_analysisCMD.c(104): warning:  #223-D: function "Send_mdrv_en_set" declared implicitly
+  						else Send_mdrv_en_set(1, 1);
+..\APP\Src\app_analysisCMD.c(138): error:  #20: identifier "Pms" is undefined
+  						if(Moto.set_lear == 0 && Moto.set_angle == 0 && (Pms.Bat_Sta & 0x01) == 0)
+..\APP\Src\app_analysisCMD.c(141): warning:  #223-D: function "Send_mdrv_en_set" declared implicitly
+  								Send_mdrv_en_set(0, 0);
+..\APP\Src\app_analysisCMD.c(143): warning:  #223-D: function "Send_speed_set" declared implicitly
+  								Send_speed_set(Moto.set_lear, Moto.set_angle);
+..\APP\Src\app_analysisCMD.c(145): warning:  #223-D: function "Send_mdrv_en_set" declared implicitly
+  							if(Moto.en_sta == 0) Send_mdrv_en_set(1, 1);
+..\APP\Src\app_analysisCMD.c(146): warning:  #223-D: function "Send_speed_set" declared implicitly
+  							else Send_speed_set(Moto.set_lear, Moto.set_angle);
+..\APP\Src\app_analysisCMD.c(153): error:  #20: identifier "Pms" is undefined
+  					Robot_Sys.mSysPower.charger = Pms.Bat_Sta | AutoCharge.chg_fail ;
+..\APP\Src\app_analysisCMD.c(182): error:  #20: identifier "Head_Status" is undefined
+  					Robot_Sys.mHeadPose.Level = Head_Status.PSC_Level_Pos * 10;
+..\APP\Src\app_analysisCMD.c(190): warning:  #223-D: function "Head_Angle_Control" declared implicitly
+  				  Head_Angle_Control(level, pitch);
+..\APP\Src\app_analysisCMD.c(222): warning:  #223-D: function "Head_Back" declared implicitly
+  							Head_Back();
+..\APP\Src\app_analysisCMD.c(236): error:  #20: identifier "Lift_Moto" is undefined
+  					Send_LiftMoto_Mess(gUpdateCnt++, Sdev_tmp, &Lift_Moto);
+..\APP\Src\app_analysisCMD.c(240): warning:  #223-D: function "Send_TempHumMess" declared implicitly
+  					Send_TempHumMess(gUpdateCnt++, Sdev_tmp, &Environ);
+..\APP\Src\app_analysisCMD.c(240): error:  #20: identifier "Environ" is undefined
+  					Send_TempHumMess(gUpdateCnt++, Sdev_tmp, &Environ);
+..\APP\Src\app_analysisCMD.c(244): warning:  #223-D: function "Send_EnvironMess" declared implicitly
+  					Send_EnvironMess(gUpdateCnt++, Sdev_tmp, &Environ);
+..\APP\Src\app_analysisCMD.c(262): error:  #20: identifier "PSC_UD_DEFAULT" is undefined
+  				  Head_Status.PSC_UD_Pos = PSC_UD_DEFAULT;
+..\APP\Src\app_analysisCMD.c(263): error:  #20: identifier "PSC_LEVEL_DEFAULT" is undefined
+  				  Head_Status.PSC_Level_Pos = PSC_LEVEL_DEFAULT;
+..\APP\Src\app_analysisCMD.c(279): error:  #20: identifier "Robot_Moto" is undefined
+  					Robot_Moto.Robot_Dir = UsartToPC.Rx_Buf[9];
+..\APP\Src\app_analysisCMD.c(282): error:  #20: identifier "MOVE_STOP" is undefined
+  					if(Robot_Moto.Robot_Dir != MOVE_STOP)
+..\APP\Src\app_analysisCMD.c(299): warning:  #1-D: last line of file ends without a newline
+  }
+..\APP\Src\app_analysisCMD.c(23): warning:  #177-D: variable "i"  was declared but never referenced
+  	uint8_t i=0;
+..\APP\Src\app_analysisCMD.c(26): warning:  #177-D: variable "real_lear"  was declared but never referenced
+  	int16_t real_lear;
+..\APP\Src\app_analysisCMD.c(27): warning:  #177-D: variable "real_angle"  was declared but never referenced
+  	int16_t real_angle;
+..\APP\Src\app_analysisCMD.c(28): warning:  #177-D: variable "pulse_width_r"  was declared but never referenced
+  	float pulse_width_r;
+..\APP\Src\app_analysisCMD.c(29): warning:  #177-D: variable "pulse_width_l"  was declared but never referenced
+  	float pulse_width_l;
+..\APP\Src\app_analysisCMD.c(30): warning:  #177-D: variable "left_speed_tmp"  was declared but never referenced
+  	static float left_speed_tmp = 0;
+..\APP\Src\app_analysisCMD.c(31): warning:  #177-D: variable "right_speed_tmp"  was declared but never referenced
+  	static float right_speed_tmp = 0;
+..\APP\Src\app_analysisCMD.c(32): warning:  #177-D: variable "left_inc_pwm"  was declared but never referenced
+  	static uint16_t left_inc_pwm = 0;
+..\APP\Src\app_analysisCMD.c(33): warning:  #177-D: variable "right_inc_pwm"  was declared but never referenced
+  	static uint16_t right_inc_pwm = 0;
+..\APP\Src\app_analysisCMD.c(34): warning:  #177-D: variable "peroid_tmp"  was declared but never referenced
+  	static uint16_t peroid_tmp = 0;
+..\APP\Src\app_analysisCMD.c(35): warning:  #177-D: variable "period_set_sta"  was declared but never referenced
+  	static uint8_t period_set_sta = 0;
+..\APP\Src\app_analysisCMD.c(36): warning:  #177-D: variable "period_inc_tmp"  was declared but never referenced
+  	float period_inc_tmp;
+..\APP\Src\app_analysisCMD.c(37): warning:  #177-D: variable "addr1"  was declared but never referenced
+  	uint16_t addr1;
+..\APP\Src\app_analysisCMD.c(38): warning:  #177-D: variable "addr2"  was declared but never referenced
+  	uint16_t addr2;
+..\APP\Src\app_analysisCMD.c(43): warning:  #177-D: variable "l_speed"  was declared but never referenced
+  	float l_speed;
+..\APP\Src\app_analysisCMD.c(44): warning:  #177-D: variable "r_speed"  was declared but never referenced
+  	float r_speed;
+..\APP\Src\app_analysisCMD.c(45): warning:  #177-D: variable "angle_div"  was declared but never referenced
+  	float angle_div;
+..\APP\Src\app_analysisCMD.c(48): warning:  #177-D: variable "chg_dis"  was declared but never referenced
+  	int16_t chg_dis;
+..\APP\Src\app_analysisCMD.c(49): warning:  #177-D: variable "chg_angle"  was declared but never referenced
+    int16_t chg_angle;
+..\APP\Src\app_analysisCMD.c: 51 warnings, 13 errors
 compiling app_24cxx.c...
 ..\BSP\Inc\bsp_adc.h(38): warning:  #1-D: last line of file ends without a newline
   #endif
@@ -202,15 +216,19 @@ compiling app_24cxx.c...
   #endif 
 ..\BSP\Inc\bsp_usart.h(10): warning:  #1-D: last line of file ends without a newline
   #endif
-..\APP\Inc\app_task.h(106): warning:  #1-D: last line of file ends without a newline
+..\APP\Inc\app_task.h(109): warning:  #1-D: last line of file ends without a newline
   #endif
 ..\APP\Inc\app_24cxx.h(30): warning:  #1-D: last line of file ends without a newline
   #endif
 ..\APP\Inc\app_usart.h(28): warning:  #1-D: last line of file ends without a newline
   #endif 
-..\APP\Inc\app_analysisCMD.h(12): warning:  #1-D: last line of file ends without a newline
+..\APP\Inc\app_analysisCMD.h(60): error:  #20: identifier "MAX_TX_LEN" is undefined
+  	uint8_t Send_BUF[MAX_TX_LEN];
+..\APP\Inc\app_analysisCMD.h(61): error:  #20: identifier "MAX_RX_LEN" is undefined
+  	uint8_t Recv_BUF[MAX_RX_LEN];
+..\APP\Inc\app_analysisCMD.h(97): warning:  #1-D: last line of file ends without a newline
   #endif 
-..\APP\Inc\app_autoCharge.h(6): warning:  #1-D: last line of file ends without a newline
+..\APP\Inc\app_autoCharge.h(73): warning:  #1-D: last line of file ends without a newline
   #endif 
 ..\APP\Inc\app_cap.h(6): warning:  #1-D: last line of file ends without a newline
   #endif 
@@ -228,139 +246,7 @@ compiling app_24cxx.c...
   #endif
 ..\APP\Src\app_24cxx.c(115): warning:  #1-D: last line of file ends without a newline
   }
-..\APP\Src\app_24cxx.c: 20 warnings, 0 errors
-compiling app_autoCharge.c...
-..\BSP\Inc\bsp_adc.h(38): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\BSP\Inc\bsp_cap.h(28): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\BSP\Inc\bsp_gpio.h(319): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\BSP\Inc\bsp_iic.h(24): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\BSP\Inc\bsp_pwm.h(38): warning:  #1-D: last line of file ends without a newline
-  #endif 
-..\BSP\Inc\bsp_rs485.h(19): warning:  #1-D: last line of file ends without a newline
-  #endif 
-..\BSP\Inc\bsp_usart.h(10): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\APP\Inc\app_task.h(106): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\APP\Inc\app_24cxx.h(30): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\APP\Inc\app_usart.h(28): warning:  #1-D: last line of file ends without a newline
-  #endif 
-..\APP\Inc\app_analysisCMD.h(12): warning:  #1-D: last line of file ends without a newline
-  #endif 
-..\APP\Inc\app_autoCharge.h(6): warning:  #1-D: last line of file ends without a newline
-  #endif 
-..\APP\Inc\app_cap.h(6): warning:  #1-D: last line of file ends without a newline
-  #endif 
-..\APP\Inc\app_exit.h(6): warning:  #1-D: last line of file ends without a newline
-  #endif 
-..\APP\Inc\app_headDone.h(6): warning:  #1-D: last line of file ends without a newline
-  #endif 
-..\APP\Inc\app_liftMoto.h(6): warning:  #1-D: last line of file ends without a newline
-  #endif 
-..\APP\Inc\app_pms.h(6): warning:  #1-D: last line of file ends without a newline
-  #endif 
-..\APP\Inc\app_system.h(75): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\APP\Inc\app_tim.h(6): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\APP\Src\app_autoCharge.c: 19 warnings, 0 errors
-compiling app_usart.c...
-..\BSP\Inc\bsp_adc.h(38): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\BSP\Inc\bsp_cap.h(28): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\BSP\Inc\bsp_gpio.h(319): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\BSP\Inc\bsp_iic.h(24): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\BSP\Inc\bsp_pwm.h(38): warning:  #1-D: last line of file ends without a newline
-  #endif 
-..\BSP\Inc\bsp_rs485.h(19): warning:  #1-D: last line of file ends without a newline
-  #endif 
-..\BSP\Inc\bsp_usart.h(10): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\APP\Inc\app_task.h(106): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\APP\Inc\app_24cxx.h(30): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\APP\Inc\app_usart.h(28): warning:  #1-D: last line of file ends without a newline
-  #endif 
-..\APP\Inc\app_analysisCMD.h(12): warning:  #1-D: last line of file ends without a newline
-  #endif 
-..\APP\Inc\app_autoCharge.h(6): warning:  #1-D: last line of file ends without a newline
-  #endif 
-..\APP\Inc\app_cap.h(6): warning:  #1-D: last line of file ends without a newline
-  #endif 
-..\APP\Inc\app_exit.h(6): warning:  #1-D: last line of file ends without a newline
-  #endif 
-..\APP\Inc\app_headDone.h(6): warning:  #1-D: last line of file ends without a newline
-  #endif 
-..\APP\Inc\app_liftMoto.h(6): warning:  #1-D: last line of file ends without a newline
-  #endif 
-..\APP\Inc\app_pms.h(6): warning:  #1-D: last line of file ends without a newline
-  #endif 
-..\APP\Inc\app_system.h(75): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\APP\Inc\app_tim.h(6): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\APP\Src\app_usart.c(96): warning:  #177-D: variable "bTemp"  was declared but never referenced
-  	static unsigned char bTemp;
-..\APP\Src\app_usart.c(98): warning:  #177-D: variable "res"  was declared but never referenced
-  	static unsigned char res;
-..\APP\Src\app_usart.c(99): warning:  #177-D: variable "rfid_flag"  was declared but never referenced
-  	static unsigned char rfid_flag = 0;
-..\APP\Src\app_usart.c(100): warning:  #177-D: variable "checksum"  was declared but never referenced
-  	uint8_t checksum = 0;
-..\APP\Src\app_usart.c(101): warning:  #177-D: variable "distance"  was declared but never referenced
-  	static uint16_t distance = 0;
-..\APP\Src\app_usart.c(199): warning:  #1-D: last line of file ends without a newline
-  }
-..\APP\Src\app_usart.c: 25 warnings, 0 errors
-compiling bsp_iic.c...
-..\BSP\Inc\bsp_adc.h(38): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\BSP\Inc\bsp_cap.h(28): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\BSP\Inc\bsp_gpio.h(319): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\BSP\Inc\bsp_iic.h(24): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\BSP\Inc\bsp_pwm.h(38): warning:  #1-D: last line of file ends without a newline
-  #endif 
-..\BSP\Inc\bsp_rs485.h(19): warning:  #1-D: last line of file ends without a newline
-  #endif 
-..\BSP\Inc\bsp_usart.h(10): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\APP\Inc\app_task.h(106): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\APP\Inc\app_24cxx.h(30): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\APP\Inc\app_usart.h(28): warning:  #1-D: last line of file ends without a newline
-  #endif 
-..\APP\Inc\app_analysisCMD.h(12): warning:  #1-D: last line of file ends without a newline
-  #endif 
-..\APP\Inc\app_autoCharge.h(6): warning:  #1-D: last line of file ends without a newline
-  #endif 
-..\APP\Inc\app_cap.h(6): warning:  #1-D: last line of file ends without a newline
-  #endif 
-..\APP\Inc\app_exit.h(6): warning:  #1-D: last line of file ends without a newline
-  #endif 
-..\APP\Inc\app_headDone.h(6): warning:  #1-D: last line of file ends without a newline
-  #endif 
-..\APP\Inc\app_liftMoto.h(6): warning:  #1-D: last line of file ends without a newline
-  #endif 
-..\APP\Inc\app_pms.h(6): warning:  #1-D: last line of file ends without a newline
-  #endif 
-..\APP\Inc\app_system.h(75): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\APP\Inc\app_tim.h(6): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\BSP\Src\bsp_iic.c: 19 warnings, 0 errors
+..\APP\Src\app_24cxx.c: 20 warnings, 2 errors
 compiling bsp_iwdg.c...
 ..\BSP\Inc\bsp_adc.h(38): warning:  #1-D: last line of file ends without a newline
   #endif
@@ -376,15 +262,19 @@ compiling bsp_iwdg.c...
   #endif 
 ..\BSP\Inc\bsp_usart.h(10): warning:  #1-D: last line of file ends without a newline
   #endif
-..\APP\Inc\app_task.h(106): warning:  #1-D: last line of file ends without a newline
+..\APP\Inc\app_task.h(109): warning:  #1-D: last line of file ends without a newline
   #endif
 ..\APP\Inc\app_24cxx.h(30): warning:  #1-D: last line of file ends without a newline
   #endif
 ..\APP\Inc\app_usart.h(28): warning:  #1-D: last line of file ends without a newline
   #endif 
-..\APP\Inc\app_analysisCMD.h(12): warning:  #1-D: last line of file ends without a newline
+..\APP\Inc\app_analysisCMD.h(60): error:  #20: identifier "MAX_TX_LEN" is undefined
+  	uint8_t Send_BUF[MAX_TX_LEN];
+..\APP\Inc\app_analysisCMD.h(61): error:  #20: identifier "MAX_RX_LEN" is undefined
+  	uint8_t Recv_BUF[MAX_RX_LEN];
+..\APP\Inc\app_analysisCMD.h(97): warning:  #1-D: last line of file ends without a newline
   #endif 
-..\APP\Inc\app_autoCharge.h(6): warning:  #1-D: last line of file ends without a newline
+..\APP\Inc\app_autoCharge.h(73): warning:  #1-D: last line of file ends without a newline
   #endif 
 ..\APP\Inc\app_cap.h(6): warning:  #1-D: last line of file ends without a newline
   #endif 
@@ -400,8 +290,8 @@ compiling bsp_iwdg.c...
   #endif
 ..\APP\Inc\app_tim.h(6): warning:  #1-D: last line of file ends without a newline
   #endif
-..\BSP\Src\bsp_iwdg.c: 19 warnings, 0 errors
-compiling bsp_cap.c...
+..\BSP\Src\bsp_iwdg.c: 19 warnings, 2 errors
+compiling app_task.c...
 ..\BSP\Inc\bsp_adc.h(38): warning:  #1-D: last line of file ends without a newline
   #endif
 ..\BSP\Inc\bsp_cap.h(28): warning:  #1-D: last line of file ends without a newline
@@ -416,15 +306,19 @@ compiling bsp_cap.c...
   #endif 
 ..\BSP\Inc\bsp_usart.h(10): warning:  #1-D: last line of file ends without a newline
   #endif
-..\APP\Inc\app_task.h(106): warning:  #1-D: last line of file ends without a newline
+..\APP\Inc\app_task.h(109): warning:  #1-D: last line of file ends without a newline
   #endif
 ..\APP\Inc\app_24cxx.h(30): warning:  #1-D: last line of file ends without a newline
   #endif
 ..\APP\Inc\app_usart.h(28): warning:  #1-D: last line of file ends without a newline
   #endif 
-..\APP\Inc\app_analysisCMD.h(12): warning:  #1-D: last line of file ends without a newline
+..\APP\Inc\app_analysisCMD.h(60): error:  #20: identifier "MAX_TX_LEN" is undefined
+  	uint8_t Send_BUF[MAX_TX_LEN];
+..\APP\Inc\app_analysisCMD.h(61): error:  #20: identifier "MAX_RX_LEN" is undefined
+  	uint8_t Recv_BUF[MAX_RX_LEN];
+..\APP\Inc\app_analysisCMD.h(97): warning:  #1-D: last line of file ends without a newline
   #endif 
-..\APP\Inc\app_autoCharge.h(6): warning:  #1-D: last line of file ends without a newline
+..\APP\Inc\app_autoCharge.h(73): warning:  #1-D: last line of file ends without a newline
   #endif 
 ..\APP\Inc\app_cap.h(6): warning:  #1-D: last line of file ends without a newline
   #endif 
@@ -440,8 +334,8 @@ compiling bsp_cap.c...
   #endif
 ..\APP\Inc\app_tim.h(6): warning:  #1-D: last line of file ends without a newline
   #endif
-..\BSP\Src\bsp_cap.c: 19 warnings, 0 errors
-compiling app_cap.c...
+..\APP\Src\app_task.c: 19 warnings, 2 errors
+compiling bsp_tim.c...
 ..\BSP\Inc\bsp_adc.h(38): warning:  #1-D: last line of file ends without a newline
   #endif
 ..\BSP\Inc\bsp_cap.h(28): warning:  #1-D: last line of file ends without a newline
@@ -456,15 +350,19 @@ compiling app_cap.c...
   #endif 
 ..\BSP\Inc\bsp_usart.h(10): warning:  #1-D: last line of file ends without a newline
   #endif
-..\APP\Inc\app_task.h(106): warning:  #1-D: last line of file ends without a newline
+..\APP\Inc\app_task.h(109): warning:  #1-D: last line of file ends without a newline
   #endif
 ..\APP\Inc\app_24cxx.h(30): warning:  #1-D: last line of file ends without a newline
   #endif
 ..\APP\Inc\app_usart.h(28): warning:  #1-D: last line of file ends without a newline
   #endif 
-..\APP\Inc\app_analysisCMD.h(12): warning:  #1-D: last line of file ends without a newline
+..\APP\Inc\app_analysisCMD.h(60): error:  #20: identifier "MAX_TX_LEN" is undefined
+  	uint8_t Send_BUF[MAX_TX_LEN];
+..\APP\Inc\app_analysisCMD.h(61): error:  #20: identifier "MAX_RX_LEN" is undefined
+  	uint8_t Recv_BUF[MAX_RX_LEN];
+..\APP\Inc\app_analysisCMD.h(97): warning:  #1-D: last line of file ends without a newline
   #endif 
-..\APP\Inc\app_autoCharge.h(6): warning:  #1-D: last line of file ends without a newline
+..\APP\Inc\app_autoCharge.h(73): warning:  #1-D: last line of file ends without a newline
   #endif 
 ..\APP\Inc\app_cap.h(6): warning:  #1-D: last line of file ends without a newline
   #endif 
@@ -480,129 +378,7 @@ compiling app_cap.c...
   #endif
 ..\APP\Inc\app_tim.h(6): warning:  #1-D: last line of file ends without a newline
   #endif
-..\APP\Src\app_cap.c: 19 warnings, 0 errors
-compiling bsp_gpio.c...
-..\BSP\Inc\bsp_adc.h(38): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\BSP\Inc\bsp_cap.h(28): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\BSP\Inc\bsp_gpio.h(319): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\BSP\Inc\bsp_iic.h(24): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\BSP\Inc\bsp_pwm.h(38): warning:  #1-D: last line of file ends without a newline
-  #endif 
-..\BSP\Inc\bsp_rs485.h(19): warning:  #1-D: last line of file ends without a newline
-  #endif 
-..\BSP\Inc\bsp_usart.h(10): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\APP\Inc\app_task.h(106): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\APP\Inc\app_24cxx.h(30): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\APP\Inc\app_usart.h(28): warning:  #1-D: last line of file ends without a newline
-  #endif 
-..\APP\Inc\app_analysisCMD.h(12): warning:  #1-D: last line of file ends without a newline
-  #endif 
-..\APP\Inc\app_autoCharge.h(6): warning:  #1-D: last line of file ends without a newline
-  #endif 
-..\APP\Inc\app_cap.h(6): warning:  #1-D: last line of file ends without a newline
-  #endif 
-..\APP\Inc\app_exit.h(6): warning:  #1-D: last line of file ends without a newline
-  #endif 
-..\APP\Inc\app_headDone.h(6): warning:  #1-D: last line of file ends without a newline
-  #endif 
-..\APP\Inc\app_liftMoto.h(6): warning:  #1-D: last line of file ends without a newline
-  #endif 
-..\APP\Inc\app_pms.h(6): warning:  #1-D: last line of file ends without a newline
-  #endif 
-..\APP\Inc\app_system.h(75): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\APP\Inc\app_tim.h(6): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\BSP\Src\bsp_gpio.c(475): warning:  #1-D: last line of file ends without a newline
-  }
-..\BSP\Src\bsp_gpio.c: 20 warnings, 0 errors
-compiling bsp_adc.c...
-..\BSP\Inc\bsp_adc.h(38): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\BSP\Inc\bsp_cap.h(28): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\BSP\Inc\bsp_gpio.h(319): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\BSP\Inc\bsp_iic.h(24): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\BSP\Inc\bsp_pwm.h(38): warning:  #1-D: last line of file ends without a newline
-  #endif 
-..\BSP\Inc\bsp_rs485.h(19): warning:  #1-D: last line of file ends without a newline
-  #endif 
-..\BSP\Inc\bsp_usart.h(10): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\APP\Inc\app_task.h(106): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\APP\Inc\app_24cxx.h(30): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\APP\Inc\app_usart.h(28): warning:  #1-D: last line of file ends without a newline
-  #endif 
-..\APP\Inc\app_analysisCMD.h(12): warning:  #1-D: last line of file ends without a newline
-  #endif 
-..\APP\Inc\app_autoCharge.h(6): warning:  #1-D: last line of file ends without a newline
-  #endif 
-..\APP\Inc\app_cap.h(6): warning:  #1-D: last line of file ends without a newline
-  #endif 
-..\APP\Inc\app_exit.h(6): warning:  #1-D: last line of file ends without a newline
-  #endif 
-..\APP\Inc\app_headDone.h(6): warning:  #1-D: last line of file ends without a newline
-  #endif 
-..\APP\Inc\app_liftMoto.h(6): warning:  #1-D: last line of file ends without a newline
-  #endif 
-..\APP\Inc\app_pms.h(6): warning:  #1-D: last line of file ends without a newline
-  #endif 
-..\APP\Inc\app_system.h(75): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\APP\Inc\app_tim.h(6): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\BSP\Src\bsp_adc.c: 19 warnings, 0 errors
-compiling bsp_usart.c...
-..\BSP\Inc\bsp_adc.h(38): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\BSP\Inc\bsp_cap.h(28): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\BSP\Inc\bsp_gpio.h(319): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\BSP\Inc\bsp_iic.h(24): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\BSP\Inc\bsp_pwm.h(38): warning:  #1-D: last line of file ends without a newline
-  #endif 
-..\BSP\Inc\bsp_rs485.h(19): warning:  #1-D: last line of file ends without a newline
-  #endif 
-..\BSP\Inc\bsp_usart.h(10): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\APP\Inc\app_task.h(106): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\APP\Inc\app_24cxx.h(30): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\APP\Inc\app_usart.h(28): warning:  #1-D: last line of file ends without a newline
-  #endif 
-..\APP\Inc\app_analysisCMD.h(12): warning:  #1-D: last line of file ends without a newline
-  #endif 
-..\APP\Inc\app_autoCharge.h(6): warning:  #1-D: last line of file ends without a newline
-  #endif 
-..\APP\Inc\app_cap.h(6): warning:  #1-D: last line of file ends without a newline
-  #endif 
-..\APP\Inc\app_exit.h(6): warning:  #1-D: last line of file ends without a newline
-  #endif 
-..\APP\Inc\app_headDone.h(6): warning:  #1-D: last line of file ends without a newline
-  #endif 
-..\APP\Inc\app_liftMoto.h(6): warning:  #1-D: last line of file ends without a newline
-  #endif 
-..\APP\Inc\app_pms.h(6): warning:  #1-D: last line of file ends without a newline
-  #endif 
-..\APP\Inc\app_system.h(75): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\APP\Inc\app_tim.h(6): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\BSP\Src\bsp_usart.c: 19 warnings, 0 errors
+..\BSP\Src\bsp_tim.c: 19 warnings, 2 errors
 compiling bsp_pwm.c...
 ..\BSP\Inc\bsp_adc.h(38): warning:  #1-D: last line of file ends without a newline
   #endif
@@ -618,15 +394,19 @@ compiling bsp_pwm.c...
   #endif 
 ..\BSP\Inc\bsp_usart.h(10): warning:  #1-D: last line of file ends without a newline
   #endif
-..\APP\Inc\app_task.h(106): warning:  #1-D: last line of file ends without a newline
+..\APP\Inc\app_task.h(109): warning:  #1-D: last line of file ends without a newline
   #endif
 ..\APP\Inc\app_24cxx.h(30): warning:  #1-D: last line of file ends without a newline
   #endif
 ..\APP\Inc\app_usart.h(28): warning:  #1-D: last line of file ends without a newline
   #endif 
-..\APP\Inc\app_analysisCMD.h(12): warning:  #1-D: last line of file ends without a newline
+..\APP\Inc\app_analysisCMD.h(60): error:  #20: identifier "MAX_TX_LEN" is undefined
+  	uint8_t Send_BUF[MAX_TX_LEN];
+..\APP\Inc\app_analysisCMD.h(61): error:  #20: identifier "MAX_RX_LEN" is undefined
+  	uint8_t Recv_BUF[MAX_RX_LEN];
+..\APP\Inc\app_analysisCMD.h(97): warning:  #1-D: last line of file ends without a newline
   #endif 
-..\APP\Inc\app_autoCharge.h(6): warning:  #1-D: last line of file ends without a newline
+..\APP\Inc\app_autoCharge.h(73): warning:  #1-D: last line of file ends without a newline
   #endif 
 ..\APP\Inc\app_cap.h(6): warning:  #1-D: last line of file ends without a newline
   #endif 
@@ -646,7 +426,401 @@ compiling bsp_pwm.c...
   	uint16_t tmp ;
 ..\BSP\Src\bsp_pwm.c(179): warning:  #177-D: variable "tmp"  was declared but never referenced
   	uint16_t tmp ;
-..\BSP\Src\bsp_pwm.c: 21 warnings, 0 errors
+..\BSP\Src\bsp_pwm.c: 21 warnings, 2 errors
+compiling bsp_iic.c...
+..\BSP\Inc\bsp_adc.h(38): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\BSP\Inc\bsp_cap.h(28): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\BSP\Inc\bsp_gpio.h(319): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\BSP\Inc\bsp_iic.h(24): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\BSP\Inc\bsp_pwm.h(38): warning:  #1-D: last line of file ends without a newline
+  #endif 
+..\BSP\Inc\bsp_rs485.h(19): warning:  #1-D: last line of file ends without a newline
+  #endif 
+..\BSP\Inc\bsp_usart.h(10): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\APP\Inc\app_task.h(109): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\APP\Inc\app_24cxx.h(30): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\APP\Inc\app_usart.h(28): warning:  #1-D: last line of file ends without a newline
+  #endif 
+..\APP\Inc\app_analysisCMD.h(60): error:  #20: identifier "MAX_TX_LEN" is undefined
+  	uint8_t Send_BUF[MAX_TX_LEN];
+..\APP\Inc\app_analysisCMD.h(61): error:  #20: identifier "MAX_RX_LEN" is undefined
+  	uint8_t Recv_BUF[MAX_RX_LEN];
+..\APP\Inc\app_analysisCMD.h(97): warning:  #1-D: last line of file ends without a newline
+  #endif 
+..\APP\Inc\app_autoCharge.h(73): warning:  #1-D: last line of file ends without a newline
+  #endif 
+..\APP\Inc\app_cap.h(6): warning:  #1-D: last line of file ends without a newline
+  #endif 
+..\APP\Inc\app_exit.h(6): warning:  #1-D: last line of file ends without a newline
+  #endif 
+..\APP\Inc\app_headDone.h(6): warning:  #1-D: last line of file ends without a newline
+  #endif 
+..\APP\Inc\app_liftMoto.h(6): warning:  #1-D: last line of file ends without a newline
+  #endif 
+..\APP\Inc\app_pms.h(6): warning:  #1-D: last line of file ends without a newline
+  #endif 
+..\APP\Inc\app_system.h(75): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\APP\Inc\app_tim.h(6): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\BSP\Src\bsp_iic.c: 19 warnings, 2 errors
+compiling app_autoCharge.c...
+..\BSP\Inc\bsp_adc.h(38): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\BSP\Inc\bsp_cap.h(28): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\BSP\Inc\bsp_gpio.h(319): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\BSP\Inc\bsp_iic.h(24): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\BSP\Inc\bsp_pwm.h(38): warning:  #1-D: last line of file ends without a newline
+  #endif 
+..\BSP\Inc\bsp_rs485.h(19): warning:  #1-D: last line of file ends without a newline
+  #endif 
+..\BSP\Inc\bsp_usart.h(10): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\APP\Inc\app_task.h(109): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\APP\Inc\app_24cxx.h(30): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\APP\Inc\app_usart.h(28): warning:  #1-D: last line of file ends without a newline
+  #endif 
+..\APP\Inc\app_analysisCMD.h(60): error:  #20: identifier "MAX_TX_LEN" is undefined
+  	uint8_t Send_BUF[MAX_TX_LEN];
+..\APP\Inc\app_analysisCMD.h(61): error:  #20: identifier "MAX_RX_LEN" is undefined
+  	uint8_t Recv_BUF[MAX_RX_LEN];
+..\APP\Inc\app_analysisCMD.h(97): warning:  #1-D: last line of file ends without a newline
+  #endif 
+..\APP\Inc\app_autoCharge.h(73): warning:  #1-D: last line of file ends without a newline
+  #endif 
+..\APP\Inc\app_cap.h(6): warning:  #1-D: last line of file ends without a newline
+  #endif 
+..\APP\Inc\app_exit.h(6): warning:  #1-D: last line of file ends without a newline
+  #endif 
+..\APP\Inc\app_headDone.h(6): warning:  #1-D: last line of file ends without a newline
+  #endif 
+..\APP\Inc\app_liftMoto.h(6): warning:  #1-D: last line of file ends without a newline
+  #endif 
+..\APP\Inc\app_pms.h(6): warning:  #1-D: last line of file ends without a newline
+  #endif 
+..\APP\Inc\app_system.h(75): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\APP\Inc\app_tim.h(6): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\APP\Src\app_autoCharge.c(16): error:  #20: identifier "Pms" is undefined
+  	if(Robot_Sys.Last_Task == CHG_TASK && (Pms.Bat_Sta & 0x01) == 0)
+..\APP\Src\app_autoCharge.c(182): error:  #20: identifier "Moto" is undefined
+  				Moto.cmd_addr1 = 0x2610;
+..\APP\Src\app_autoCharge.c(193): error:  #20: identifier "Moto" is undefined
+  				Moto.cmd_addr1 = 0x2610;
+..\APP\Src\app_autoCharge.c(209): error:  #20: identifier "Moto" is undefined
+  				Moto.cmd_addr1 = 0x2610;
+..\APP\Src\app_autoCharge.c(225): error:  #20: identifier "Moto" is undefined
+  				Moto.cmd_addr1 = 0x2620;
+..\APP\Src\app_autoCharge.c(241): error:  #20: identifier "Moto" is undefined
+  				Moto.cmd_addr1 = 0x2620;
+..\APP\Src\app_autoCharge.c(254): error:  #20: identifier "Moto" is undefined
+  				Moto.set_left_pwm = 90 ;
+..\APP\Src\app_autoCharge.c(166): warning:  #177-D: variable "left_period_set"  was declared but never referenced
+  	static uint16_t left_period_set;
+..\APP\Src\app_autoCharge.c(167): warning:  #177-D: variable "right_period_set"  was declared but never referenced
+  	static uint16_t right_period_set;
+..\APP\Src\app_autoCharge.c(168): warning:  #177-D: variable "max_pwm"  was declared but never referenced
+  	static int16_t max_pwm;
+..\APP\Src\app_autoCharge.c(169): warning:  #177-D: variable "min_pwm"  was declared but never referenced
+  	static int16_t min_pwm;
+..\APP\Src\app_autoCharge.c(485): warning:  #550-D: variable "right_cnt"  was set but never used
+  	static uint8_t right_cnt = 0;
+..\APP\Src\app_autoCharge.c(568): warning:  #550-D: variable "left_cnt"  was set but never used
+  	static uint8_t left_cnt = 0;
+..\APP\Src\app_autoCharge.c(792): error:  #20: identifier "Robot_Moto" is undefined
+  	if((Robot_Moto.Locked_Flag & 0x03) != 0 || (Robot_Sys.Crash_Flag & 0x02) != 0)
+..\APP\Src\app_autoCharge.c: 25 warnings, 10 errors
+compiling bsp_gpio.c...
+..\BSP\Inc\bsp_adc.h(38): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\BSP\Inc\bsp_cap.h(28): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\BSP\Inc\bsp_gpio.h(319): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\BSP\Inc\bsp_iic.h(24): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\BSP\Inc\bsp_pwm.h(38): warning:  #1-D: last line of file ends without a newline
+  #endif 
+..\BSP\Inc\bsp_rs485.h(19): warning:  #1-D: last line of file ends without a newline
+  #endif 
+..\BSP\Inc\bsp_usart.h(10): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\APP\Inc\app_task.h(109): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\APP\Inc\app_24cxx.h(30): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\APP\Inc\app_usart.h(28): warning:  #1-D: last line of file ends without a newline
+  #endif 
+..\APP\Inc\app_analysisCMD.h(60): error:  #20: identifier "MAX_TX_LEN" is undefined
+  	uint8_t Send_BUF[MAX_TX_LEN];
+..\APP\Inc\app_analysisCMD.h(61): error:  #20: identifier "MAX_RX_LEN" is undefined
+  	uint8_t Recv_BUF[MAX_RX_LEN];
+..\APP\Inc\app_analysisCMD.h(97): warning:  #1-D: last line of file ends without a newline
+  #endif 
+..\APP\Inc\app_autoCharge.h(73): warning:  #1-D: last line of file ends without a newline
+  #endif 
+..\APP\Inc\app_cap.h(6): warning:  #1-D: last line of file ends without a newline
+  #endif 
+..\APP\Inc\app_exit.h(6): warning:  #1-D: last line of file ends without a newline
+  #endif 
+..\APP\Inc\app_headDone.h(6): warning:  #1-D: last line of file ends without a newline
+  #endif 
+..\APP\Inc\app_liftMoto.h(6): warning:  #1-D: last line of file ends without a newline
+  #endif 
+..\APP\Inc\app_pms.h(6): warning:  #1-D: last line of file ends without a newline
+  #endif 
+..\APP\Inc\app_system.h(75): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\APP\Inc\app_tim.h(6): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\BSP\Src\bsp_gpio.c(475): warning:  #1-D: last line of file ends without a newline
+  }
+..\BSP\Src\bsp_gpio.c: 20 warnings, 2 errors
+compiling app_cap.c...
+..\BSP\Inc\bsp_adc.h(38): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\BSP\Inc\bsp_cap.h(28): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\BSP\Inc\bsp_gpio.h(319): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\BSP\Inc\bsp_iic.h(24): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\BSP\Inc\bsp_pwm.h(38): warning:  #1-D: last line of file ends without a newline
+  #endif 
+..\BSP\Inc\bsp_rs485.h(19): warning:  #1-D: last line of file ends without a newline
+  #endif 
+..\BSP\Inc\bsp_usart.h(10): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\APP\Inc\app_task.h(109): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\APP\Inc\app_24cxx.h(30): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\APP\Inc\app_usart.h(28): warning:  #1-D: last line of file ends without a newline
+  #endif 
+..\APP\Inc\app_analysisCMD.h(60): error:  #20: identifier "MAX_TX_LEN" is undefined
+  	uint8_t Send_BUF[MAX_TX_LEN];
+..\APP\Inc\app_analysisCMD.h(61): error:  #20: identifier "MAX_RX_LEN" is undefined
+  	uint8_t Recv_BUF[MAX_RX_LEN];
+..\APP\Inc\app_analysisCMD.h(97): warning:  #1-D: last line of file ends without a newline
+  #endif 
+..\APP\Inc\app_autoCharge.h(73): warning:  #1-D: last line of file ends without a newline
+  #endif 
+..\APP\Inc\app_cap.h(6): warning:  #1-D: last line of file ends without a newline
+  #endif 
+..\APP\Inc\app_exit.h(6): warning:  #1-D: last line of file ends without a newline
+  #endif 
+..\APP\Inc\app_headDone.h(6): warning:  #1-D: last line of file ends without a newline
+  #endif 
+..\APP\Inc\app_liftMoto.h(6): warning:  #1-D: last line of file ends without a newline
+  #endif 
+..\APP\Inc\app_pms.h(6): warning:  #1-D: last line of file ends without a newline
+  #endif 
+..\APP\Inc\app_system.h(75): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\APP\Inc\app_tim.h(6): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\APP\Src\app_cap.c: 19 warnings, 2 errors
+compiling bsp_adc.c...
+..\BSP\Inc\bsp_adc.h(38): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\BSP\Inc\bsp_cap.h(28): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\BSP\Inc\bsp_gpio.h(319): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\BSP\Inc\bsp_iic.h(24): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\BSP\Inc\bsp_pwm.h(38): warning:  #1-D: last line of file ends without a newline
+  #endif 
+..\BSP\Inc\bsp_rs485.h(19): warning:  #1-D: last line of file ends without a newline
+  #endif 
+..\BSP\Inc\bsp_usart.h(10): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\APP\Inc\app_task.h(109): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\APP\Inc\app_24cxx.h(30): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\APP\Inc\app_usart.h(28): warning:  #1-D: last line of file ends without a newline
+  #endif 
+..\APP\Inc\app_analysisCMD.h(60): error:  #20: identifier "MAX_TX_LEN" is undefined
+  	uint8_t Send_BUF[MAX_TX_LEN];
+..\APP\Inc\app_analysisCMD.h(61): error:  #20: identifier "MAX_RX_LEN" is undefined
+  	uint8_t Recv_BUF[MAX_RX_LEN];
+..\APP\Inc\app_analysisCMD.h(97): warning:  #1-D: last line of file ends without a newline
+  #endif 
+..\APP\Inc\app_autoCharge.h(73): warning:  #1-D: last line of file ends without a newline
+  #endif 
+..\APP\Inc\app_cap.h(6): warning:  #1-D: last line of file ends without a newline
+  #endif 
+..\APP\Inc\app_exit.h(6): warning:  #1-D: last line of file ends without a newline
+  #endif 
+..\APP\Inc\app_headDone.h(6): warning:  #1-D: last line of file ends without a newline
+  #endif 
+..\APP\Inc\app_liftMoto.h(6): warning:  #1-D: last line of file ends without a newline
+  #endif 
+..\APP\Inc\app_pms.h(6): warning:  #1-D: last line of file ends without a newline
+  #endif 
+..\APP\Inc\app_system.h(75): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\APP\Inc\app_tim.h(6): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\BSP\Src\bsp_adc.c: 19 warnings, 2 errors
+compiling bsp_rs485.c...
+..\BSP\Inc\bsp_adc.h(38): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\BSP\Inc\bsp_cap.h(28): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\BSP\Inc\bsp_gpio.h(319): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\BSP\Inc\bsp_iic.h(24): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\BSP\Inc\bsp_pwm.h(38): warning:  #1-D: last line of file ends without a newline
+  #endif 
+..\BSP\Inc\bsp_rs485.h(19): warning:  #1-D: last line of file ends without a newline
+  #endif 
+..\BSP\Inc\bsp_usart.h(10): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\APP\Inc\app_task.h(109): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\APP\Inc\app_24cxx.h(30): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\APP\Inc\app_usart.h(28): warning:  #1-D: last line of file ends without a newline
+  #endif 
+..\APP\Inc\app_analysisCMD.h(60): error:  #20: identifier "MAX_TX_LEN" is undefined
+  	uint8_t Send_BUF[MAX_TX_LEN];
+..\APP\Inc\app_analysisCMD.h(61): error:  #20: identifier "MAX_RX_LEN" is undefined
+  	uint8_t Recv_BUF[MAX_RX_LEN];
+..\APP\Inc\app_analysisCMD.h(97): warning:  #1-D: last line of file ends without a newline
+  #endif 
+..\APP\Inc\app_autoCharge.h(73): warning:  #1-D: last line of file ends without a newline
+  #endif 
+..\APP\Inc\app_cap.h(6): warning:  #1-D: last line of file ends without a newline
+  #endif 
+..\APP\Inc\app_exit.h(6): warning:  #1-D: last line of file ends without a newline
+  #endif 
+..\APP\Inc\app_headDone.h(6): warning:  #1-D: last line of file ends without a newline
+  #endif 
+..\APP\Inc\app_liftMoto.h(6): warning:  #1-D: last line of file ends without a newline
+  #endif 
+..\APP\Inc\app_pms.h(6): warning:  #1-D: last line of file ends without a newline
+  #endif 
+..\APP\Inc\app_system.h(75): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\APP\Inc\app_tim.h(6): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\BSP\Src\bsp_rs485.c: 19 warnings, 2 errors
+compiling app_usart.c...
+..\BSP\Inc\bsp_adc.h(38): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\BSP\Inc\bsp_cap.h(28): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\BSP\Inc\bsp_gpio.h(319): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\BSP\Inc\bsp_iic.h(24): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\BSP\Inc\bsp_pwm.h(38): warning:  #1-D: last line of file ends without a newline
+  #endif 
+..\BSP\Inc\bsp_rs485.h(19): warning:  #1-D: last line of file ends without a newline
+  #endif 
+..\BSP\Inc\bsp_usart.h(10): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\APP\Inc\app_task.h(109): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\APP\Inc\app_24cxx.h(30): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\APP\Inc\app_usart.h(28): warning:  #1-D: last line of file ends without a newline
+  #endif 
+..\APP\Inc\app_analysisCMD.h(60): error:  #20: identifier "MAX_TX_LEN" is undefined
+  	uint8_t Send_BUF[MAX_TX_LEN];
+..\APP\Inc\app_analysisCMD.h(61): error:  #20: identifier "MAX_RX_LEN" is undefined
+  	uint8_t Recv_BUF[MAX_RX_LEN];
+..\APP\Inc\app_analysisCMD.h(97): warning:  #1-D: last line of file ends without a newline
+  #endif 
+..\APP\Inc\app_autoCharge.h(73): warning:  #1-D: last line of file ends without a newline
+  #endif 
+..\APP\Inc\app_cap.h(6): warning:  #1-D: last line of file ends without a newline
+  #endif 
+..\APP\Inc\app_exit.h(6): warning:  #1-D: last line of file ends without a newline
+  #endif 
+..\APP\Inc\app_headDone.h(6): warning:  #1-D: last line of file ends without a newline
+  #endif 
+..\APP\Inc\app_liftMoto.h(6): warning:  #1-D: last line of file ends without a newline
+  #endif 
+..\APP\Inc\app_pms.h(6): warning:  #1-D: last line of file ends without a newline
+  #endif 
+..\APP\Inc\app_system.h(75): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\APP\Inc\app_tim.h(6): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\APP\Src\app_usart.c(97): warning:  #177-D: variable "bTemp"  was declared but never referenced
+  	static unsigned char bTemp;
+..\APP\Src\app_usart.c(99): warning:  #177-D: variable "res"  was declared but never referenced
+  	static unsigned char res;
+..\APP\Src\app_usart.c(100): warning:  #177-D: variable "rfid_flag"  was declared but never referenced
+  	static unsigned char rfid_flag = 0;
+..\APP\Src\app_usart.c(101): warning:  #177-D: variable "checksum"  was declared but never referenced
+  	uint8_t checksum = 0;
+..\APP\Src\app_usart.c(102): warning:  #177-D: variable "distance"  was declared but never referenced
+  	static uint16_t distance = 0;
+..\APP\Src\app_usart.c(201): warning:  #1-D: last line of file ends without a newline
+  }
+..\APP\Src\app_usart.c: 25 warnings, 2 errors
+compiling bsp_usart.c...
+..\BSP\Inc\bsp_adc.h(38): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\BSP\Inc\bsp_cap.h(28): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\BSP\Inc\bsp_gpio.h(319): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\BSP\Inc\bsp_iic.h(24): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\BSP\Inc\bsp_pwm.h(38): warning:  #1-D: last line of file ends without a newline
+  #endif 
+..\BSP\Inc\bsp_rs485.h(19): warning:  #1-D: last line of file ends without a newline
+  #endif 
+..\BSP\Inc\bsp_usart.h(10): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\APP\Inc\app_task.h(109): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\APP\Inc\app_24cxx.h(30): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\APP\Inc\app_usart.h(28): warning:  #1-D: last line of file ends without a newline
+  #endif 
+..\APP\Inc\app_analysisCMD.h(60): error:  #20: identifier "MAX_TX_LEN" is undefined
+  	uint8_t Send_BUF[MAX_TX_LEN];
+..\APP\Inc\app_analysisCMD.h(61): error:  #20: identifier "MAX_RX_LEN" is undefined
+  	uint8_t Recv_BUF[MAX_RX_LEN];
+..\APP\Inc\app_analysisCMD.h(97): warning:  #1-D: last line of file ends without a newline
+  #endif 
+..\APP\Inc\app_autoCharge.h(73): warning:  #1-D: last line of file ends without a newline
+  #endif 
+..\APP\Inc\app_cap.h(6): warning:  #1-D: last line of file ends without a newline
+  #endif 
+..\APP\Inc\app_exit.h(6): warning:  #1-D: last line of file ends without a newline
+  #endif 
+..\APP\Inc\app_headDone.h(6): warning:  #1-D: last line of file ends without a newline
+  #endif 
+..\APP\Inc\app_liftMoto.h(6): warning:  #1-D: last line of file ends without a newline
+  #endif 
+..\APP\Inc\app_pms.h(6): warning:  #1-D: last line of file ends without a newline
+  #endif 
+..\APP\Inc\app_system.h(75): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\APP\Inc\app_tim.h(6): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\BSP\Src\bsp_usart.c: 19 warnings, 2 errors
 compiling app_exit.c...
 ..\BSP\Inc\bsp_adc.h(38): warning:  #1-D: last line of file ends without a newline
   #endif
@@ -662,15 +836,19 @@ compiling app_exit.c...
   #endif 
 ..\BSP\Inc\bsp_usart.h(10): warning:  #1-D: last line of file ends without a newline
   #endif
-..\APP\Inc\app_task.h(106): warning:  #1-D: last line of file ends without a newline
+..\APP\Inc\app_task.h(109): warning:  #1-D: last line of file ends without a newline
   #endif
 ..\APP\Inc\app_24cxx.h(30): warning:  #1-D: last line of file ends without a newline
   #endif
 ..\APP\Inc\app_usart.h(28): warning:  #1-D: last line of file ends without a newline
   #endif 
-..\APP\Inc\app_analysisCMD.h(12): warning:  #1-D: last line of file ends without a newline
+..\APP\Inc\app_analysisCMD.h(60): error:  #20: identifier "MAX_TX_LEN" is undefined
+  	uint8_t Send_BUF[MAX_TX_LEN];
+..\APP\Inc\app_analysisCMD.h(61): error:  #20: identifier "MAX_RX_LEN" is undefined
+  	uint8_t Recv_BUF[MAX_RX_LEN];
+..\APP\Inc\app_analysisCMD.h(97): warning:  #1-D: last line of file ends without a newline
   #endif 
-..\APP\Inc\app_autoCharge.h(6): warning:  #1-D: last line of file ends without a newline
+..\APP\Inc\app_autoCharge.h(73): warning:  #1-D: last line of file ends without a newline
   #endif 
 ..\APP\Inc\app_cap.h(6): warning:  #1-D: last line of file ends without a newline
   #endif 
@@ -686,7 +864,7 @@ compiling app_exit.c...
   #endif
 ..\APP\Inc\app_tim.h(6): warning:  #1-D: last line of file ends without a newline
   #endif
-..\APP\Src\app_exit.c: 19 warnings, 0 errors
+..\APP\Src\app_exit.c: 19 warnings, 2 errors
 compiling app_headDone.c...
 ..\BSP\Inc\bsp_adc.h(38): warning:  #1-D: last line of file ends without a newline
   #endif
@@ -702,15 +880,19 @@ compiling app_headDone.c...
   #endif 
 ..\BSP\Inc\bsp_usart.h(10): warning:  #1-D: last line of file ends without a newline
   #endif
-..\APP\Inc\app_task.h(106): warning:  #1-D: last line of file ends without a newline
+..\APP\Inc\app_task.h(109): warning:  #1-D: last line of file ends without a newline
   #endif
 ..\APP\Inc\app_24cxx.h(30): warning:  #1-D: last line of file ends without a newline
   #endif
 ..\APP\Inc\app_usart.h(28): warning:  #1-D: last line of file ends without a newline
   #endif 
-..\APP\Inc\app_analysisCMD.h(12): warning:  #1-D: last line of file ends without a newline
+..\APP\Inc\app_analysisCMD.h(60): error:  #20: identifier "MAX_TX_LEN" is undefined
+  	uint8_t Send_BUF[MAX_TX_LEN];
+..\APP\Inc\app_analysisCMD.h(61): error:  #20: identifier "MAX_RX_LEN" is undefined
+  	uint8_t Recv_BUF[MAX_RX_LEN];
+..\APP\Inc\app_analysisCMD.h(97): warning:  #1-D: last line of file ends without a newline
   #endif 
-..\APP\Inc\app_autoCharge.h(6): warning:  #1-D: last line of file ends without a newline
+..\APP\Inc\app_autoCharge.h(73): warning:  #1-D: last line of file ends without a newline
   #endif 
 ..\APP\Inc\app_cap.h(6): warning:  #1-D: last line of file ends without a newline
   #endif 
@@ -726,7 +908,7 @@ compiling app_headDone.c...
   #endif
 ..\APP\Inc\app_tim.h(6): warning:  #1-D: last line of file ends without a newline
   #endif
-..\APP\Src\app_headDone.c: 19 warnings, 0 errors
+..\APP\Src\app_headDone.c: 19 warnings, 2 errors
 compiling app_liftMoto.c...
 ..\BSP\Inc\bsp_adc.h(38): warning:  #1-D: last line of file ends without a newline
   #endif
@@ -742,15 +924,19 @@ compiling app_liftMoto.c...
   #endif 
 ..\BSP\Inc\bsp_usart.h(10): warning:  #1-D: last line of file ends without a newline
   #endif
-..\APP\Inc\app_task.h(106): warning:  #1-D: last line of file ends without a newline
+..\APP\Inc\app_task.h(109): warning:  #1-D: last line of file ends without a newline
   #endif
 ..\APP\Inc\app_24cxx.h(30): warning:  #1-D: last line of file ends without a newline
   #endif
 ..\APP\Inc\app_usart.h(28): warning:  #1-D: last line of file ends without a newline
   #endif 
-..\APP\Inc\app_analysisCMD.h(12): warning:  #1-D: last line of file ends without a newline
+..\APP\Inc\app_analysisCMD.h(60): error:  #20: identifier "MAX_TX_LEN" is undefined
+  	uint8_t Send_BUF[MAX_TX_LEN];
+..\APP\Inc\app_analysisCMD.h(61): error:  #20: identifier "MAX_RX_LEN" is undefined
+  	uint8_t Recv_BUF[MAX_RX_LEN];
+..\APP\Inc\app_analysisCMD.h(97): warning:  #1-D: last line of file ends without a newline
   #endif 
-..\APP\Inc\app_autoCharge.h(6): warning:  #1-D: last line of file ends without a newline
+..\APP\Inc\app_autoCharge.h(73): warning:  #1-D: last line of file ends without a newline
   #endif 
 ..\APP\Inc\app_cap.h(6): warning:  #1-D: last line of file ends without a newline
   #endif 
@@ -766,7 +952,7 @@ compiling app_liftMoto.c...
   #endif
 ..\APP\Inc\app_tim.h(6): warning:  #1-D: last line of file ends without a newline
   #endif
-..\APP\Src\app_liftMoto.c: 19 warnings, 0 errors
+..\APP\Src\app_liftMoto.c: 19 warnings, 2 errors
 compiling app_pms.c...
 ..\BSP\Inc\bsp_adc.h(38): warning:  #1-D: last line of file ends without a newline
   #endif
@@ -782,15 +968,19 @@ compiling app_pms.c...
   #endif 
 ..\BSP\Inc\bsp_usart.h(10): warning:  #1-D: last line of file ends without a newline
   #endif
-..\APP\Inc\app_task.h(106): warning:  #1-D: last line of file ends without a newline
+..\APP\Inc\app_task.h(109): warning:  #1-D: last line of file ends without a newline
   #endif
 ..\APP\Inc\app_24cxx.h(30): warning:  #1-D: last line of file ends without a newline
   #endif
 ..\APP\Inc\app_usart.h(28): warning:  #1-D: last line of file ends without a newline
   #endif 
-..\APP\Inc\app_analysisCMD.h(12): warning:  #1-D: last line of file ends without a newline
+..\APP\Inc\app_analysisCMD.h(60): error:  #20: identifier "MAX_TX_LEN" is undefined
+  	uint8_t Send_BUF[MAX_TX_LEN];
+..\APP\Inc\app_analysisCMD.h(61): error:  #20: identifier "MAX_RX_LEN" is undefined
+  	uint8_t Recv_BUF[MAX_RX_LEN];
+..\APP\Inc\app_analysisCMD.h(97): warning:  #1-D: last line of file ends without a newline
   #endif 
-..\APP\Inc\app_autoCharge.h(6): warning:  #1-D: last line of file ends without a newline
+..\APP\Inc\app_autoCharge.h(73): warning:  #1-D: last line of file ends without a newline
   #endif 
 ..\APP\Inc\app_cap.h(6): warning:  #1-D: last line of file ends without a newline
   #endif 
@@ -806,7 +996,7 @@ compiling app_pms.c...
   #endif
 ..\APP\Inc\app_tim.h(6): warning:  #1-D: last line of file ends without a newline
   #endif
-..\APP\Src\app_pms.c: 19 warnings, 0 errors
+..\APP\Src\app_pms.c: 19 warnings, 2 errors
 compiling app_system.c...
 ..\BSP\Inc\bsp_adc.h(38): warning:  #1-D: last line of file ends without a newline
   #endif
@@ -822,15 +1012,19 @@ compiling app_system.c...
   #endif 
 ..\BSP\Inc\bsp_usart.h(10): warning:  #1-D: last line of file ends without a newline
   #endif
-..\APP\Inc\app_task.h(106): warning:  #1-D: last line of file ends without a newline
+..\APP\Inc\app_task.h(109): warning:  #1-D: last line of file ends without a newline
   #endif
 ..\APP\Inc\app_24cxx.h(30): warning:  #1-D: last line of file ends without a newline
   #endif
 ..\APP\Inc\app_usart.h(28): warning:  #1-D: last line of file ends without a newline
   #endif 
-..\APP\Inc\app_analysisCMD.h(12): warning:  #1-D: last line of file ends without a newline
+..\APP\Inc\app_analysisCMD.h(60): error:  #20: identifier "MAX_TX_LEN" is undefined
+  	uint8_t Send_BUF[MAX_TX_LEN];
+..\APP\Inc\app_analysisCMD.h(61): error:  #20: identifier "MAX_RX_LEN" is undefined
+  	uint8_t Recv_BUF[MAX_RX_LEN];
+..\APP\Inc\app_analysisCMD.h(97): warning:  #1-D: last line of file ends without a newline
   #endif 
-..\APP\Inc\app_autoCharge.h(6): warning:  #1-D: last line of file ends without a newline
+..\APP\Inc\app_autoCharge.h(73): warning:  #1-D: last line of file ends without a newline
   #endif 
 ..\APP\Inc\app_cap.h(6): warning:  #1-D: last line of file ends without a newline
   #endif 
@@ -846,7 +1040,7 @@ compiling app_system.c...
   #endif
 ..\APP\Inc\app_tim.h(6): warning:  #1-D: last line of file ends without a newline
   #endif
-..\APP\Src\app_system.c: 19 warnings, 0 errors
+..\APP\Src\app_system.c: 19 warnings, 2 errors
 compiling app_tim.c...
 ..\BSP\Inc\bsp_adc.h(38): warning:  #1-D: last line of file ends without a newline
   #endif
@@ -862,15 +1056,19 @@ compiling app_tim.c...
   #endif 
 ..\BSP\Inc\bsp_usart.h(10): warning:  #1-D: last line of file ends without a newline
   #endif
-..\APP\Inc\app_task.h(106): warning:  #1-D: last line of file ends without a newline
+..\APP\Inc\app_task.h(109): warning:  #1-D: last line of file ends without a newline
   #endif
 ..\APP\Inc\app_24cxx.h(30): warning:  #1-D: last line of file ends without a newline
   #endif
 ..\APP\Inc\app_usart.h(28): warning:  #1-D: last line of file ends without a newline
   #endif 
-..\APP\Inc\app_analysisCMD.h(12): warning:  #1-D: last line of file ends without a newline
+..\APP\Inc\app_analysisCMD.h(60): error:  #20: identifier "MAX_TX_LEN" is undefined
+  	uint8_t Send_BUF[MAX_TX_LEN];
+..\APP\Inc\app_analysisCMD.h(61): error:  #20: identifier "MAX_RX_LEN" is undefined
+  	uint8_t Recv_BUF[MAX_RX_LEN];
+..\APP\Inc\app_analysisCMD.h(97): warning:  #1-D: last line of file ends without a newline
   #endif 
-..\APP\Inc\app_autoCharge.h(6): warning:  #1-D: last line of file ends without a newline
+..\APP\Inc\app_autoCharge.h(73): warning:  #1-D: last line of file ends without a newline
   #endif 
 ..\APP\Inc\app_cap.h(6): warning:  #1-D: last line of file ends without a newline
   #endif 
@@ -888,8 +1086,7 @@ compiling app_tim.c...
   #endif
 ..\APP\Src\app_tim.c(29): warning:  #1-D: last line of file ends without a newline
   }
-..\APP\Src\app_tim.c: 20 warnings, 0 errors
-compiling stm32f4xx_it.c...
+..\APP\Src\app_tim.c: 20 warnings, 2 errors
 compiling main.c...
 ..\BSP\Inc\bsp_adc.h(38): warning:  #1-D: last line of file ends without a newline
   #endif
@@ -905,15 +1102,19 @@ compiling main.c...
   #endif 
 ..\BSP\Inc\bsp_usart.h(10): warning:  #1-D: last line of file ends without a newline
   #endif
-..\APP\Inc\app_task.h(106): warning:  #1-D: last line of file ends without a newline
+..\APP\Inc\app_task.h(109): warning:  #1-D: last line of file ends without a newline
   #endif
 ..\APP\Inc\app_24cxx.h(30): warning:  #1-D: last line of file ends without a newline
   #endif
 ..\APP\Inc\app_usart.h(28): warning:  #1-D: last line of file ends without a newline
   #endif 
-..\APP\Inc\app_analysisCMD.h(12): warning:  #1-D: last line of file ends without a newline
+..\APP\Inc\app_analysisCMD.h(60): error:  #20: identifier "MAX_TX_LEN" is undefined
+  	uint8_t Send_BUF[MAX_TX_LEN];
+..\APP\Inc\app_analysisCMD.h(61): error:  #20: identifier "MAX_RX_LEN" is undefined
+  	uint8_t Recv_BUF[MAX_RX_LEN];
+..\APP\Inc\app_analysisCMD.h(97): warning:  #1-D: last line of file ends without a newline
   #endif 
-..\APP\Inc\app_autoCharge.h(6): warning:  #1-D: last line of file ends without a newline
+..\APP\Inc\app_autoCharge.h(73): warning:  #1-D: last line of file ends without a newline
   #endif 
 ..\APP\Inc\app_cap.h(6): warning:  #1-D: last line of file ends without a newline
   #endif 
@@ -929,40 +1130,8 @@ compiling main.c...
   #endif
 ..\APP\Inc\app_tim.h(6): warning:  #1-D: last line of file ends without a newline
   #endif
-main.c: 19 warnings, 0 errors
-compiling system_stm32f4xx.c...
-assembling startup_stm32f40_41xxx.s...
-compiling delay.c...
-compiling sys.c...
-compiling usart.c...
-compiling malloc.c...
-compiling stm32f4xx_adc.c...
-compiling stm32f4xx_dac.c...
-compiling stm32f4xx_dma.c...
-compiling stm32f4xx_exti.c...
-compiling stm32f4xx_gpio.c...
-compiling stm32f4xx_i2c.c...
-compiling stm32f4xx_iwdg.c...
-compiling stm32f4xx_spi.c...
-compiling stm32f4xx_usart.c...
-compiling stm32f4xx_tim.c...
-compiling stm32f4xx_syscfg.c...
-compiling stm32f4xx_pwr.c...
-compiling misc.c...
-compiling list.c...
-compiling croutine.c...
-compiling stm32f4xx_rcc.c...
-compiling event_groups.c...
-compiling stm32f4xx_rtc.c...
-compiling queue.c...
-compiling tasks.c...
-compiling timers.c...
-compiling port.c...
-compiling heap_4.c...
-linking...
-Program Size: Code=16752 RO-data=460 RW-data=256 ZI-data=1187440  
-FromELF: creating hex file...
-"..\OBJ\LED.axf" - 0 Error(s), 429 Warning(s).
+main.c: 19 warnings, 2 errors
+"..\OBJ\LED.axf" - 63 Error(s), 467 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -975,7 +1144,8 @@ Package Vendor: Keil
   D:/Arm/Packs/Keil/STM32F4xx_DFP/2.16.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include
 
 <h2>Collection of Component Files used:</h2>
-Build Time Elapsed:  00:00:12
+Target not created.
+Build Time Elapsed:  00:00:04
 </pre>
 </body>
 </html>
