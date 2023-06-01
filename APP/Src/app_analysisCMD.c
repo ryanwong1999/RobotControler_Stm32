@@ -237,11 +237,11 @@ void AnalysisCMD(void)
 					break;
 				
 				case CMD_QUERY_TEMP:			//查询温湿度,CO2
-					Send_TempHumMess(gUpdateCnt++, Sdev_tmp, &Environ);
+//					Send_TempHumMess(gUpdateCnt++, Sdev_tmp, &Environ);
 					break;
 				
 				case CMD_QUERY_ENVIRON:		//查询PM值
-					Send_EnvironMess(gUpdateCnt++, Sdev_tmp, &Environ);
+//					Send_EnvironMess(gUpdateCnt++, Sdev_tmp, &Environ);
 					break;	
 				
         case CMD_QUERY_OBS_EN:		//障碍传感器使能
@@ -276,14 +276,6 @@ void AnalysisCMD(void)
 				case CMD_LIFT_CON:				//升降控制命令
 					Lift_Moto.Cmd = UsartToPC.Rx_Buf[8];
 					Lift_Moto.Set_Height = 0xffff;
-					Robot_Moto.Robot_Dir = UsartToPC.Rx_Buf[9];
-				  Robot_Moto.Slow_Flag = UsartToPC.Rx_Buf[10];
-					Robot_Moto.Turn_Angle = UsartToPC.Rx_Buf[11];
-					if(Robot_Moto.Robot_Dir != MOVE_STOP)
-					{
-						Robot_Sys.Remote_flag = false;
-						Robot_Sys.Last_Task = AGV_TASK;
-					}
 					#ifndef ROBOT_YZ01	
           Send_LiftCtrl_reply(gUpdateCnt++, Sdev_tmp, Lift_Moto.Cmd);
 					#endif

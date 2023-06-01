@@ -17,7 +17,7 @@ void TIM2_IRQHandler(void)
 	static uint16_t errom_cnt = 0;
 	if((TIM_GetITStatus(TIM2, TIM_IT_Update) == SET))
 	{
-			TIM_ClearITPendingBit(TIM2 , TIM_IT_Update);  
+		TIM_ClearITPendingBit(TIM2, TIM_IT_Update);  
 		
 		Charge_Tim1ms();
 		//Robot_Moto.Locked_Flag = Wheel_Locded_Check();
@@ -46,16 +46,16 @@ void TIM2_IRQHandler(void)
 				last_pitch_offset = AT24CXX_ReadOneByte(7);
 			}
 		}
-	 if((UsartToEnviro.Rx_Sta & 0x01) != 0)
-		{
-		  UsartToEnviro.Comm_TimeOut ++;
-		  if( UsartToEnviro.Comm_TimeOut > 10)
-			{
-				UsartToEnviro.Comm_TimeOut = 0;
-			  UsartToEnviro.Usart_Rx_OK = true;
-		    UsartToEnviro.Rx_Sta = 0;
-			}
-		} 
+//		if((UsartToEnviro.Rx_Sta & 0x01) != 0)
+//		{
+//		  UsartToEnviro.Comm_TimeOut ++;
+//		  if(UsartToEnviro.Comm_TimeOut > 10)
+//			{
+//				UsartToEnviro.Comm_TimeOut = 0;
+//			  UsartToEnviro.Usart_Rx_OK = true;
+//		    UsartToEnviro.Rx_Sta = 0;
+//			}
+//		} 
 		tim1ms_cnt++;
 		if(tim1ms_cnt >= 1000) tim1ms_cnt = 0;
 		

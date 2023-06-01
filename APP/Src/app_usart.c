@@ -6,7 +6,13 @@ Usart_TypeDef UsartToDrv;
 //Usart_TypeDef UsartToEnviro;
 //Usart_TypeDef UsartToVoice;
 
-//串口1 中断函数，用于测试
+
+/************************************************/
+//函数功能：串口1 中断函数，用于测试
+//输入参数：
+//返回值：
+//备注：
+/************************************************/
 void USART1_IRQHandler(void)  
 {
 	uint8_t dat;
@@ -91,7 +97,12 @@ void USART1_IRQHandler(void)
 }
 
 
-//中断函数，工控机通信
+/************************************************/
+//函数功能：中断函数，工控机通信
+//输入参数：
+//返回值：
+//备注：
+/************************************************/
 void USART3_IRQHandler(void)  
 {
 	static unsigned char bTemp;
@@ -105,12 +116,13 @@ void USART3_IRQHandler(void)
   if(USART_GetITStatus(USART3, USART_IT_RXNE) != RESET)	//若接收数据寄存器满
   {  	
 		USART_ClearITPendingBit(USART3, USART_IT_RXNE);
-		dat =USART_ReceiveData(USART3);//(USART1->DR);			//读取接收到的数据
-	 // USARTx_SendOneByte(USART1, dat);
-		if(UsartToPC.Usart_Rx_OK == false){
+		dat = USART_ReceiveData(USART3);//(USART1->DR);			//读取接收到的数据
+//	  USARTx_SendOneByte(USART1, dat);
+		if(UsartToPC.Usart_Rx_OK == false)
+		{
 			if((UsartToPC.Rx_Sta & 0x02) != 0x02)							//收到帧头
 			{
-				if((UsartToPC.Rx_Sta&0x01) != 0x01)
+				if((UsartToPC.Rx_Sta & 0x01) != 0x01)
 				{
 					if(dat == 0x55)
 					{
@@ -149,7 +161,7 @@ void USART3_IRQHandler(void)
 					{
 						if(dat == 0x0D)
 						{
-							//Usart3_Rx_Struct.Rx_Buf[Usart3_Rx_Struct.Rx_Len] = dat;
+//							Usart3_Rx_Struct.Rx_Buf[Usart3_Rx_Struct.Rx_Len] = dat;
 							UsartToPC.Rx_Sta |= 0x04;
 						}
 						else 
@@ -183,16 +195,22 @@ void USART3_IRQHandler(void)
 }
 
 
-//中断函数，电机驱动器通信
+/************************************************/
+//函数功能：中断函数，电机驱动器通信
+//输入参数：
+//返回值：
+//备注：
+/************************************************/
 void UART4_IRQHandler(void)   
 {	
 	static uint8_t dat;
-	if(USART_GetITStatus(UART4, USART_IT_RXNE) != RESET)    //若接收数据寄存器满
+	if(USART_GetITStatus(UART4, USART_IT_RXNE) != RESET)	//若接收数据寄存器满
   {  	
 		USART_ClearITPendingBit(UART4, USART_IT_RXNE);       
-		dat = USART_ReceiveData(UART4);           // 先把UART4串口数据取出来暂存
-	  //USARTx_SendOneByte(USART1, dat);
-		if(UsartToDrv.Usart_Rx_OK == false){
+		dat = USART_ReceiveData(UART4);           					//先把UART4串口数据取出来暂存
+//	  USARTx_SendOneByte(USART1, dat);
+		if(UsartToDrv.Usart_Rx_OK == false)
+		{
 			UsartToDrv.Rx_Buf[UsartToDrv.Rx_Len++] = dat;
 			TIM_SetCounter(TIM7,0);
 			TIM_Cmd(TIM7,ENABLE);

@@ -9,23 +9,26 @@
 
 //#define MOTO_LOCK					1		//电机是否抱死
 
-#define END_H     0x0D
-#define END_L     0x0A	 
+#define END_H     		0x0D
+#define END_L     		0x0A	 
+//buffer 缓冲区大小	 
+#define	MAX_TX_LEN		64
+#define	MAX_RX_LEN		64
 //数据帧寄存器
-#define FRH_REG   0x00   // 帧1
-#define FRL_REG   0x01   // 帧2
-#define FINX_REG  0x02   // index
-#define FLEN_REG  0x03   // Frame length
-#define S_ID_REG  0x04   // 源ID
-#define P_ID_REG  0x05	 // 目的ID
-#define CMD_REG   0x06   // 命令
-#define DUM_REG   0x07   // 数据包大小
+#define FRH_REG   		0x00   // 帧1
+#define FRL_REG   		0x01   // 帧2
+#define FINX_REG  		0x02   // index
+#define FLEN_REG  		0x03   // Frame length
+#define S_ID_REG  		0x04   // 源ID
+#define P_ID_REG  		0x05	 // 目的ID
+#define CMD_REG   		0x06   // 命令
+#define DUM_REG   		0x07   // 数据包大小
 
-#define SPEED1_REG1  0x08
-#define SPEED2_REG1  0x0A
+#define SPEED1_REG1		0x08
+#define SPEED2_REG1		0x0A
 //本地地址
-#define DEV_ID    0x01
-#define PSC_ID    0x02
+#define DEV_ID    		0x01
+#define PSC_ID    		0x02
 //命令
 #define CMD_QUERY_ODOM       	0x01		//查询ODOM
 #define CMD_QUERY_PWR        	0x02    //查询电量
@@ -72,18 +75,17 @@ typedef struct
 	int16_t Right_Value_Sum;
 }Odom_Data_type;
 
-
 extern Odom_Data_type  Moto_Odom; 
 
-void  Send_OdomUpdata(uint8_t index, uint8_t paddr, Odom_Data_type odom_dat);
-void  Send_HeadCtrlCmd(uint8_t index, uint8_t addr, uint8_t cmd_dat );
-void  Send_HeadCtrlAngle(uint8_t index, uint8_t addr, uint8_t level,uint8_t);
+void Send_OdomUpdata(uint8_t index, uint8_t paddr, Odom_Data_type odom_dat);
+void Send_HeadCtrlCmd(uint8_t index, uint8_t addr, uint8_t cmd_dat);
+void Send_HeadCtrlAngle(uint8_t index, uint8_t addr, uint8_t level,uint8_t);
 void Send_Obs_EN_Mess(uint8_t index,uint8_t addr);
 unsigned char CRC8_Table(unsigned char *p, char counter);
-uint8_t  CRC8(uint8_t *pDate, uint8_t length);
-void  AnalysisCMD(void);	 
+uint8_t CRC8(uint8_t *pDate, uint8_t length);
+void AnalysisCMD(void);	 
 unsigned char CRC8_Table(unsigned char *p, char counter);	 
-void  SetMotoSpeed(void);
+void SetMotoSpeed(void);
 void Send_Obstacle_Sta(uint8_t index, uint8_t paddr, uint8_t obs_sta, uint8_t crach_sta);
 void Send_Speed_reply(uint8_t index, uint8_t paddr, uint16_t linear, uint16_t angular);
 void Send_Autocharge_reply(uint8_t index, uint8_t paddr, uint8_t dat);

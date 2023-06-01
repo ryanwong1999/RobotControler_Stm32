@@ -179,8 +179,6 @@ void AutoCharge_move( uint8_t Move_sta1)
 			if(sta_last != Move_sta1)
 			{
 				sta_last = Move_sta1;
-				Moto.cmd_addr1 = 0x2610;
-				Moto.cmd_addr2 = 0x3610;
 				AutoCharge.set_lear = -60;
 				AutoCharge.set_angle = 0;
 			}	
@@ -190,8 +188,6 @@ void AutoCharge_move( uint8_t Move_sta1)
 			if(sta_last != Move_sta1)
 			{
 				sta_last = Move_sta1;
-				Moto.cmd_addr1 = 0x2610;
-				Moto.cmd_addr2 = 0x3610;
 				#ifdef ROBOT_M100
 				AutoCharge.set_lear = -30;     //60,230
 				AutoCharge.set_angle = -110;
@@ -206,8 +202,6 @@ void AutoCharge_move( uint8_t Move_sta1)
 			if(sta_last != Move_sta1)
 			{
 				sta_last = Move_sta1;
-				Moto.cmd_addr1 = 0x2610;
-				Moto.cmd_addr2 = 0x3610;
 				#ifdef ROBOT_M100
 				AutoCharge.set_lear = -30;
 				AutoCharge.set_angle = 110;
@@ -222,8 +216,6 @@ void AutoCharge_move( uint8_t Move_sta1)
 			if(sta_last != Move_sta1)
 			{
 				sta_last = Move_sta1;
-				Moto.cmd_addr1 = 0x2620;
-				Moto.cmd_addr2 = 0x3620;
 				#ifdef ROBOT_M100
 				AutoCharge.set_lear = 0;
 				AutoCharge.set_angle = -200;
@@ -238,8 +230,6 @@ void AutoCharge_move( uint8_t Move_sta1)
 			if(sta_last != Move_sta1)
 			{
 				sta_last = Move_sta1;
-				Moto.cmd_addr1 = 0x2620;
-				Moto.cmd_addr2 = 0x3620;
 				#ifdef ROBOT_M100
 				AutoCharge.set_lear = 0;
 				AutoCharge.set_angle = 200;
@@ -251,8 +241,6 @@ void AutoCharge_move( uint8_t Move_sta1)
 				break;
 	
 		case CHG_MOVE_BACKWARD:
-				Moto.set_left_pwm = 90 ;
-				Moto.set_right_pwm = 90;
 			break;
 		
 	 default:
@@ -789,6 +777,6 @@ void Charge_OverTime_Process(void)
 /************************************************/
 void Charge_Crash_Pross(void)
 {
-	if((Robot_Moto.Locked_Flag & 0x03) != 0 || (Robot_Sys.Crash_Flag & 0x02) != 0)
+	if((Robot_Sys.Crash_Flag & 0x02) != 0)
 		AutoCharge.Chg_Sta = 0;
 }

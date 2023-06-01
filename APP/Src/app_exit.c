@@ -242,107 +242,107 @@ void EXTI9_5_IRQHandler(void)
 	
 	if(EXTI_GetITStatus(EXTI_Line5) != RESET)   // Line12产生中断
 	{
-		if((Ultra2.Uswave_Sta &0x20) ==0x20)			// 已经使能超声波数据捕获
-		{
-			if((Ultra2.Uswave_Sta &0x80)!=0x80)			// 数据没有接收完成
-			{
-				if((Ultra2.Uswave_Sta &0x40)!=0x40)		// 没有捕获到上升沿
-				{
-					if( ECHO_READ_2 == SET)							// 高电平
-					{
-						ultra2_val1 =BaseTimeCount;
-						Ultra2.Uswave_Sta |= 0x40;				// 标记捕获到上升沿	
-					}
-				}
-				else                                 	// 捕获到上升沿了，判断捕获下降沿
-				{
-					if(ECHO_READ_2 == RESET)						// 低电平 下降沿了
-					{
-						ultra2_val2 = BaseTimeCount;
-						if(ultra2_val2 < ultra2_val1)     // 计数有溢出
-							tmp= 65535 + ultra2_val2 - ultra2_val1;
-						else
-							tmp= ultra2_val2 - ultra2_val1;
-						Ultra2.Distance = tmp*50/29;    	// 障碍物距离  mm
-						if(Ultra2.Distance>2000) Ultra2.Distance = 2000;
-						Ultra2.Uswave_Sta &= 0x0F;				// 清除使能接收数据
-						Ultra2.Uswave_Sta |=0x80;					// 数据接收完成
-					  Ultra2.Out_time = 0;
-					}
-				}
-			}
-		}
-		EXTI_ClearITPendingBit(EXTI_Line5);       // 清除Lin6中断标志位
-	}
+//		if((Ultra2.Uswave_Sta &0x20) ==0x20)			// 已经使能超声波数据捕获
+//		{
+//			if((Ultra2.Uswave_Sta &0x80)!=0x80)			// 数据没有接收完成
+//			{
+//				if((Ultra2.Uswave_Sta &0x40)!=0x40)		// 没有捕获到上升沿
+//				{
+//					if( ECHO_READ_2 == SET)							// 高电平
+//					{
+//						ultra2_val1 =BaseTimeCount;
+//						Ultra2.Uswave_Sta |= 0x40;				// 标记捕获到上升沿	
+//					}
+//				}
+//				else                                 	// 捕获到上升沿了，判断捕获下降沿
+//				{
+//					if(ECHO_READ_2 == RESET)						// 低电平 下降沿了
+//					{
+//						ultra2_val2 = BaseTimeCount;
+//						if(ultra2_val2 < ultra2_val1)     // 计数有溢出
+//							tmp= 65535 + ultra2_val2 - ultra2_val1;
+//						else
+//							tmp= ultra2_val2 - ultra2_val1;
+//						Ultra2.Distance = tmp*50/29;    	// 障碍物距离  mm
+//						if(Ultra2.Distance>2000) Ultra2.Distance = 2000;
+//						Ultra2.Uswave_Sta &= 0x0F;				// 清除使能接收数据
+//						Ultra2.Uswave_Sta |=0x80;					// 数据接收完成
+//					  Ultra2.Out_time = 0;
+//					}
+//				}
+//			}
+//		}
+//		EXTI_ClearITPendingBit(EXTI_Line5);       // 清除Lin6中断标志位
+//	}
 
-	if(EXTI_GetITStatus(EXTI_Line7) != RESET)   // Line12产生中断
-	{
-		if((Ultra1.Uswave_Sta &0x20) ==0x20)			// 已经使能超声波数据捕获
-		{
-			if((Ultra1.Uswave_Sta &0x80)!=0x80)			// 数据没有接收完成
-			{
-				if((Ultra1.Uswave_Sta &0x40)!=0x40)		// 没有捕获到上升沿
-				{
-					if( ECHO_READ_1 == SET)       			// 高电平
-					{
-						ultra1_val1 =BaseTimeCount;
-						Ultra1.Uswave_Sta |= 0x40;				// 标记捕获到上升沿	
-					}
-				}
-				else                                 	// 捕获到上升沿了，判断捕获下降沿
-				{
-					if( ECHO_READ_1 == RESET)     			// 低电平 下降沿了
-					{
-						ultra1_val2 = BaseTimeCount;
-						if(ultra1_val2 < ultra1_val1)     // 计数有溢出
-							tmp= 65535 + ultra1_val2 - ultra1_val1;
-						else
-							tmp= ultra1_val2 - ultra1_val1;
-						Ultra1.Distance = tmp*50/29;  		// 障碍物距离  mm
-						if(Ultra1.Distance>2000) Ultra1.Distance = 2000;
-						Ultra1.Uswave_Sta &= 0x0F;				// 清除使能接收数据
-						Ultra1.Uswave_Sta |=0x80;					// 数据接收完成
-					  Ultra1.Out_time = 0;
-					}
-				}
-			}
-		}
+//	if(EXTI_GetITStatus(EXTI_Line7) != RESET)   // Line12产生中断
+//	{
+//		if((Ultra1.Uswave_Sta &0x20) ==0x20)			// 已经使能超声波数据捕获
+//		{
+//			if((Ultra1.Uswave_Sta &0x80)!=0x80)			// 数据没有接收完成
+//			{
+//				if((Ultra1.Uswave_Sta &0x40)!=0x40)		// 没有捕获到上升沿
+//				{
+//					if( ECHO_READ_1 == SET)       			// 高电平
+//					{
+//						ultra1_val1 =BaseTimeCount;
+//						Ultra1.Uswave_Sta |= 0x40;				// 标记捕获到上升沿	
+//					}
+//				}
+//				else                                 	// 捕获到上升沿了，判断捕获下降沿
+//				{
+//					if( ECHO_READ_1 == RESET)     			// 低电平 下降沿了
+//					{
+//						ultra1_val2 = BaseTimeCount;
+//						if(ultra1_val2 < ultra1_val1)     // 计数有溢出
+//							tmp= 65535 + ultra1_val2 - ultra1_val1;
+//						else
+//							tmp= ultra1_val2 - ultra1_val1;
+//						Ultra1.Distance = tmp*50/29;  		// 障碍物距离  mm
+//						if(Ultra1.Distance>2000) Ultra1.Distance = 2000;
+//						Ultra1.Uswave_Sta &= 0x0F;				// 清除使能接收数据
+//						Ultra1.Uswave_Sta |=0x80;					// 数据接收完成
+//					  Ultra1.Out_time = 0;
+//					}
+//				}
+//			}
+//		}
 		EXTI_ClearITPendingBit(EXTI_Line7);       // 清除Lin6中断标志位
 	}
 	
 	if(EXTI_GetITStatus(EXTI_Line9) != RESET)   // Line12产生中断
 	{
-   if((Ultra3.Uswave_Sta &0x20) ==0x20)				// 已经使能超声波数据捕获
-		{
-			if((Ultra3.Uswave_Sta &0x80)!=0x80)			// 数据没有接收完成
-			{
-				if((Ultra3.Uswave_Sta &0x40)!=0x40)		// 没有捕获到上升沿
-				{
-					if(ECHO_READ_3 == SET)       				// 高电平
-					{
-						ultra3_val1 =BaseTimeCount;
-						Ultra3.Uswave_Sta |= 0x40;				// 标记捕获到上升沿	
-					}
-				}
-				else                                 	// 捕获到上升沿了，判断捕获下降沿
-				{
-					if(ECHO_READ_3 == RESET)     				// 低电平 下降沿了
-					{
-						ultra3_val2 = BaseTimeCount;
-						if(ultra3_val2 < ultra3_val1)     // 计数有溢出
-							tmp= 65535 + ultra3_val2 - ultra3_val1;
-						else
-							tmp= ultra3_val2 - ultra3_val1;
-						Ultra3.Distance = tmp*50/29;    	// 障碍物距离  mm
-//						printf("Ultra3.Distance = %d\r\n",Ultra3.Distance);
-						if(Ultra3.Distance>2000) Ultra3.Distance = 2000;
-						Ultra3.Uswave_Sta &= 0x0F;				// 清除使能接收数据
-						Ultra3.Uswave_Sta |=0x80;					// 数据接收完成
-					  Ultra3.Out_time = 0;
-					}
-				}
-			}
-		}
+//   if((Ultra3.Uswave_Sta &0x20) ==0x20)				// 已经使能超声波数据捕获
+//		{
+//			if((Ultra3.Uswave_Sta &0x80)!=0x80)			// 数据没有接收完成
+//			{
+//				if((Ultra3.Uswave_Sta &0x40)!=0x40)		// 没有捕获到上升沿
+//				{
+//					if(ECHO_READ_3 == SET)       				// 高电平
+//					{
+//						ultra3_val1 =BaseTimeCount;
+//						Ultra3.Uswave_Sta |= 0x40;				// 标记捕获到上升沿	
+//					}
+//				}
+//				else                                 	// 捕获到上升沿了，判断捕获下降沿
+//				{
+//					if(ECHO_READ_3 == RESET)     				// 低电平 下降沿了
+//					{
+//						ultra3_val2 = BaseTimeCount;
+//						if(ultra3_val2 < ultra3_val1)     // 计数有溢出
+//							tmp= 65535 + ultra3_val2 - ultra3_val1;
+//						else
+//							tmp= ultra3_val2 - ultra3_val1;
+//						Ultra3.Distance = tmp*50/29;    	// 障碍物距离  mm
+////						printf("Ultra3.Distance = %d\r\n",Ultra3.Distance);
+//						if(Ultra3.Distance>2000) Ultra3.Distance = 2000;
+//						Ultra3.Uswave_Sta &= 0x0F;				// 清除使能接收数据
+//						Ultra3.Uswave_Sta |=0x80;					// 数据接收完成
+//					  Ultra3.Out_time = 0;
+//					}
+//				}
+//			}
+//		}
 		EXTI_ClearITPendingBit(EXTI_Line9);       // 清除Lin6中断标志位
 	}
 }
@@ -366,36 +366,36 @@ void  EXTI15_10_IRQHandler(void)
 	
 	if(EXTI_GetITStatus(EXTI_Line11) != RESET)		// Line12产生中断
 	{
-		if((Ultra4.Uswave_Sta &0x20) ==0x20)				// 已经使能超声波数据捕获
-		{
-			if((Ultra4.Uswave_Sta &0x80)!=0x80)				// 数据没有接收完成
-			{
-				if((Ultra4.Uswave_Sta &0x40)!=0x40)			// 没有捕获到上升沿
-				{
-					if(ECHO_READ_4 == SET)       					// 高电平
-					{
-						ultra4_val1 =BaseTimeCount;
-						Ultra4.Uswave_Sta |= 0x40;					// 标记捕获到上升沿	
-					}
-				}
-				else                                 		// 捕获到上升沿了，判断捕获下降沿
-				{
-					if(ECHO_READ_4 == RESET)     					// 低电平 下降沿了
-					{
-						ultra4_val2 = BaseTimeCount;
-						if(ultra4_val2 < ultra4_val1)     	// 计数有溢出
-							tmp= 65535 + ultra4_val2 - ultra4_val1;
-						else
-							tmp= ultra4_val2 - ultra4_val1;
-						Ultra4.Distance = tmp*50/29;    		// 障碍物距离  mm  
-						if(Ultra4.Distance>2000) Ultra4.Distance = 2000;
-						Ultra4.Uswave_Sta &= 0x0F;					// 清除使能接收数据
-						Ultra4.Uswave_Sta |=0x80;						// 数据接收完成
-					  Ultra4.Out_time = 0;
-					}
-				}
-			}
-		}
+//		if((Ultra4.Uswave_Sta &0x20) ==0x20)				// 已经使能超声波数据捕获
+//		{
+//			if((Ultra4.Uswave_Sta &0x80)!=0x80)				// 数据没有接收完成
+//			{
+//				if((Ultra4.Uswave_Sta &0x40)!=0x40)			// 没有捕获到上升沿
+//				{
+//					if(ECHO_READ_4 == SET)       					// 高电平
+//					{
+//						ultra4_val1 =BaseTimeCount;
+//						Ultra4.Uswave_Sta |= 0x40;					// 标记捕获到上升沿	
+//					}
+//				}
+//				else                                 		// 捕获到上升沿了，判断捕获下降沿
+//				{
+//					if(ECHO_READ_4 == RESET)     					// 低电平 下降沿了
+//					{
+//						ultra4_val2 = BaseTimeCount;
+//						if(ultra4_val2 < ultra4_val1)     	// 计数有溢出
+//							tmp= 65535 + ultra4_val2 - ultra4_val1;
+//						else
+//							tmp= ultra4_val2 - ultra4_val1;
+//						Ultra4.Distance = tmp*50/29;    		// 障碍物距离  mm  
+//						if(Ultra4.Distance>2000) Ultra4.Distance = 2000;
+//						Ultra4.Uswave_Sta &= 0x0F;					// 清除使能接收数据
+//						Ultra4.Uswave_Sta |=0x80;						// 数据接收完成
+//					  Ultra4.Out_time = 0;
+//					}
+//				}
+//			}
+//		}
 		EXTI_ClearITPendingBit(EXTI_Line11);       // 清除Lin6中断标志位
 	}
 }

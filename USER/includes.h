@@ -82,6 +82,7 @@
 #include "app_exit.h" 
 #include "app_headDone.h"
 #include "app_liftMoto.h" 
+#include "app_motoDrv.h" 
 #include "app_pms.h" 
 #include "app_system.h" 
 #include "app_tim.h" 

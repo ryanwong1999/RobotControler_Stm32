@@ -494,6 +494,11 @@
               <FileType>1</FileType>
               <FilePath>..\APP\Src\app_tim.c</FilePath>
             </File>
+            <File>
+              <FileName>app_motoDrv.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\APP\Src\app_motoDrv.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
