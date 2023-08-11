@@ -3,11 +3,13 @@
 
 #include "includes.h"
 
-//#define ROBOT_YZ01	1		//YZ01
-//#define ROBOT_M100	1		//M100
-#define ROBOT_MR9		1		//MR9
+//#define ROBOT_YZ01		1		//YZ01
+//#define ROBOT_M100		1		//M100
+#define ROBOT_MR9			1		//MR9
 
-//#define MOTO_LOCK					1		//电机是否抱死
+//#define MOTO_LOCK			1		//电机是否抱死
+
+#define SEND_PC_LEN		19
 
 #define END_H     		0x0D
 #define END_L     		0x0A	 
@@ -58,6 +60,12 @@
 #define CMD_LIFT_CON					0x81		//控制升降电机
 #define CMD_CON_MOVE					0x82
 
+
+#define WHEEL_TRACK  					0.38		//YZ01C 单位米 轮距 ,金属外壳0.31,加拿大0.28，塑胶底壳0.41
+#define WHEEL_RADIUS  				0.0845	//单位米,轮子半径
+#define PI  									3.1415926
+#define PULSE_CYCLE   				5600		//脉冲周期
+
 typedef struct
 {
 	uint8_t Send_BUF[MAX_TX_LEN];
@@ -73,6 +81,7 @@ typedef struct
 	int16_t Right_Value;
 	int16_t Left_Value_Sum;
 	int16_t Right_Value_Sum;
+	int8_t Clean_Flag;
 }Odom_Data_type;
 
 extern Odom_Data_type  Moto_Odom; 

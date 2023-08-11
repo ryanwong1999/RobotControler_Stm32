@@ -141,5 +141,103 @@ void Head_Level_To_SomeWhere(float pos)
 }
 
 
+/************************************************/
+//函数功能：头部复位，归正
+//输入参数：
+//返回值：
+//备注：
+/************************************************/
+void Head_Back()
+{
+	/* 俯仰 */
+	Head_UD_To_SomeWhere(Head_Status.PSC_UD_Default_Pos);
+	/* 水平 */
+	Head_Level_To_SomeWhere(Head_Status.PSC_Level_Default_Pos);
+}
+
+
+/************************************************/
+//函数功能：是否转到位，转到位则停止
+//输入参数：
+//返回值：
+//备注：
+/************************************************/
+void Check_Assign_Ok()
+{
+	/* 水平目标值 */
+	if(Head_Status.PSC_Level_Goal_Pos > 0)
+	{
+		if(fabs(Head_Status.PSC_Level_Pos - Head_Status.PSC_Level_Goal_Pos) < 0.5)
+		{
+			/* 左右停止 */
+			Head_Status.PSC_Dir &= ~((1 << (5-1)) | (1<<(7-1)));
+			Head_Status.PSC_Level_Goal_Pos = 0;
+			
+		}
+	}
+	/* 垂直目标值 */
+	if(Head_Status.PSC_UD_Goal_Pos > 0)
+	{
+		if(fabs(Head_Status.PSC_UD_Pos - Head_Status.PSC_UD_Goal_Pos) < 0.5)
+		{
+			/* 俯仰停止 */
+			Head_Status.PSC_Dir &= ~((1 << (6-1)) | (1<<(8-1)));
+			Head_Status.PSC_UD_Goal_Pos = 0;			
+		}
+	}
+}
+
+
+/************************************************/
+//函数功能：头部转动控制
+//输入参数：
+//返回值：
+//备注：
+/************************************************/
+void Head_Control_Done()
+{
+	if(Head_Status.PSC_Dir == 0)
+	{
+	}
+	else if((Head_Status.PSC_Dir & (1<<(5-1))) != 0)
+	{
+		/* 5  左 */
+		Moto_Level(PSC_MOVE_LEFT);  
+	}
+	else if((Head_Status.PSC_Dir & (1<<(7-1))) != 0)
+	{
+		/* 7  右   为 0 */
+		Moto_Level(PSC_MOVE_RIGHT);
+	}
+
+	if((Head_Status.PSC_Dir & (1<<(6-1))) != 0)
+	{
+		/* 这个是 上 */
+		Moto_Pit(PSC_MOVE_UP);
+	}
+	else if((Head_Status.PSC_Dir & (1<<(8-1))) != 0)
+	{
+		/* 这个是 下 */
+		Moto_Pit(PSC_MOVE_DOWN);
+	}
+	else if(Head_Status.PSC_Dir == 9)
+	{
+		/* 回中 */
+		Head_Back();
+	}
+
+	if((Head_Status.PSC_Dir & 0xF0) == 0)
+	{
+		Head_Status.PSC_Dir = 0;
+	}
+
+	if(Head_Status.PSC_Dir != 0)
+	{
+		Check_Assign_Ok();
+	}
+}
+
+
+
 
 

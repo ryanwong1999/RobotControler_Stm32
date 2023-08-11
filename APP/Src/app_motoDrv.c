@@ -146,3 +146,245 @@ void Moto_mdrv_analysis(void)
 		UsartToDrv.Rx_Len = 0;
 	}
 }
+
+
+/************************************************/
+//函数功能：驱动器过流保护
+//输入参数：
+//返回值：
+//备注：
+/************************************************/
+bool Get_Drv_OverCur_Flag(uint16_t drv_cur, int16_t bat_cur)
+{
+	static bool sta = 0;
+	static uint8_t over_cnt = 0, over_rst_cnt = 0;
+	if(drv_cur >= 40000){
+		over_cnt ++;
+		over_rst_cnt = 0;
+		if(over_cnt >= 3){
+			over_cnt = 0;
+			sta = true;
+		}
+	}else{
+		over_rst_cnt ++;
+		over_cnt = 0;
+		if(over_rst_cnt > 20){
+			over_rst_cnt = 0;
+			sta = false;
+		}
+	}
+	return sta;
+}
+
+
+/************************************************/
+//函数功能：计算脉冲数
+//输入参数：
+//返回值：
+//备注：
+/************************************************/
+void Get_odom_pulse(int16_t l_pos, int16_t r_pos, int16_t *l_pulse, int16_t *r_pulse)
+{
+	static int16_t last_l_pos = 0, last_r_pos = 0;
+	static int16_t last_l_pulse = 0, last_r_pulse = 0;
+	static int16_t l_pulse_temp = 0, r_pulse_temp = 0;
+	int16_t pulse_tmp;
+
+	/* 计算左轮脉冲 */
+	if(l_pos > PULSE_CYCLE * 0.75 && last_l_pos < PULSE_CYCLE * 0.25)
+	{
+		pulse_tmp = PULSE_CYCLE;
+	}
+	else if(l_pos < PULSE_CYCLE * 0.25 && last_l_pos > PULSE_CYCLE * 0.75)
+	{
+		pulse_tmp = 0 - PULSE_CYCLE;
+	}
+	else
+	{
+		pulse_tmp = 0;
+	} 
+	l_pulse_temp = pulse_tmp + last_l_pos - l_pos;
+	l_pulse_temp = l_pulse_temp/4; 
+	/* 计算右轮脉冲 */
+	if(r_pos > PULSE_CYCLE * 0.75 && last_r_pos < PULSE_CYCLE * 0.25)
+	{
+		pulse_tmp = 0 - PULSE_CYCLE;
+	}
+	else if(r_pos < PULSE_CYCLE * 0.25 && last_r_pos > PULSE_CYCLE * 0.75)
+	{
+		pulse_tmp = PULSE_CYCLE;
+	}
+	else
+	{
+		pulse_tmp = 0;
+	}
+	r_pulse_temp = pulse_tmp + r_pos - last_r_pos;
+	r_pulse_temp = r_pulse_temp/4;
+	/* 判断急停松开后的第一个脉冲数有跳变，滤掉 */
+	if(Moto_Odom.Clean_Flag == 1)
+	{
+		*l_pulse = 0;
+		*r_pulse = 0;
+		Moto_Odom.Clean_Flag = 0;
+	}
+	else
+	{
+		*l_pulse = l_pulse_temp;
+		*r_pulse = r_pulse_temp;
+	}
+//	printf("last_l_pos : %d, last_r_pos : %d, last_l_pulse : %d, last_r_pulse : %d\r\n",last_l_pos, last_r_pos, last_l_pulse, last_r_pulse);
+	last_l_pulse = l_pulse_temp;
+	last_r_pulse = r_pulse_temp;
+	last_l_pos = l_pos;
+	last_r_pos = r_pos;
+//	printf("l_pos : %d, r_pos : %d, *l_pulse : %d, *r_pulse : %d ----------------------------------\r\n", l_pos, r_pos, *l_pulse, *r_pulse);
+}
+
+
+/************************************************/
+//函数功能：查询脉冲位置
+//输入参数：
+//返回值：
+//备注：
+/************************************************/
+void Send_code_disk_query(void)
+{
+	Send_read_mdrv_cmd(0x5004, 0x5104);
+}
+
+
+/************************************************/
+//函数功能：设置电机使能
+//输入参数：
+//返回值：
+//备注：
+/************************************************/
+void Send_mdrv_en_set(int16_t l_en, int16_t r_en)
+{
+	Send_write_mdrv_cmd(0x2100, 0x3100, l_en, r_en);
+}
+
+
+/************************************************/
+//函数功能：设置电机速度
+//输入参数：
+//返回值：
+//备注：
+/************************************************/
+void Send_wheel_speed_set(int16_t l_speed, int16_t r_speed)
+{
+  Send_write_mdrv_cmd(0x2318, 0x3318, r_speed, l_speed);
+}
+
+
+/************************************************/
+//函数功能：设置电机线速度和角速度
+//输入参数：
+//返回值：
+//备注：
+/************************************************/
+void Send_speed_set(int16_t set_lear, int16_t set_angle)
+{
+	uint8_t i;
+  uint16_t crc16_data;
+	uint8_t *buf;
+	uint8_t sramx = 0;					//默认为内部sram
+  buf = mymalloc(sramx, 10);	//申请2K字节
+	
+	buf[0] = 0x01;
+	buf[1] = 0xEA;
+	buf[2] = set_lear;
+	buf[3] = set_lear>>8;
+	buf[4] = set_angle;
+	buf[5] = set_angle>>8;
+	crc16_data = ModBusCRC16(buf, 6);
+	buf[6] = crc16_data >> 8;
+	buf[7] = crc16_data;
+	
+	RS485_SendMultibyte(USART_RS485, buf, 8);
+	myfree(sramx, buf);				//释放内存
+}
+
+
+/************************************************/
+//函数功能：读命令
+//输入参数：
+//返回值：
+//备注：
+/************************************************/
+void Send_read_mdrv_cmd(uint16_t addr1, uint16_t addr2)
+{
+  uint16_t crc16_data;
+  uint8_t *buf;
+	uint8_t sramx = 0;					//默认为内部sram
+  buf = mymalloc(sramx, 10);	//申请20字节
+	
+	buf[0] = 0x01;
+	buf[1] = 0x43;
+	buf[2] = addr1>>8;
+	buf[3] = addr1;
+	buf[4] = addr2>>8;
+	buf[5] = addr2;
+	crc16_data = ModBusCRC16(buf, 6);
+	buf[6] = crc16_data >> 8;
+	buf[7] = crc16_data;
+	
+	RS485_SendMultibyte(USART_RS485, buf, 8);
+	myfree(sramx, buf);
+}
+
+
+/************************************************/
+//函数功能：写数据命令
+//输入参数：
+//返回值：
+//备注：
+/************************************************/
+void Send_write_mdrv_cmd(uint16_t addr1, uint16_t addr2, int16_t dat1, int16_t dat2)
+{
+  uint16_t crc16_data;
+	uint8_t *buf;
+	uint8_t sramx = 0;					//默认为内部sram
+  buf = mymalloc(sramx, 20); 	//申请2K字节
+	
+	buf[0] = 0x01;
+	buf[1] = 0x44;
+	buf[2] = addr1>>8;
+	buf[3] = addr1;
+	buf[4] = addr2>>8;
+	buf[5] = addr2;
+	buf[6] = dat1>>8;
+	buf[7] = dat1;
+	buf[8] = dat2>>8;
+	buf[9] = dat2;
+	crc16_data = ModBusCRC16(buf, 10);
+	buf[10] = crc16_data >> 8;
+	buf[11] = crc16_data;
+	
+	RS485_SendMultibyte(USART_RS485, buf, 12);
+	myfree(sramx, buf);
+}
+
+
+/************************************************/
+//函数功能：校验
+//输入参数：
+//返回值：
+//备注：
+/************************************************/
+unsigned short ModBusCRC16(const void *s, int n) 
+{
+	unsigned short c = 0xffff, b;
+	char i;
+	int k;
+	for(k = 0; k < n; k++) 
+	{  
+		b=(((u8 *)s)[k]); 
+		for(i = 0; i < 8; i++) 
+		{  
+			c = ((b^c)&1) ? (c>>1)^0xA001 : (c>>1); 
+			b>>=1; 
+		}  
+	}  
+	return (c<<8)|(c>>8);
+}

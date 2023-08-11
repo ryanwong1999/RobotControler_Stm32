@@ -61,93 +61,93 @@ void AnalysisCMD(void)
 			cmd_tmp =  UsartToPC.Rx_Buf[CMD_REG];
 			switch(cmd_tmp)
 			{
-				case CMD_QUERY_ODOM:   // 查询ODOM
-					Robot_Sys.Odom_Timeout_cnt = 0;
-					if(Robot_Sys.Mergency_Stop_flag == true)
-					{
-						Moto_Odom.Left_Value = 0;
-						Moto_Odom.Right_Value = 0;
-						Send_OdomUpdata(1, 0xff, Moto_Odom);
-					}
-					else Send_code_disk_query();
-					break;
+//				case CMD_QUERY_ODOM:   // 查询ODOM
+//					Robot_Sys.Odom_Timeout_cnt = 0;
+//					if(Robot_Sys.Mergency_Stop_flag == true)
+//					{
+//						Moto_Odom.Left_Value = 0;
+//						Moto_Odom.Right_Value = 0;
+//						Send_OdomUpdata(1, 0xff, Moto_Odom);
+//					}
+//					else Send_code_disk_query();
+//					break;
 
-        case CMD_SET_SPEED:   // 设置速度	
-					Robot_Sys.Speed_Timeout_cnt = 0;
-				  memcpy(&lear_tmp, &UsartToPC.Rx_Buf[SPEED1_REG1], sizeof(int16_t));
-					memcpy(&angular_tmp, &UsartToPC.Rx_Buf[SPEED2_REG1], sizeof(int16_t));
-					rx_lear = (short int)t_ntohs(lear_tmp);
-					rx_angle = (short int)t_ntohs(angular_tmp);
-				 
-					if(rx_lear > 1500) rx_lear = 1500;
-				  else if(rx_lear < -1500) rx_lear = -1500;
-					
-					if(rx_lear != 0 || rx_angle != 0)
-					{
-						Robot_Sys.AutoCharge_task_flag = false;
-						AutoCharge.AutoChg_Cmd = false;
-						Robot_Sys.Remote_flag = true;
-						Robot_Sys.Set_PWM_Task_Flag = false;
-						Robot_Sys.Last_Task = REMOTE_TASK;
-						AutoCharge.chg_flag = 0 ;
-						AutoCharge.chg_fail = 0;
-					}
-					
-					if(Robot_Sys.Mergency_Stop_flag == true || Moto.over_cur_flag == true)
-					{
-						if(Moto.en_sta == 1)
-						{
-							Moto.set_lear = 0;
-							Moto.set_angle = 0;
-							Send_speed_set(Moto.set_lear, Moto.set_angle);
-						}
-						else Send_mdrv_en_set(1, 1);
-					}
-					else if(Robot_Sys.Mergency_Stop_flag != true)
-					{
-						if(Robot_Sys.AutoCharge_task_flag == false)
-						{
-							if(((Robot_Sys.Ultra_sta & 0x03) != 0 || ((Robot_Sys.Crash_Flag & 0x01) != 0)) && rx_lear > 0)
-							{
-								Moto.set_lear = 0;
-								Moto.set_angle = 0;
-							}
-							else if(((Robot_Sys.Ultra_sta & 0x30) != 0 || ((Robot_Sys.Crash_Flag & 0x02) != 0)) && rx_lear < 0)
-							{
-								Moto.set_lear = 0;
-								Moto.set_angle = 0;
-							}
-							else
-							{
-								Moto.set_lear = rx_lear;
-								Moto.set_angle = rx_angle;
-							}
-						}
-						else
-						{
-							Moto.set_lear = AutoCharge.set_lear;
-							Moto.set_angle = AutoCharge.set_angle;
-						}
-						
-						#ifdef MOTO_LOCK	 	
-						//电机不动时可以用手推动，适用于室外
-						if(Moto.en_sta == 0) Send_mdrv_en_set(1, 1);
-						else Send_speed_set(Moto.set_lear, Moto.set_angle);
-						#else
-						//电机不动时可以用手推动，适用于室内
-						if(Moto.set_lear == 0 && Moto.set_angle == 0 && (Pms.Bat_Sta & 0x01) == 0)
-						{
-							if(Moto.stop_sta == 1 && Moto.en_sta == 1) 
-								Send_mdrv_en_set(0, 0);
-							else 
-								Send_speed_set(Moto.set_lear, Moto.set_angle);
-						}else{
-							if(Moto.en_sta == 0) Send_mdrv_en_set(1, 1);
-							else Send_speed_set(Moto.set_lear, Moto.set_angle);
-						}
-						#endif
-					}
-					break;
+//        case CMD_SET_SPEED:   // 设置速度	
+//					Robot_Sys.Speed_Timeout_cnt = 0;
+//				  memcpy(&lear_tmp, &UsartToPC.Rx_Buf[SPEED1_REG1], sizeof(int16_t));
+//					memcpy(&angular_tmp, &UsartToPC.Rx_Buf[SPEED2_REG1], sizeof(int16_t));
+//					rx_lear = (short int)t_ntohs(lear_tmp);
+//					rx_angle = (short int)t_ntohs(angular_tmp);
+//				 
+//					if(rx_lear > 1500) rx_lear = 1500;
+//				  else if(rx_lear < -1500) rx_lear = -1500;
+//					
+//					if(rx_lear != 0 || rx_angle != 0)
+//					{
+//						Robot_Sys.AutoCharge_task_flag = false;
+//						AutoCharge.AutoChg_Cmd = false;
+//						Robot_Sys.Remote_flag = true;
+//						Robot_Sys.Set_PWM_Task_Flag = false;
+//						Robot_Sys.Last_Task = REMOTE_TASK;
+//						AutoCharge.chg_flag = 0 ;
+//						AutoCharge.chg_fail = 0;
+//					}
+//					
+//					if(Robot_Sys.Mergency_Stop_flag == true || Moto.over_cur_flag == true)
+//					{
+//						if(Moto.en_sta == 1)
+//						{
+//							Moto.set_lear = 0;
+//							Moto.set_angle = 0;
+//							Send_speed_set(Moto.set_lear, Moto.set_angle);
+//						}
+//						else Send_mdrv_en_set(1, 1);
+//					}
+//					else if(Robot_Sys.Mergency_Stop_flag != true)
+//					{
+//						if(Robot_Sys.AutoCharge_task_flag == false)
+//						{
+//							if(((Robot_Sys.Ultra_sta & 0x03) != 0 || ((Robot_Sys.Crash_Flag & 0x01) != 0)) && rx_lear > 0)
+//							{
+//								Moto.set_lear = 0;
+//								Moto.set_angle = 0;
+//							}
+//							else if(((Robot_Sys.Ultra_sta & 0x30) != 0 || ((Robot_Sys.Crash_Flag & 0x02) != 0)) && rx_lear < 0)
+//							{
+//								Moto.set_lear = 0;
+//								Moto.set_angle = 0;
+//							}
+//							else
+//							{
+//								Moto.set_lear = rx_lear;
+//								Moto.set_angle = rx_angle;
+//							}
+//						}
+//						else
+//						{
+//							Moto.set_lear = AutoCharge.set_lear;
+//							Moto.set_angle = AutoCharge.set_angle;
+//						}
+//						
+//						#ifdef MOTO_LOCK	 	
+//						//电机不动时可以用手推动，适用于室外
+//						if(Moto.en_sta == 0) Send_mdrv_en_set(1, 1);
+//						else Send_speed_set(Moto.set_lear, Moto.set_angle);
+//						#else
+//						//电机不动时可以用手推动，适用于室内
+//						if(Moto.set_lear == 0 && Moto.set_angle == 0 && (Pms.Bat_Sta & 0x01) == 0)
+//						{
+//							if(Moto.stop_sta == 1 && Moto.en_sta == 1) 
+//								Send_mdrv_en_set(0, 0);
+//							else 
+//								Send_speed_set(Moto.set_lear, Moto.set_angle);
+//						}else{
+//							if(Moto.en_sta == 0) Send_mdrv_en_set(1, 1);
+//							else Send_speed_set(Moto.set_lear, Moto.set_angle);
+//						}
+//						#endif
+//					}
+//					break;
 
 				case CMD_QUERY_POWER:        // 查询电量及充电状态
 					Robot_Sys.mSysPower.charger = Pms.Bat_Sta | AutoCharge.chg_fail ;
@@ -266,12 +266,12 @@ void AnalysisCMD(void)
 					Send_angle_offset_reply(gUpdateCnt++, Sdev_tmp, Head_Status.Level_Offset, Head_Status.Pitch_Offset);
 					break;
 				
-				case CMD_SET_SENSOR_EN:		//设置传感器使能
-					Robot_Sys.Ultra_Disable_Flag = UsartToPC.Rx_Buf[8];
-					Robot_Sys.IR_Front_Disable_Flag = UsartToPC.Rx_Buf[9];
-					Robot_Sys.IR_Bottom_Disable_Flag = UsartToPC.Rx_Buf[10];
-				  Send_ultra_en_reply(gUpdateCnt++, Sdev_tmp, Robot_Sys.Ultra_Disable_Flag);
-					break;
+//				case CMD_SET_SENSOR_EN:		//设置传感器使能
+//					Robot_Sys.Ultra_Disable_Flag = UsartToPC.Rx_Buf[8];
+//					Robot_Sys.IR_Front_Disable_Flag = UsartToPC.Rx_Buf[9];
+//					Robot_Sys.IR_Bottom_Disable_Flag = UsartToPC.Rx_Buf[10];
+//				  Send_ultra_en_reply(gUpdateCnt++, Sdev_tmp, Robot_Sys.Ultra_Disable_Flag);
+//					break;
 				
 				case CMD_LIFT_CON:				//升降控制命令
 					Lift_Moto.Cmd = UsartToPC.Rx_Buf[8];
@@ -289,3 +289,639 @@ void AnalysisCMD(void)
 		}	
 	}
 }
+
+
+/************************************************/
+//函数功能：发送Odom信息
+//输入参数：
+//返回值：
+//备注：
+/************************************************/
+void Send_OdomUpdata(uint8_t index, uint8_t addr, Odom_Data_type odom_dat)
+{
+	int16_t tmpYaw;
+	int16_t tmpAngular_Rate;
+	static uint8_t ultra[4];
+	uint8_t *buf;
+	uint8_t sramx = 0;					//默认为内部sram
+  buf = mymalloc(sramx, 20);	//申请20字节
+	
+	buf[0] = 0x55;
+	buf[1] = 0xAA;
+	buf[2] = index;
+	buf[3] = 0x13;
+	buf[4] = 0x01;   //本机ID
+	buf[5] = addr;   //目的ID
+	buf[6] = 0x01;   //功能码
+	buf[7] = 0x08;   //数据包个数
+	
+	buf[8] = (odom_dat.Left_Value >> 8) & 0x00ff;
+	buf[9] = odom_dat.Left_Value & 0x00ff; 
+	buf[10] = (odom_dat.Right_Value >> 8) & 0x00ff; 
+	buf[11] = odom_dat.Right_Value & 0x00ff; 
+	buf[12]	= 0;
+	buf[13]	= 0;
+	buf[14]	= 0;
+	buf[15]	= 0;
+	buf[16]	= CRC8_Table(buf, 16);
+	buf[17]	= 0x0D;
+	buf[18]	= 0x0A;
+	
+	USARTx_SendMultibyte(USART_PC, buf, SEND_PC_LEN);
+	myfree(sramx, buf);
+}
+
+
+/************************************************/
+//函数功能：发送头部状态信息
+//输入参数：
+//返回值：
+//备注：
+/************************************************/
+void Send_Head_Pose(uint8_t index, uint8_t addr, HeadPose_Type mHead_Pose, bool stop_key)
+{
+	int16_t level;
+	int16_t pitch;
+	uint8_t *buf;
+	uint8_t sramx = 0;					//默认为内部sram
+  buf = mymalloc(sramx, 20);	//申请20字节
+
+//	printf("Robot_Sys.Mergency_Stop_flag:%d\r\n", Robot_Sys.Mergency_Stop_flag);
+	buf[0] = 0x55;
+	buf[1] = 0xAA;
+	buf[2] = index;
+	buf[3] = 0x13;
+	buf[4] = 0x01;
+	buf[5] = addr;
+	buf[6] = 0x10;
+	buf[7] = 0x08;
+	
+	buf[8] = (mHead_Pose.Level >> 8) & 0x00FF;
+	buf[9] = (mHead_Pose.Level) & 0x00FF;
+	buf[10] = (mHead_Pose.Pitch >> 8) & 0x00FF;
+	buf[11] = (mHead_Pose.Pitch) & 0x00FF;
+	buf[12] = 0x00;
+	buf[13] = Robot_Sys.Mergency_Stop_flag;
+	buf[14] = (uint8_t)stop_key;
+	buf[15] = 0x00;
+	
+	buf[16]	= CRC8_Table(buf, 16);
+	buf[17]	= 0x0D;
+	buf[18]	= 0x0A;
+	
+	USARTx_SendMultibyte(USART_PC, buf, SEND_PC_LEN);
+	myfree(sramx, buf);
+}
+
+
+/************************************************/
+//函数功能：发送升降状态信息
+//输入参数：
+//返回值：
+//备注：
+/************************************************/
+void Send_LiftMoto_Mess(uint8_t index, uint8_t addr,LiftMoto_Type *_liftmoto)
+{
+	uint8_t *buf;
+	uint8_t sramx = 0;					//默认为内部sram
+  buf = mymalloc(sramx, 20);	//申请20字节
+	
+	buf[0] = 0x55;
+	buf[1] = 0xAA;
+	buf[2] = index;
+	buf[3] = 0x13;
+	buf[4] = 0x01;
+	buf[5] = addr;
+	buf[6] = 0x61;
+	buf[7] = 0x08;
+	
+	buf[8] = (_liftmoto->Height >> 8) & 0x00FF;
+	buf[9] = _liftmoto->Height & 0x00FF;
+	buf[10] = _liftmoto->Limit_Switch_Flag | _liftmoto->OverCurrent_Flag;
+	buf[11] = _liftmoto->Lift_OK_flag;
+	buf[12] = _liftmoto->OverCurrent_Flag;
+	buf[13] = 0;
+	buf[14] = 0;
+	buf[15] = 0;
+	
+	buf[16]	= CRC8_Table(buf, 16);
+	buf[17]	= 0x0D;
+	buf[18]	= 0x0A;
+	
+	USARTx_SendMultibyte(USART_PC, buf, SEND_PC_LEN);
+	myfree(sramx, buf);
+}
+
+
+/************************************************/
+//函数功能：发送电源状态信息
+//输入参数：
+//返回值：
+//备注：
+/************************************************/
+void Send_PowerDataUpdata(uint8_t index, uint8_t addr, Power_Type mPower)
+{
+	uint32_t tmpCharger;
+	uint32_t tmpPower;
+	uint8_t *buf;
+	uint8_t sramx = 0;					//默认为内部sram
+  buf = mymalloc(sramx, 20);	//申请2K字节
+	
+  buf[0] = 0x55;
+	buf[1] = 0xAA;
+	buf[2] = index;
+	buf[3] = 0x13;
+	buf[4] = 0x01;		//本机ID
+	buf[5] = addr;		//目的ID
+	buf[6] = 0x09;		//功能码
+	buf[7] = 0x08;		//数据包个数
+
+	tmpCharger = (uint32_t) mPower.charger;	//以整形发送
+	tmpPower = (uint32_t) mPower.power;			//以整形发送	
+	
+	buf[8] = Robot_Sys.Mergency_Stop_flag;	//急停开关标志
+	buf[9] = Robot_Sys.PowerOff_flag;				//关机命令
+	buf[10]	= Robot_Sys.Voice_flag;					//语音使能标志
+	buf[11]	= (uint8_t)tmpCharger;	
+	buf[12]	= 0;
+	buf[13]	= 0;	
+	buf[14]	= Moto.en_sta;	
+	buf[15]	= (uint8_t)tmpPower;	
+
+	buf[16]	= CRC8_Table(buf, 16);
+	buf[17]	= 0x0D;
+	buf[18]	= 0x0A;
+	
+	USARTx_SendMultibyte(USART_PC, buf, SEND_PC_LEN); 
+	myfree(sramx, buf);	//释放内存
+}
+
+
+/************************************************/
+//函数功能：发送头部控制信息
+//输入参数：
+//返回值：
+//备注：
+/************************************************/
+void Send_HeadCtrlCmd(uint8_t index, uint8_t addr, uint8_t cmd_dat)
+{
+	uint8_t *buf;
+	uint8_t sramx = 0;					//默认为内部sram
+  buf = mymalloc(sramx, 20);	//申请20字节
+	
+	buf[0] = 0x55;
+	buf[1] = 0xAA;
+	buf[2] = index;
+	buf[3] = 0x13;
+	buf[4] = 0x01;   //本机ID
+	buf[5] = addr;   //目的ID
+	buf[6] = 0x32;   //功能码
+	buf[7] = 0x08;   //数据包个数
+
+	buf[8] = cmd_dat;
+	
+	memset(buf+9,0,7);	
+		
+	buf[16] = CRC8_Table(buf, 16);
+	buf[17]	= 0x0D;
+	buf[18]	= 0x0A;
+	
+	USARTx_SendMultibyte(USART_PC, buf, SEND_PC_LEN); 
+	myfree(sramx, buf);
+}
+
+
+/************************************************/
+//函数功能：发送障碍传感器使能状态信息
+//输入参数：
+//返回值：
+//备注：
+/************************************************/
+void Send_Obs_EN_Mess(uint8_t index, uint8_t addr)
+{
+	uint8_t *buf;
+	uint8_t sramx = 0;					//默认为内部sram
+  buf = mymalloc(sramx, 20);	//申请20字节
+	
+	buf[0] = 0x55;
+	buf[1] = 0xAA;
+	buf[2] = index;
+	buf[3] = 0x13;
+	buf[4] = 0x01;
+	buf[5] = addr;
+	buf[6] = 0x64;
+	buf[7] = 0x08;
+	
+	buf[8] = Robot_Sys.Ultra_Disable_Flag;		//超声失能标志
+	buf[9] = Robot_Sys.IR_Bottom_Disable_Flag;
+	buf[10] = Robot_Sys.IR_Front_Disable_Flag;
+	buf[11] = 0;
+	buf[12] = 0;
+	buf[13] = 0;
+	buf[14] = 0;
+	
+	buf[15] = 0;
+	buf[16]	= CRC8_Table(buf, 16);
+	buf[17]	= 0x0D;
+	buf[18]	= 0x0A;
+	
+	USARTx_SendMultibyte(USART_PC, buf, SEND_PC_LEN);
+	myfree(sramx, buf);
+}
+
+
+/************************************************/
+//函数功能：发送障碍传感器状态信息
+//输入参数：
+//返回值：
+//备注：
+/************************************************/
+void Send_Obstacle_Sta(uint8_t index, uint8_t paddr, uint8_t obs_sta, uint8_t crach_sta)
+{
+	uint8_t *buf;
+	uint8_t sramx = 0;					//默认为内部sram
+  buf = mymalloc(sramx, 20);	//申请20字节
+	
+	buf[0] = 0x55;
+	buf[1] = 0xAA;
+	buf[2] = index;
+	buf[3] = 0x13;
+	buf[4] = 0x01;			//本机ID
+	buf[5] = paddr;			//目的ID
+	buf[6] = 0x07;			//功能码
+	buf[7] = 0x08;			//数据包个数8
+
+	buf[8] = obs_sta;		//下左
+	buf[9] = crach_sta;	//下右
+	buf[10] = 0;				
+	buf[11] = (Pms.Moto_Cur >> 8) & 0x00ff;			//把驱动器电流发上去
+	buf[12] = Pms.Moto_Cur & 0x00ff;
+	buf[13] = Robot_Sys.Stop_flag;
+	buf[14] = (Pms.Bat_Voltage >> 8) & 0x00ff;	//把电池电压发上去
+	buf[15] = Pms.Bat_Voltage & 0x00ff;	
+		
+	buf[16]	= CRC8_Table(buf, 16);
+	buf[17]	= 0x0D;
+	buf[18]	= 0x0A;
+	
+	USARTx_SendMultibyte(USART_PC, buf, SEND_PC_LEN);
+	myfree(sramx, buf);
+} 
+
+
+/************************************************/
+//函数功能：发送设置速度应答
+//输入参数：
+//返回值：
+//备注：
+/************************************************/
+void Send_Speed_reply(uint8_t index, uint8_t paddr, uint16_t linear, uint16_t angular)
+{
+	uint8_t *buf;
+	uint8_t sramx = 0;					//默认为内部sram
+  buf = mymalloc(sramx, 20);	//申请20字节
+	
+	buf[0] = 0x55;
+	buf[1] = 0xAA;
+	buf[2] = index;
+	buf[3] = 0x13;
+	buf[4] = 0x01;	//本机ID
+	buf[5] = paddr;	//目的ID6
+	buf[6] = 0x15;	//功能码
+	buf[7] = 0x08;	//数据包个数
+
+	buf[8] = linear >> 8;
+	buf[9] = linear;
+	buf[10] = angular >> 8;
+	buf[11] = angular;
+	buf[12] = AutoCharge.NotFind_Flag;
+	buf[13] = 0;
+	buf[14] = 0;
+	buf[15] = 0;
+		
+	buf[16] = CRC8_Table(buf, 16);
+	buf[17] = 0x0D;
+	buf[18] = 0x0A;
+	
+	USARTx_SendMultibyte(USART_PC, buf, SEND_PC_LEN);
+	myfree(sramx, buf);
+}
+
+
+/************************************************/
+//函数功能：发送自动充电命令应答
+//输入参数：
+//返回值：
+//备注：
+/************************************************/
+void Send_Autocharge_reply(uint8_t index, uint8_t paddr, uint8_t dat)
+{
+	uint8_t *buf;
+	uint8_t sramx = 0;					//默认为内部sram
+  buf = mymalloc(sramx, 20);	//申请20字节
+	
+	buf[0] = 0x55;
+	buf[1] = 0xAA;
+	buf[2] = index;
+	buf[3] = 0x13;
+	buf[4] = 0x01;	//本机ID
+	buf[5] = paddr;	//目的ID
+	buf[6] = 0x08;	//自动充电
+	buf[7] = 0x08;	//数据包个数
+
+	buf[8] = 0;
+	buf[9] = 0;
+	buf[10] = 0;
+	buf[11] = 0;
+	buf[12] = 0;
+	buf[13] = 0;
+	buf[14] = 0;
+	buf[15] = 0;
+
+	buf[16] = CRC8_Table(buf, 16);
+	buf[17] = 0x0D;
+	buf[18] = 0x0A;
+	
+	USARTx_SendMultibyte(USART_PC, buf, SEND_PC_LEN);
+	myfree(sramx, buf);
+}
+
+
+/************************************************/
+//函数功能：发送自动充电速度
+//输入参数：
+//返回值：
+//备注：
+/************************************************/
+void Send_Autocharge_speed(uint8_t index, uint8_t paddr, uint16_t linear, uint16_t angular)
+{
+	uint8_t *buf;
+	uint8_t sramx = 0;					//默认为内部sram
+  buf = mymalloc(sramx, 20);	//申请20字节
+	
+	buf[0] = 0x55;
+	buf[1] = 0xAA;
+	buf[2] = index;
+	buf[3] = 0x13;
+	buf[4] = 0x01;	//本机ID
+	buf[5] = paddr;	//目的ID
+	buf[6] = 0x04;	//自动充电速度
+	buf[7] = 0x08;	//数据包个数
+
+	buf[8] = linear>>8;
+	buf[9] = linear;
+	buf[10] = angular>>8;
+	buf[11] = angular;
+	buf[12] = Robot_Sys.AutoCharge_task_flag;
+	buf[13] = Robot_Sys.Mergency_Stop_flag;
+	buf[14] = AutoCharge.ReChg_flag;
+	buf[15] = 0;
+
+	buf[16] = CRC8_Table(buf, 16);
+	buf[17] = 0x0D;
+	buf[18] = 0x0A;
+	
+	USARTx_SendMultibyte(USART_PC, buf, SEND_PC_LEN);
+	myfree(sramx, buf);
+}
+
+
+/************************************************/
+//函数功能：发送设置头部角度命令应答
+//输入参数：
+//返回值：
+//备注：
+/************************************************/
+void Send_HeadAngle_reply(uint8_t index, uint8_t paddr, uint16_t set_level, uint16_t set_pitch)
+{
+	uint8_t *buf;
+	uint8_t sramx = 0;					//默认为内部sram
+  buf = mymalloc(sramx, 20);	//申请20字节
+	
+	buf[0] = 0x55;
+	buf[1] = 0xAA;
+	buf[2] = index;
+	buf[3] = 0x13;
+	buf[4] = 0x01;	//本机ID
+	buf[5] = paddr;	//目的ID
+	buf[6] = 0x11;	//头部角度设置
+	buf[7] = 0x08;	//数据包个数
+
+	buf[8] = set_level >> 8;
+	buf[9] = set_level;
+	buf[10] = set_pitch >> 8;
+	buf[11] = set_pitch;
+	buf[12] = 0;
+	buf[13] = 0;
+	buf[14] = 0;
+	buf[15] = 0;
+		
+	buf[16] = CRC8_Table(buf, 16);
+	buf[17] = 0x0D;
+	buf[18] = 0x0A;
+	
+	USARTx_SendMultibyte(USART_PC, buf, SEND_PC_LEN);
+	myfree(sramx, buf);
+}
+
+
+/************************************************/
+//函数功能：发送头部控制命令应答
+//输入参数：
+//返回值：
+//备注：
+/************************************************/
+void Send_HeadCtrl_reply(uint8_t index, uint8_t paddr, uint8_t cmd)
+{
+	uint8_t *buf;
+	uint8_t sramx = 0;					//默认为内部sram
+  buf = mymalloc(sramx, 20);	//申请20字节
+	
+	buf[0] = 0x55;
+	buf[1] = 0xAA;
+	buf[2] = index;
+	buf[3] = 0x13;
+	buf[4] = 0x01;	//本机ID
+	buf[5] = paddr;	//目的ID
+	buf[6] = 0x06;	//头部角度设置
+	buf[7] = 0x08;	//数据包个数
+
+	buf[8] = cmd;
+	buf[9] = 0;
+	buf[10] = 0;
+	buf[11] = 0;
+	buf[12] = 0;
+	buf[13] = 0;
+	buf[14] = 0;
+	buf[15] = 0;
+	
+	buf[16] = CRC8_Table(buf, 16);
+	buf[17] = 0x0D;
+	buf[18] = 0x0A;
+	
+	USARTx_SendMultibyte(USART_PC, buf, SEND_PC_LEN);
+	myfree(sramx, buf);
+}
+
+
+/************************************************/
+//函数功能：发送设置升降高度命令应答
+//输入参数：
+//返回值：
+//备注：
+/************************************************/
+void Send_SetLift_reply(uint8_t index, uint8_t paddr, uint16_t heitht)
+{
+	uint8_t *buf;
+	uint8_t sramx = 0;					//默认为内部sram
+  buf = mymalloc(sramx, 20);	//申请20字节
+	
+	buf[0] = 0x55;
+	buf[1] = 0xAA;
+	buf[2] = index;
+	buf[3] = 0x13;
+	buf[4] = 0x01;	//本机ID
+	buf[5] = paddr;	//目的ID
+	buf[6] = 0x71;	//头部角度设置
+	buf[7] = 0x08;	//数据包个数
+
+	buf[8] = heitht >> 8;
+	buf[9] = heitht;
+	buf[10] = 0;
+	buf[11] = 0;
+	buf[12] = 0;
+	buf[13] = 0;
+	buf[14] = 0;
+	buf[15] = 0;
+
+	buf[16]= CRC8_Table(buf, 16);
+	buf[17]= 0x0D;
+	buf[18]= 0x0A;
+	
+	USARTx_SendMultibyte(USART_PC, buf, SEND_PC_LEN);
+	myfree(sramx, buf);
+}
+
+
+/************************************************/
+//函数功能：发送升降控制命令应答
+//输入参数：
+//返回值：
+//备注：
+/************************************************/
+void Send_LiftCtrl_reply(uint8_t index, uint8_t paddr, uint8_t cmd)
+{
+	uint8_t *buf;
+	uint8_t sramx = 0;					//默认为内部sram
+  buf = mymalloc(sramx, 20);	//申请20字节
+	
+	buf[0] = 0x55;
+	buf[1] = 0xAA;
+	buf[2] = index;
+	buf[3] = 0x13;
+	buf[4] = 0x01;	//本机ID
+	buf[5] = paddr;	//目的ID
+	buf[6] = 0x81;	//头部角度设置
+	buf[7] = 0x08;	//数据包个数
+
+	buf[8] = cmd;
+	buf[9] = 0;
+	buf[10] = 0;
+	buf[11] = 0;
+	buf[12] = 0;
+	buf[13] = 0;
+	buf[14] = 0;
+	buf[15] = 0;
+	
+	buf[16] = CRC8_Table(buf, 16);
+	buf[17] = 0x0D;
+	buf[18] = 0x0A;
+	
+	USARTx_SendMultibyte(USART_PC, buf, SEND_PC_LEN);
+	myfree(sramx, buf);
+}
+
+
+/************************************************/
+//函数功能：设置头部云台偏移量
+//输入参数：
+//返回值：
+//备注：
+/************************************************/
+void Send_angle_offset_reply(uint8_t index, uint8_t paddr, int8_t level_offset, int8_t pitch_offset)
+{
+	uint8_t *buf;
+	uint8_t sramx=0;						//默认为内部sram
+  buf = mymalloc(sramx, 20);	//申请20字节
+	
+	buf[0] = 0x55;
+	buf[1] = 0xAA;
+	buf[2] = index;
+	buf[3] = 0x13;
+	buf[4] = 0x01;	//本机ID
+	buf[5] = paddr;	//目的ID
+	buf[6] = 0x75;	//头部角度设置
+	buf[7] = 0x08;	//数据包个数
+
+	buf[8] = level_offset;
+	buf[9] = pitch_offset;
+	buf[10] = 0;
+	buf[11] = 0;
+	buf[12] = 0;
+	buf[13] = 0;
+	buf[14] = 0;
+	buf[15] = 0;
+	
+	buf[16] = CRC8_Table(buf, 16);
+	buf[17] = 0x0D;
+	buf[18] = 0x0A;
+	
+	USARTx_SendMultibyte(USART_PC, buf, SEND_PC_LEN);
+	myfree(sramx, buf);
+}
+
+
+/************************************************/
+//函数功能：校验数组
+//输入参数：
+//返回值：
+//备注：
+/************************************************/
+const char CRC8Table[]={
+  0, 94, 188, 226, 97, 63, 221, 131, 194, 156, 126, 32, 163, 253, 31, 65,
+  157, 195, 33, 127, 252, 162, 64, 30, 95, 1, 227, 189, 62, 96, 130, 220,
+  35, 125, 159, 193, 66, 28, 254, 160, 225, 191, 93, 3, 128, 222, 60, 98,
+  190, 224, 2, 92, 223, 129, 99, 61, 124, 34, 192, 158, 29, 67, 161, 255,
+  70, 24, 250, 164, 39, 121, 155, 197, 132, 218, 56, 102, 229, 187, 89, 7,
+  219, 133, 103, 57, 186, 228, 6, 88, 25, 71, 165, 251, 120, 38, 196, 154,
+  101, 59, 217, 135, 4, 90, 184, 230, 167, 249, 27, 69, 198, 152, 122, 36,
+  248, 166, 68, 26, 153, 199, 37, 123, 58, 100, 134, 216, 91, 5, 231, 185,
+  140, 210, 48, 110, 237, 179, 81, 15, 78, 16, 242, 172, 47, 113, 147, 205,
+  17, 79, 173, 243, 112, 46, 204, 146, 211, 141, 111, 49, 178, 236, 14, 80,
+  175, 241, 19, 77, 206, 144, 114, 44, 109, 51, 209, 143, 12, 82, 176, 238,
+  50, 108, 142, 208, 83, 13, 239, 177, 240, 174, 76, 18, 145, 207, 45, 115,
+  202, 148, 118, 40, 171, 245, 23, 73, 8, 86, 180, 234, 105, 55, 213, 139,
+  87, 9, 235, 181, 54, 104, 138, 212, 149, 203, 41, 119, 244, 170, 72, 22,
+  233, 183, 85, 11, 136, 214, 52, 106, 43, 117, 151, 201, 74, 20, 246, 168,
+  116, 42, 200, 150, 21, 75, 169, 247, 182, 232, 10, 84, 215, 137, 107, 53
+};
+
+
+/************************************************/
+//函数功能：校验
+//输入参数：
+//返回值：
+//备注：
+/************************************************/
+unsigned char CRC8_Table(unsigned char *p, char counter)
+{
+	unsigned char crc8 = 0;
+
+	for( ; counter > 0; counter--)
+	{
+			crc8 = CRC8Table[crc8^*p];
+			p++;
+	}
+	return(crc8);
+}
+
