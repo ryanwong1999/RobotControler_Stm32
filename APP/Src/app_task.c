@@ -121,6 +121,7 @@ void Poweroff_Task(void *pvParameters)
 {
 	while(1)
 	{
+		
 		vTaskDelay(200);
 	}
 }
@@ -166,6 +167,12 @@ void AutoCharge_Task(void *pvParameters)
 {
 	while(1)
 	{
+		if(Robot_Sys.AutoCharge_task_flag == true)
+		{
+		}
+		else
+		{
+		}
 		vTaskDelay(100);
 	}
 }
@@ -256,6 +263,7 @@ void Mdrv_Task(void *pvParameters)
 {
 	while(1)
 	{
+		Moto_mdrv_analysis();
 		vTaskDelay(5);
 	}
 }
@@ -271,7 +279,8 @@ void LED_Task(void *pvParameters)
 {
 	while(1)
 	{
-		LED_TEST_TOGGLE;
+		LED1_TOGGLE;
+//		LED2_TOGGLE;
 		
 		vTaskDelay(500);
 	}

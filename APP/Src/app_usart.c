@@ -12,6 +12,8 @@ Usart_TypeDef UsartToDrv;
 //输入参数：
 //返回值：
 //备注：
+//      接收命令: 55  AA  11  0e  10  00  00  00  00  00  00  00  0D  0A
+//                 head  adr len cmd voltage current cap tmp sta   ends    
 /************************************************/
 void USART1_IRQHandler(void)  
 {

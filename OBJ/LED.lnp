@@ -21,6 +21,7 @@
 "..\obj\app_system.o"
 "..\obj\app_tim.o"
 "..\obj\app_motodrv.o"
+"..\obj\app_imu.o"
 "..\obj\main.o"
 "..\obj\stm32f4xx_it.o"
 "..\obj\system_stm32f4xx.o"

@@ -79,3 +79,4 @@
 ..\obj\bsp_tim.o: ..\APP\Inc\app_pms.h
 ..\obj\bsp_tim.o: ..\APP\Inc\app_system.h
 ..\obj\bsp_tim.o: ..\APP\Inc\app_tim.h
+..\obj\bsp_tim.o: ..\APP\Inc\app_imu.h

@@ -79,3 +79,4 @@
 ..\obj\main.o: ..\APP\Inc\app_pms.h
 ..\obj\main.o: ..\APP\Inc\app_system.h
 ..\obj\main.o: ..\APP\Inc\app_tim.h
+..\obj\main.o: ..\APP\Inc\app_imu.h

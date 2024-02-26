@@ -86,6 +86,7 @@
 #include "app_pms.h" 
 #include "app_system.h" 
 #include "app_tim.h" 
+#include "app_imu.h" 
 
 
 #endif

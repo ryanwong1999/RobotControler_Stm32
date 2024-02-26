@@ -35,8 +35,7 @@ void Moto_mdrv_analysis(void)
 	uint16_t cal_crc;
 	uint8_t cmd;
 	uint16_t addr1, addr2;
-	int16_t l_pulse_tmp;
-	int16_t r_pulse_tmp;
+	int16_t l_pulse_tmp, r_pulse_tmp;
 	
 	if(UsartToDrv.Usart_Rx_OK == true)
 	{
@@ -377,10 +376,10 @@ unsigned short ModBusCRC16(const void *s, int n)
 	unsigned short c = 0xffff, b;
 	char i;
 	int k;
-	for(k = 0; k < n; k++) 
+	for(k=0; k<n; k++) 
 	{  
 		b=(((u8 *)s)[k]); 
-		for(i = 0; i < 8; i++) 
+		for(i=0; i<8; i++) 
 		{  
 			c = ((b^c)&1) ? (c>>1)^0xA001 : (c>>1); 
 			b>>=1; 

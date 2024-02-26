@@ -499,6 +499,11 @@
               <FileType>1</FileType>
               <FilePath>..\APP\Src\app_motoDrv.c</FilePath>
             </File>
+            <File>
+              <FileName>app_imu.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\APP\Src\app_imu.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

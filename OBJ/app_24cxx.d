@@ -79,3 +79,4 @@
 ..\obj\app_24cxx.o: ..\APP\Inc\app_pms.h
 ..\obj\app_24cxx.o: ..\APP\Inc\app_system.h
 ..\obj\app_24cxx.o: ..\APP\Inc\app_tim.h
+..\obj\app_24cxx.o: ..\APP\Inc\app_imu.h

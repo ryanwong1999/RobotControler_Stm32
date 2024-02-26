@@ -7,6 +7,14 @@
 #define digitalToggle(p,i)	 {p->ODR ^=i;}		//Êä³ö·´×ª×´Ì¬	 
 
 //LED GPIOºê¶¨Òå
+//LED1
+#define LED1_PORT_CLK      			RCC_AHB1Periph_GPIOF
+#define LED1_PORT          			GPIOF
+#define LED1_PIN	          		GPIO_Pin_9
+//LED2
+#define LED2_PORT_CLK      			RCC_AHB1Periph_GPIOF
+#define LED2_PORT          			GPIOF
+#define LED2_PIN	          		GPIO_Pin_10
 //ÂÌµÆ
 #define LEDG_PORT_CLK          	RCC_AHB1Periph_GPIOC
 #define LEDG_PORT              	GPIOC
@@ -15,58 +23,33 @@
 #define LEDR_PORT_CLK          	RCC_AHB1Periph_GPIOC
 #define LEDR_PORT              	GPIOC
 #define LED_RED_PIN	          	GPIO_Pin_4
-
-#define LED_TEST_PORT_CLK      	RCC_AHB1Periph_GPIOD
-#define LED_TEST_PORT          	GPIOD
-#define LED_TEST_PIN	          GPIO_Pin_8
-//ºìµÆÉÁË¸
+//LED1
+#define LED1_TOGGLE      				digitalToggle(LED1_PORT, LED1_PIN)
+#define LED1_ON			    				digitalLo(LED1_PORT, LED1_PIN)
+#define LED1_OFF			  				digitalHi(LED1_PORT, LED1_PIN)
+//LED2
+#define LED2_TOGGLE      				digitalToggle(LED2_PORT, LED2_PIN)
+#define LED2_ON			    				digitalLo(LED2_PORT, LED2_PIN)
+#define LED2_OFF			  				digitalHi(LED2_PORT, LED2_PIN)
+//ÂÌµÆ
 #define LED_RED_TOGGLE					digitalToggle(LEDR_PORT, LED_RED_PIN)
 #define LED_RED_ON			    		digitalHi(LEDR_PORT, LED_RED_PIN)
 #define LED_RED_OFF			    		digitalLo(LEDR_PORT, LED_RED_PIN)
-//ÂÌµÆÉÁË¸
+//ºìµÆ
 #define LED_GREEN_TOGGLE				digitalToggle(LEDG_PORT, LED_GREEN_PIN)
 #define LED_GREEN_ON			  		digitalHi(LEDG_PORT, LED_GREEN_PIN)
 #define LED_GREEN_OFF			  		digitalLo(LEDG_PORT, LED_GREEN_PIN)
-
-#define LED_TEST_TOGGLE      		digitalToggle(LED_TEST_PORT, LED_TEST_PIN)
-#define LED_TEST_ON			    		GPIO_SetBits(LED_TEST_PORT, LED_TEST_PIN)
-#define LED_TEST_OFF			  		GPIO_ResetBits(LED_TEST_PORT, LED_TEST_PIN)
-//¾¯Ê¾µÆ
-#define LAMP_PORT_CLK          	RCC_AHB1Periph_GPIOD
-#define LAMP_PORT              	GPIOD
-#define LAMP_RED_PIN	         	GPIO_Pin_10
-#define LAMP_GREEN_PIN	        GPIO_Pin_11
-#define LAMP_YELLOW_PIN	      	GPIO_Pin_12
-#define LAMP_BEEP_PIN          	GPIO_Pin_13
-//¾¯Ê¾µÆºìµÆÉÁË¸
-#define LAMP_RED_TOGGLE      		digitalToggle(LAMP_PORT, LAMP_RED_PIN)
-#define LAMP_RED_ON			    		GPIO_SetBits(LAMP_PORT, LAMP_RED_PIN)
-#define LAMP_RED_OFF			  		GPIO_ResetBits(LAMP_PORT, LAMP_RED_PIN)
-//¾¯Ê¾µÆÂÌµÆÉÁË¸
-#define LAMP_GREEN_TOGGLE     	digitalToggle(LAMP_PORT, LAMP_GREEN_PIN)
-#define LAMP_GREEN_ON			    	GPIO_SetBits(LAMP_PORT, LAMP_GREEN_PIN)
-#define LAMP_GREEN_OFF			  	GPIO_ResetBits(LAMP_PORT, LAMP_GREEN_PIN)
-//¾¯Ê¾µÆ»ÆµÆÉÁË¸
-#define LAMP_YELLOW_TOGGLE    	digitalToggle(LAMP_PORT, LAMP_YELLOW_PIN)
-#define LAMP_YELLOW_ON			  	GPIO_SetBits(LAMP_PORT, LAMP_YELLOW_PIN)
-#define LAMP_YELLOW_OFF			  	GPIO_ResetBits(LAMP_PORT, LAMP_YELLOW_PIN)
-
-#define LAMP_BEEP_ON			    	GPIO_SetBits(LAMP_PORT, LAMP_BEEP_PIN)
-#define LAMP_BEEP_OFF			  		GPIO_ResetBits(LAMP_PORT, LAMP_BEEP_PIN)
 //·äÃùÆ÷
 #define BEEP_PORT_CLK          	RCC_AHB1Periph_GPIOD
 #define BEEP_PORT              	GPIOD
 #define BEEP_PIN               	GPIO_Pin_9
-       
-#define BEEP_ENABLE            	GPIO_SetBits(BEEP_PORT, BEEP_PIN);
-#define BEEP_DISABLE           	GPIO_ResetBits(BEEP_PORT, BEEP_PIN);
 
-#define BEEP_TOGGLE		   				digitalToggle(BEEP_PORT,BEEP_PIN)
+#define BEEP_TOGGLE		   				digitalToggle(BEEP_PORT, BEEP_PIN)
 #define BEEP_ON		       				digitalHi(BEEP_PORT, BEEP_PIN)
-#define BEEP_OFF				 				digitalLo(BEEP_PORT, BEEP_PIN)	 
+#define BEEP_OFF				 				digitalLo(BEEP_PORT, BEEP_PIN)
 
-#define ON  0
-#define OFF 1
+#define ON  	0
+#define OFF 	1
 
 //³äµç¿ØÖÆ
 #define EN_CHG_PORT_CLK        	RCC_AHB1Periph_GPIOA
@@ -105,20 +88,20 @@
 #define POWERKEY_PORT          	GPIOA
 #define POWERKEY_PIN           	GPIO_Pin_4
        
-#define POWERKEY_IN       			GPIO_ReadInputDataBit(POWERKEY_PORT,POWERKEY_PIN)
+#define POWERKEY_IN       			GPIO_ReadInputDataBit(POWERKEY_PORT, POWERKEY_PIN)
 //POWER SWITCH CHECK    					RCC_AHB1Periph_GPIOD
 
 #define VOICE_EN_CLK	   				RCC_AHB1Periph_GPIOE
 #define VOICE_EN_PORT      			GPIOE
 #define VOICE_EN_PIN       			GPIO_Pin_1
 
-#define VOICE_EN_READ       		GPIO_ReadInputDataBit(VOICE_EN_PORT,VOICE_EN_PIN)
+#define VOICE_EN_READ       		GPIO_ReadInputDataBit(VOICE_EN_PORT, VOICE_EN_PIN)
 
 #define STOP_KEY_CLK	    			RCC_AHB1Periph_GPIOA
 #define STOP_KEY_PORT      			GPIOA
 #define STOP_KEY_PIN       			GPIO_Pin_7
 
-#define STOP_KEY_READ       		GPIO_ReadInputDataBit(STOP_KEY_PORT,STOP_KEY_PIN)
+#define STOP_KEY_READ       		GPIO_ReadInputDataBit(STOP_KEY_PORT, STOP_KEY_PIN)
 
 //12VÊä³ö¿ØÖÆ
 #define EN_DC12V_PORT_CLK      	RCC_AHB1Periph_GPIOE
@@ -136,9 +119,6 @@
 #define PC_EN_ENABLE           	GPIO_SetBits(PC_EN_PORT, PC_EN_PIN);
 #define PC_EN_DISABLE          	GPIO_ResetBits(PC_EN_PORT, PC_EN_PIN);
 //PC»ú¿ª¹ØGPIOºê¶¨Òå
-//#define PC_STARTUP_CLK        RCC_AHB1Periph_GPIOD
-//#define PC_STARTUP_PORT       GPIOD
-//#define PC_STARTUP_PIN	      GPIO_Pin_6
 
 #define PC_STARTUP_CLK         	RCC_AHB1Periph_GPIOE
 #define PC_STARTUP_PORT        	GPIOE
@@ -147,8 +127,8 @@
 #define PC_STARTUP_ON    				0
 #define PC_STARTUP_OFF   				1
 
-#define PC_STARTUP_HIGH			  	GPIO_SetBits(PC_STARTUP_PORT,PC_STARTUP_PIN);
-#define PC_STARTUP_LOW			  	GPIO_ResetBits(PC_STARTUP_PORT,PC_STARTUP_PIN);
+#define PC_STARTUP_HIGH			  	GPIO_SetBits(PC_STARTUP_PORT, PC_STARTUP_PIN);
+#define PC_STARTUP_LOW			  	GPIO_ResetBits(PC_STARTUP_PORT, PC_STARTUP_PIN);
 
 
 /********************************************************
@@ -211,10 +191,10 @@
 #define TRIG4_OFF								digitalLo(ULTRA4_PORT, TRIG4_PIN)
 
 
-#define ECHO_READ_1       			GPIO_ReadInputDataBit(ULTRA1_PORT,ECHO1_PIN)
-#define ECHO_READ_2       			GPIO_ReadInputDataBit(ULTRA2_PORT,ECHO2_PIN)
-#define ECHO_READ_3       			GPIO_ReadInputDataBit(ULTRA3_PORT,ECHO3_PIN)
-#define ECHO_READ_4       			GPIO_ReadInputDataBit(ULTRA4_PORT,ECHO4_PIN)
+#define ECHO_READ_1       			GPIO_ReadInputDataBit(ULTRA1_PORT, ECHO1_PIN)
+#define ECHO_READ_2       			GPIO_ReadInputDataBit(ULTRA2_PORT, ECHO2_PIN)
+#define ECHO_READ_3       			GPIO_ReadInputDataBit(ULTRA3_PORT, ECHO3_PIN)
+#define ECHO_READ_4       			GPIO_ReadInputDataBit(ULTRA4_PORT, ECHO4_PIN)
 
 
 /********************************************************
@@ -228,8 +208,8 @@
 #define CRASH_BACK_PORT       	GPIOE
 #define CRASH_BACK_PIN        	GPIO_Pin_12
 
-#define CRASH_FRONT_READ       	GPIO_ReadInputDataBit(CRASH_FRONT_PORT,CRASH_FRONT_PIN)
-#define CRASH_BACK_READ        	GPIO_ReadInputDataBit(CRASH_BACK_PORT,CRASH_BACK_PIN)
+#define CRASH_FRONT_READ       	GPIO_ReadInputDataBit(CRASH_FRONT_PORT, CRASH_FRONT_PIN)
+#define CRASH_BACK_READ        	GPIO_ReadInputDataBit(CRASH_BACK_PORT, CRASH_BACK_PIN)
 
 //MOTO_UPDOWN
 #define LIFTMOTO_PORT_CLK     	RCC_AHB1Periph_GPIOC
@@ -244,14 +224,14 @@
 
 #define LIFTMOTO_PWM_PIN				GPIO_Pin_8
 
-#define LIFTMOTO_ENABLE					GPIO_ResetBits(LIFTMOTO_PORT,LIFTMOTO_EN_PIN);
-#define LIFTMOTO_DISABLE				GPIO_SetBits(LIFTMOTO_PORT,LIFTMOTO_EN_PIN);
+#define LIFTMOTO_ENABLE					GPIO_ResetBits(LIFTMOTO_PORT, LIFTMOTO_EN_PIN);
+#define LIFTMOTO_DISABLE				GPIO_SetBits(LIFTMOTO_PORT, LIFTMOTO_EN_PIN);
 
-#define LIFTMOTO_DOWN         	GPIO_ResetBits(LIFTMOTO_PORT,LIFTMOTO_DIR_PIN);
-#define LIFTMOTO_UP							GPIO_SetBits(LIFTMOTO_PORT,LIFTMOTO_DIR_PIN);
+#define LIFTMOTO_DOWN         	GPIO_ResetBits(LIFTMOTO_PORT, LIFTMOTO_DIR_PIN);
+#define LIFTMOTO_UP							GPIO_SetBits(LIFTMOTO_PORT, LIFTMOTO_DIR_PIN);
 
-#define LIFTMOTO_PWM_EN	        GPIO_ResetBits (LIFTMOTO_PWM_PORT,LIFTMOTO_PWM_PIN);
-#define LIFTMOTO_PWM_DISABLE	  GPIO_SetBits (LIFTMOTO_PWM_PORT,LIFTMOTO_PWM_PIN);
+#define LIFTMOTO_PWM_EN	        GPIO_ResetBits(LIFTMOTO_PWM_PORT, LIFTMOTO_PWM_PIN);
+#define LIFTMOTO_PWM_DISABLE	  GPIO_SetBits (LIFTMOTO_PWM_PORT, LIFTMOTO_PWM_PIN);
 
 
 /********************************************************
@@ -265,8 +245,8 @@
 #define LIMIT_DOWN_PORT       	GPIOE
 #define LIMIT_DOWN_PIN        	GPIO_Pin_14		//ÏÂÏÞÎ»
 
-#define LIMIT_UP_READ       		GPIO_ReadInputDataBit(LIMIT_UP_PORT,LIMIT_UP_PIN)
-#define LIMIT_DOWN_READ     		GPIO_ReadInputDataBit(LIMIT_DOWN_PORT,LIMIT_DOWN_PIN)
+#define LIMIT_UP_READ       		GPIO_ReadInputDataBit(LIMIT_UP_PORT, LIMIT_UP_PIN)
+#define LIMIT_DOWN_READ     		GPIO_ReadInputDataBit(LIMIT_DOWN_PORT, LIMIT_DOWN_PIN)
 
 //µç»ú¿ØÖÆGPIOºê¶¨Òå
 #define MOTO_LEFT_DIR_CLK       RCC_AHB1Periph_GPIOD
@@ -284,17 +264,17 @@
 #define MOTO_RIGHT_DIR_PIN      GPIO_Pin_8      // Dir
 #define MOTO_RIGHT_EN_PIN       GPIO_Pin_11
 
-#define MOTO_LEFT_EN_ENABLE    	GPIO_ResetBits(MOTO_LEFT_PORT,MOTO_LEFT_EN_PIN);
-#define MOTO_LEFT_EN_DISABLE    GPIO_SetBits(MOTO_LEFT_PORT,MOTO_LEFT_EN_PIN);
+#define MOTO_LEFT_EN_ENABLE    	GPIO_ResetBits(MOTO_LEFT_PORT, MOTO_LEFT_EN_PIN);
+#define MOTO_LEFT_EN_DISABLE    GPIO_SetBits(MOTO_LEFT_PORT, MOTO_LEFT_EN_PIN);
 
-#define MOTO_RIGHT_EN_ENABLE    GPIO_ResetBits(MOTO_RIGHT_PORT,MOTO_RIGHT_EN_PIN);
-#define MOTO_RIGHT_EN_DISABLE   GPIO_SetBits(MOTO_RIGHT_PORT,MOTO_RIGHT_EN_PIN);
+#define MOTO_RIGHT_EN_ENABLE    GPIO_ResetBits(MOTO_RIGHT_PORT, MOTO_RIGHT_EN_PIN);
+#define MOTO_RIGHT_EN_DISABLE   GPIO_SetBits(MOTO_RIGHT_PORT, MOTO_RIGHT_EN_PIN);
 
-#define MOTO_LEFT_DIR_FRONT    	GPIO_SetBits(MOTO_LEFT_DIR_PORT,MOTO_LEFT_DIR_PIN);
-#define MOTO_LEFT_DIR_BACK      GPIO_ResetBits(MOTO_LEFT_DIR_PORT,MOTO_LEFT_DIR_PIN);
+#define MOTO_LEFT_DIR_FRONT    	GPIO_SetBits(MOTO_LEFT_DIR_PORT, MOTO_LEFT_DIR_PIN);
+#define MOTO_LEFT_DIR_BACK      GPIO_ResetBits(MOTO_LEFT_DIR_PORT, MOTO_LEFT_DIR_PIN);
 
-#define MOTO_RIGHT_DIR_FRONT    GPIO_ResetBits(MOTO_RIGHT_PORT,MOTO_RIGHT_DIR_PIN);
-#define MOTO_RIGHT_DIR_BACK     GPIO_SetBits(MOTO_RIGHT_PORT,MOTO_RIGHT_DIR_PIN);
+#define MOTO_RIGHT_DIR_FRONT    GPIO_ResetBits(MOTO_RIGHT_PORT, MOTO_RIGHT_DIR_PIN);
+#define MOTO_RIGHT_DIR_BACK     GPIO_SetBits(MOTO_RIGHT_PORT, MOTO_RIGHT_DIR_PIN);
 
 void LED_GPIO_Cfg_Init(void);
 void Lamp_GPIO_Cfg_Init(void);
