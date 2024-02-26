@@ -6,7 +6,7 @@ int main(void)
 { 
 	System_Board_Init();		//初始化系统硬件资源
 	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_4);//设置系统中断优先级分组4
-	NVIC_Configuration();  							//中断优先级配置
+	NVIC_Configuration();		//中断优先级配置
 	delay_ms(200);
 	EN_OUT_ENABLE;					//硬开软关使能VCC-OUT
 //	System_StartTips();			//系统启动蜂鸣器提示

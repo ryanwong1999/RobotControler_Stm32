@@ -53,7 +53,7 @@
 
 #define LAMP_BEEP_ON			    	GPIO_SetBits(LAMP_PORT, LAMP_BEEP_PIN)
 #define LAMP_BEEP_OFF			  		GPIO_ResetBits(LAMP_PORT, LAMP_BEEP_PIN)
-// BEEP
+//·äÃùÆ÷
 #define BEEP_PORT_CLK          	RCC_AHB1Periph_GPIOD
 #define BEEP_PORT              	GPIOD
 #define BEEP_PIN               	GPIO_Pin_9
@@ -172,7 +172,7 @@
 #define EXTI_LINE_IRBR    			EXTI_Line1	
 
 
-//ULTRASONIC
+//³¬Éù´«¸ÐÆ÷
 #define ULTRA1_PORT_CLK			  	RCC_AHB1Periph_GPIOD
 #define ULTRA1_PORT							GPIOD
 #define ECHO1_PIN			    			GPIO_Pin_7
@@ -187,11 +187,6 @@
 #define ULTRA3_PORT							GPIOE
 #define ECHO3_PIN				      	GPIO_Pin_9
 #define TRIG3_PIN				      	GPIO_Pin_8
-
-//#define ULTRA4_PORT_CLK			   RCC_AHB1Periph_GPIOE
-//#define ULTRA4_PORT						 GPIOE
-//#define ECHO4_PIN				       GPIO_Pin_11
-//#define TRIG4_PIN			         GPIO_Pin_10
 
 #define ULTRA4_PORT_CLK			  	RCC_AHB1Periph_GPIOE
 #define ULTRA4_PORT							GPIOE
