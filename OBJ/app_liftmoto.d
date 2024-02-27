@@ -80,3 +80,4 @@
 ..\obj\app_liftmoto.o: ..\APP\Inc\app_system.h
 ..\obj\app_liftmoto.o: ..\APP\Inc\app_tim.h
 ..\obj\app_liftmoto.o: ..\APP\Inc\app_imu.h
+..\obj\app_liftmoto.o: ..\APP\Inc\app_key.h

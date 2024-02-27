@@ -16,12 +16,12 @@ static void ADC_GOIO_Cfg_Init(void)
   GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_NOPULL;                   //不带上下拉
 	GPIO_Init(ADC_PORT, &GPIO_InitStructure);  
 	
-	RCC_AHB1PeriphClockCmd(ADC1_PORT_CLK, ENABLE);
-	
-  GPIO_InitStructure.GPIO_Pin = IBAT_PIN | ILIFT_PIN;	
-  GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AIN;	                     
-  GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_NOPULL;                  
-	GPIO_Init(ADC1_PORT, &GPIO_InitStructure);  
+//	RCC_AHB1PeriphClockCmd(ADC1_PORT_CLK, ENABLE);
+//
+//  GPIO_InitStructure.GPIO_Pin = IBAT_PIN | ILIFT_PIN;	
+//  GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AIN;	                     
+//  GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_NOPULL;                  
+//	GPIO_Init(ADC1_PORT, &GPIO_InitStructure);  
 }
 
 

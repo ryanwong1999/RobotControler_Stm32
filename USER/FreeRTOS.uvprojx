@@ -450,11 +450,6 @@
               <FilePath>..\APP\Src\app_usart.c</FilePath>
             </File>
             <File>
-              <FileName>app_analysisCMD.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\APP\Src\app_analysisCMD.c</FilePath>
-            </File>
-            <File>
               <FileName>app_autoCharge.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\APP\Src\app_autoCharge.c</FilePath>
@@ -468,16 +463,6 @@
               <FileName>app_exit.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\APP\Src\app_exit.c</FilePath>
-            </File>
-            <File>
-              <FileName>app_headDone.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\APP\Src\app_headDone.c</FilePath>
-            </File>
-            <File>
-              <FileName>app_liftMoto.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\APP\Src\app_liftMoto.c</FilePath>
             </File>
             <File>
               <FileName>app_pms.c</FileName>
@@ -503,6 +488,11 @@
               <FileName>app_imu.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\APP\Src\app_imu.c</FilePath>
+            </File>
+            <File>
+              <FileName>app_key.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\APP\Src\app_key.c</FilePath>
             </File>
           </Files>
         </Group>

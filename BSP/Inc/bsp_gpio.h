@@ -6,44 +6,45 @@
 #define digitalLo(p,i)			 {p->BSRRH=i;}		//输出低电平
 #define digitalToggle(p,i)	 {p->ODR ^=i;}		//输出反转状态	 
 
-//LED GPIO宏定义
+/********************************************************
+* LED IO初始化
+********************************************************/	
 //LED1
 #define LED1_PORT_CLK      			RCC_AHB1Periph_GPIOF
 #define LED1_PORT          			GPIOF
 #define LED1_PIN	          		GPIO_Pin_9
+#define LED1_TOGGLE      				digitalToggle(LED1_PORT, LED1_PIN)
+#define LED1_ON			    				digitalLo(LED1_PORT, LED1_PIN)
+#define LED1_OFF			  				digitalHi(LED1_PORT, LED1_PIN)
+
 //LED2
 #define LED2_PORT_CLK      			RCC_AHB1Periph_GPIOF
 #define LED2_PORT          			GPIOF
 #define LED2_PIN	          		GPIO_Pin_10
+#define LED2_TOGGLE      				digitalToggle(LED2_PORT, LED2_PIN)
+#define LED2_ON			    				digitalLo(LED2_PORT, LED2_PIN)
+#define LED2_OFF			  				digitalHi(LED2_PORT, LED2_PIN)
+
 //绿灯
 #define LEDG_PORT_CLK          	RCC_AHB1Periph_GPIOC
 #define LEDG_PORT              	GPIOC
 #define LED_GREEN_PIN	        	GPIO_Pin_5
+#define LED_RED_TOGGLE					digitalToggle(LEDR_PORT, LED_RED_PIN)
+#define LED_RED_ON			    		digitalHi(LEDR_PORT, LED_RED_PIN)
+#define LED_RED_OFF			    		digitalLo(LEDR_PORT, LED_RED_PIN)
+
 //红灯
 #define LEDR_PORT_CLK          	RCC_AHB1Periph_GPIOC
 #define LEDR_PORT              	GPIOC
 #define LED_RED_PIN	          	GPIO_Pin_4
-//LED1
-#define LED1_TOGGLE      				digitalToggle(LED1_PORT, LED1_PIN)
-#define LED1_ON			    				digitalLo(LED1_PORT, LED1_PIN)
-#define LED1_OFF			  				digitalHi(LED1_PORT, LED1_PIN)
-//LED2
-#define LED2_TOGGLE      				digitalToggle(LED2_PORT, LED2_PIN)
-#define LED2_ON			    				digitalLo(LED2_PORT, LED2_PIN)
-#define LED2_OFF			  				digitalHi(LED2_PORT, LED2_PIN)
-//绿灯
-#define LED_RED_TOGGLE					digitalToggle(LEDR_PORT, LED_RED_PIN)
-#define LED_RED_ON			    		digitalHi(LEDR_PORT, LED_RED_PIN)
-#define LED_RED_OFF			    		digitalLo(LEDR_PORT, LED_RED_PIN)
-//红灯
 #define LED_GREEN_TOGGLE				digitalToggle(LEDG_PORT, LED_GREEN_PIN)
 #define LED_GREEN_ON			  		digitalHi(LEDG_PORT, LED_GREEN_PIN)
 #define LED_GREEN_OFF			  		digitalLo(LEDG_PORT, LED_GREEN_PIN)
+
 //蜂鸣器
 #define BEEP_PORT_CLK          	RCC_AHB1Periph_GPIOD
 #define BEEP_PORT              	GPIOD
 #define BEEP_PIN               	GPIO_Pin_9
-
 #define BEEP_TOGGLE		   				digitalToggle(BEEP_PORT, BEEP_PIN)
 #define BEEP_ON		       				digitalHi(BEEP_PORT, BEEP_PIN)
 #define BEEP_OFF				 				digitalLo(BEEP_PORT, BEEP_PIN)
@@ -51,84 +52,23 @@
 #define ON  	0
 #define OFF 	1
 
-//充电控制
-#define EN_CHG_PORT_CLK        	RCC_AHB1Periph_GPIOA
-#define EN_CHG_PORT            	GPIOA
-#define EN_CHG_PIN             	GPIO_Pin_6
-       
-#define EN_CHG_ENABLE          	GPIO_ResetBits(EN_CHG_PORT, EN_CHG_PIN);
-#define EN_CHG_DISABLE         	GPIO_SetBits(EN_CHG_PORT, EN_CHG_PIN);
+/********************************************************
+* 按键IO初始化
+********************************************************/	
+#define KEY_UP_PORT_CLK					RCC_AHB1Periph_GPIOE
+#define KEY_UP_PORT							GPIOE
+#define KEY_UP_PIN							GPIO_Pin_3
+#define KEY_UP_READ							GPIO_ReadInputDataBit(KEY_UP_PORT, KEY_UP_PIN)				//读取按键
 
-//26V输出控制
-#define EN_OUT_PORT_CLK        	RCC_AHB1Periph_GPIOE
-#define EN_OUT_PORT            	GPIOE
-#define EN_OUT_PIN             	GPIO_Pin_6
-       
-#define EN_OUT_ENABLE          	GPIO_SetBits(EN_OUT_PORT, EN_OUT_PIN);
-#define EN_OUT_DISABLE         	GPIO_ResetBits(EN_OUT_PORT, EN_OUT_PIN);
+#define KEY_DOWN_PORT_CLK				RCC_AHB1Periph_GPIOE
+#define KEY_DOWN_PORT						GPIOE
+#define KEY_DOWN_PIN						GPIO_Pin_4
+#define KEY_DOWN_READ 					GPIO_ReadInputDataBit(KEY_DOWN_PORT, KEY_DOWN_PIN)		//读取按键
 
-//26V输出控制
-#define EN24_PORT_CLK          	RCC_AHB1Periph_GPIOE
-#define EN24_PORT              	GPIOE
-#define EN24_PIN               	GPIO_Pin_5
-       
-#define EN24_ENABLE            	GPIO_SetBits(EN24_PORT, EN24_PIN);
-#define EN24_DISABLE           	GPIO_ResetBits(EN24_PORT, EN24_PIN);
-
-//伺服驱动器控制
-#define EN_MDRV_PORT_CLK       	RCC_AHB1Periph_GPIOA
-#define EN_MDRV_PORT           	GPIOA
-#define EN_MDRV_PIN            	GPIO_Pin_5
-       
-#define EN_MDRV_ENABLE         	GPIO_SetBits(EN_MDRV_PORT, EN_MDRV_PIN);
-#define EN_MDRV_DISABLE        	GPIO_ResetBits(EN_MDRV_PORT, EN_MDRV_PIN);
-
-//POWER SWITCH CHECK
-#define POWERKEY_PORT_CLK      	RCC_AHB1Periph_GPIOA
-#define POWERKEY_PORT          	GPIOA
-#define POWERKEY_PIN           	GPIO_Pin_4
-       
-#define POWERKEY_IN       			GPIO_ReadInputDataBit(POWERKEY_PORT, POWERKEY_PIN)
-//POWER SWITCH CHECK    					RCC_AHB1Periph_GPIOD
-
-#define VOICE_EN_CLK	   				RCC_AHB1Periph_GPIOE
-#define VOICE_EN_PORT      			GPIOE
-#define VOICE_EN_PIN       			GPIO_Pin_1
-
-#define VOICE_EN_READ       		GPIO_ReadInputDataBit(VOICE_EN_PORT, VOICE_EN_PIN)
-
-#define STOP_KEY_CLK	    			RCC_AHB1Periph_GPIOA
-#define STOP_KEY_PORT      			GPIOA
-#define STOP_KEY_PIN       			GPIO_Pin_7
-
-#define STOP_KEY_READ       		GPIO_ReadInputDataBit(STOP_KEY_PORT, STOP_KEY_PIN)
-
-//12V输出控制
-#define EN_DC12V_PORT_CLK      	RCC_AHB1Periph_GPIOE
-#define EN_DC12V_PORT          	GPIOE
-#define EN_DC12V_PIN           	GPIO_Pin_4
-
-#define EN_DC12V_ENABLE        	GPIO_SetBits(EN_DC12V_PORT, EN_DC12V_PIN);
-#define EN_DC12V_DISABLE       	GPIO_ResetBits(EN_DC12V_PORT, EN_DC12V_PIN);
-
-//工控机控制
-#define PC_EN_PORT_CLK         	RCC_AHB1Periph_GPIOE
-#define PC_EN_PORT             	GPIOE
-#define PC_EN_PIN              	GPIO_Pin_3
-       
-#define PC_EN_ENABLE           	GPIO_SetBits(PC_EN_PORT, PC_EN_PIN);
-#define PC_EN_DISABLE          	GPIO_ResetBits(PC_EN_PORT, PC_EN_PIN);
-//PC机开关GPIO宏定义
-
-#define PC_STARTUP_CLK         	RCC_AHB1Periph_GPIOE
-#define PC_STARTUP_PORT        	GPIOE
-#define PC_STARTUP_PIN	        GPIO_Pin_2
-
-#define PC_STARTUP_ON    				0
-#define PC_STARTUP_OFF   				1
-
-#define PC_STARTUP_HIGH			  	GPIO_SetBits(PC_STARTUP_PORT, PC_STARTUP_PIN);
-#define PC_STARTUP_LOW			  	GPIO_ResetBits(PC_STARTUP_PORT, PC_STARTUP_PIN);
+#define KEY_ENTER_PORT_CLK			RCC_APB1Periph_GPIOA
+#define KEY_ENTER_PORT					GPIOA
+#define KEY_ENTER_PIN						GPIO_Pin_0
+#define KEY_ENTER_READ					GPIO_ReadInputDataBit(KEY_ENTER_PORT, KEY_ENTER_PIN)	//读取按键
 
 
 /********************************************************
@@ -152,7 +92,9 @@
 #define EXTI_LINE_IRBR    			EXTI_Line1	
 
 
-//超声传感器
+/********************************************************
+* 超声IO初始化
+********************************************************/	
 #define ULTRA1_PORT_CLK			  	RCC_AHB1Periph_GPIOD
 #define ULTRA1_PORT							GPIOD
 #define ECHO1_PIN			    			GPIO_Pin_7
@@ -190,7 +132,6 @@
 #define TRIG4_ON			  				digitalHi(ULTRA4_PORT, TRIG4_PIN)
 #define TRIG4_OFF								digitalLo(ULTRA4_PORT, TRIG4_PIN)
 
-
 #define ECHO_READ_1       			GPIO_ReadInputDataBit(ULTRA1_PORT, ECHO1_PIN)
 #define ECHO_READ_2       			GPIO_ReadInputDataBit(ULTRA2_PORT, ECHO2_PIN)
 #define ECHO_READ_3       			GPIO_ReadInputDataBit(ULTRA3_PORT, ECHO3_PIN)
@@ -211,42 +152,6 @@
 #define CRASH_FRONT_READ       	GPIO_ReadInputDataBit(CRASH_FRONT_PORT, CRASH_FRONT_PIN)
 #define CRASH_BACK_READ        	GPIO_ReadInputDataBit(CRASH_BACK_PORT, CRASH_BACK_PIN)
 
-//MOTO_UPDOWN
-#define LIFTMOTO_PORT_CLK     	RCC_AHB1Periph_GPIOC
-#define LIFTMOTO_PORT						GPIOC
-
-#define LIFTMOTO_EN_PIN					GPIO_Pin_8
-#define LIFTMOTO_DIR_PIN				GPIO_Pin_9
-
-//MOTO_UPDOWN
-#define LIFTMOTO_PWM_CLK     		RCC_AHB1Periph_GPIOA
-#define LIFTMOTO_PWM_PORT				GPIOA
-
-#define LIFTMOTO_PWM_PIN				GPIO_Pin_8
-
-#define LIFTMOTO_ENABLE					GPIO_ResetBits(LIFTMOTO_PORT, LIFTMOTO_EN_PIN);
-#define LIFTMOTO_DISABLE				GPIO_SetBits(LIFTMOTO_PORT, LIFTMOTO_EN_PIN);
-
-#define LIFTMOTO_DOWN         	GPIO_ResetBits(LIFTMOTO_PORT, LIFTMOTO_DIR_PIN);
-#define LIFTMOTO_UP							GPIO_SetBits(LIFTMOTO_PORT, LIFTMOTO_DIR_PIN);
-
-#define LIFTMOTO_PWM_EN	        GPIO_ResetBits(LIFTMOTO_PWM_PORT, LIFTMOTO_PWM_PIN);
-#define LIFTMOTO_PWM_DISABLE	  GPIO_SetBits (LIFTMOTO_PWM_PORT, LIFTMOTO_PWM_PIN);
-
-
-/********************************************************
-* 限位开关检测
-********************************************************/	
-#define LIMIT_UP_PORT_CLK	 	 		RCC_AHB1Periph_GPIOE
-#define LIMIT_UP_PORT       		GPIOE
-#define LIMIT_UP_PIN        		GPIO_Pin_13		//上限位
-
-#define LIMIT_DOWN_PORT_CLK	  	RCC_AHB1Periph_GPIOE
-#define LIMIT_DOWN_PORT       	GPIOE
-#define LIMIT_DOWN_PIN        	GPIO_Pin_14		//下限位
-
-#define LIMIT_UP_READ       		GPIO_ReadInputDataBit(LIMIT_UP_PORT, LIMIT_UP_PIN)
-#define LIMIT_DOWN_READ     		GPIO_ReadInputDataBit(LIMIT_DOWN_PORT, LIMIT_DOWN_PIN)
 
 //电机控制GPIO宏定义
 #define MOTO_LEFT_DIR_CLK       RCC_AHB1Periph_GPIOD
@@ -276,19 +181,13 @@
 #define MOTO_RIGHT_DIR_FRONT    GPIO_ResetBits(MOTO_RIGHT_PORT, MOTO_RIGHT_DIR_PIN);
 #define MOTO_RIGHT_DIR_BACK     GPIO_SetBits(MOTO_RIGHT_PORT, MOTO_RIGHT_DIR_PIN);
 
-void LED_GPIO_Cfg_Init(void);
-void Lamp_GPIO_Cfg_Init(void);
-void BEEP_GPIO_Cfg_Init(void);
-void PowerSys_Gpio_Cfg_Init(void);
-void PC_Power_Cfg_Init(uint8_t on_off);
-
-//void LiftMoto_Gpio_Cfg_Init(void);
+void LED_GPIO_Init(void);
+void Lamp_GPIO_Init(void);
+void BEEP_GPIO_Init(void);
+void Key_GPIO_Init(void);
 void Obstacle_GPIO_Init(void);
-
 void Ultrasonic_Exti_Init(void);
-void IR_Decoding_GPIO_Cfg_Init(void);
-void Crash_Gpio_Cfg_Init(void);
-void LiftMoto_Gpio_Cfg_Init(void);
-void LimitSwitch_Gpio_Cfg_Init(void);
+void IR_Decoding_GPIO_Init(void);
+void Crash_Gpio_Init(void);
 
 #endif

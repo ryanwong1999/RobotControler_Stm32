@@ -76,17 +76,26 @@
 #include "app_task.h" 
 #include "app_24cxx.h"
 #include "app_usart.h" 
-#include "app_analysisCMD.h" 
+//#include "app_analysisCMD.h" 
 #include "app_autoCharge.h" 
 #include "app_cap.h" 
 #include "app_exit.h" 
-#include "app_headDone.h"
-#include "app_liftMoto.h" 
+//#include "app_headDone.h"
+//#include "app_liftMoto.h" 
 #include "app_motoDrv.h" 
 #include "app_pms.h" 
 #include "app_system.h" 
 #include "app_tim.h" 
 #include "app_imu.h" 
+#include "app_key.h" 
 
+
+/**********************************************************************************************************
+                                             define
+**********************************************************************************************************/
+#define WHEEL_TRACK  					0.38			//YZ01C 单位米 轮距 ,金属外壳0.31,加拿大0.28，塑胶底壳0.41
+#define WHEEL_RADIUS  				0.0845		//单位米,轮子半径
+#define PI  									3.1415926       
+#define PULSE_CYCLE   				5600			//脉冲周期
 
 #endif

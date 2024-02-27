@@ -64,10 +64,10 @@ void Moto_mdrv_analysis(void)
 				    if(Moto.lear == 0 && Moto.angle == 0) Moto.stop_sta = 1;
 						else Moto.stop_sta = 0;
 					
-						#ifndef ROBOT_YZ01
-						if(UsartToPC.Disconnect_flag == 0 && Robot_Sys.Speed_Timeout_cnt < 2000)
-							Send_Speed_reply(1, 0xff, Moto.lear, Moto.angle);
-            #endif
+//						#ifndef ROBOT_YZ01
+//						if(UsartToPC.Disconnect_flag == 0 && Robot_Sys.Speed_Timeout_cnt < 2000)
+//							Send_Speed_reply(1, 0xff, Moto.lear, Moto.angle);
+//            #endif
 					 break;
 					
 					case MDRV_READ:
@@ -88,8 +88,8 @@ void Moto_mdrv_analysis(void)
 							Moto.left_pos = (uint16_t)UsartToDrv.Rx_Buf[8]<<8 | UsartToDrv.Rx_Buf[9];
 							Get_odom_pulse(Moto.left_pos, Moto.right_pos, &Moto_Odom.Left_Value, &Moto_Odom.Right_Value);		
 							
-							if(UsartToPC.Disconnect_flag == 0 && Robot_Sys.Odom_Timeout_cnt < 5000)
-								Send_OdomUpdata(1, 0xff, Moto_Odom );
+//							if(UsartToPC.Disconnect_flag == 0 && Robot_Sys.Odom_Timeout_cnt < 5000)
+//								Send_OdomUpdata(1, 0xff, Moto_Odom );
 							
 							Moto_Odom.Left_Value = 0;
 							Moto_Odom.Right_Value = 0;
@@ -133,10 +133,10 @@ void Moto_mdrv_analysis(void)
 							
 							Moto.left_pwm = (int16_t)UsartToDrv.Rx_Buf[14]<<8 | UsartToDrv.Rx_Buf[15];
 							Moto.right_pwm = (int16_t)UsartToDrv.Rx_Buf[16]<<8 | UsartToDrv.Rx_Buf[17];
-							#ifndef ROBOT_YZ01	
-							if(UsartToPC.Disconnect_flag == 0 && Robot_Sys.Speed_Timeout_cnt < 5000)
-								Send_Speed_reply(1, 0xff, Moto.lear, Moto.angle);
-							#endif
+//							#ifndef ROBOT_YZ01	
+//							if(UsartToPC.Disconnect_flag == 0 && Robot_Sys.Speed_Timeout_cnt < 5000)
+//								Send_Speed_reply(1, 0xff, Moto.lear, Moto.angle);
+//							#endif
 						}
 						break;
 				}

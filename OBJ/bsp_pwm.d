@@ -69,14 +69,12 @@
 ..\obj\bsp_pwm.o: ..\USER\includes.h
 ..\obj\bsp_pwm.o: ..\APP\Inc\app_24cxx.h
 ..\obj\bsp_pwm.o: ..\APP\Inc\app_usart.h
-..\obj\bsp_pwm.o: ..\APP\Inc\app_analysisCMD.h
 ..\obj\bsp_pwm.o: ..\APP\Inc\app_autoCharge.h
 ..\obj\bsp_pwm.o: ..\APP\Inc\app_cap.h
 ..\obj\bsp_pwm.o: ..\APP\Inc\app_exit.h
-..\obj\bsp_pwm.o: ..\APP\Inc\app_headDone.h
-..\obj\bsp_pwm.o: ..\APP\Inc\app_liftMoto.h
 ..\obj\bsp_pwm.o: ..\APP\Inc\app_motoDrv.h
 ..\obj\bsp_pwm.o: ..\APP\Inc\app_pms.h
 ..\obj\bsp_pwm.o: ..\APP\Inc\app_system.h
 ..\obj\bsp_pwm.o: ..\APP\Inc\app_tim.h
 ..\obj\bsp_pwm.o: ..\APP\Inc\app_imu.h
+..\obj\bsp_pwm.o: ..\APP\Inc\app_key.h

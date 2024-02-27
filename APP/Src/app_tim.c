@@ -21,7 +21,6 @@ void TIM2_IRQHandler(void)
 		
 		Charge_Tim1ms();
 		//Robot_Moto.Locked_Flag = Wheel_Locded_Check();
-	
 		UsartToPC.Comm_TimeOut++;
 		UsartToDrv.Comm_TimeOut++;
 	  Robot_Sys.Speed_Timeout_cnt++;
@@ -35,16 +34,16 @@ void TIM2_IRQHandler(void)
 				AT24CXX_WriteOneByte(8,Robot_Sys.Ultra_Disable_Flag);
 				last_ultra_en = AT24CXX_ReadOneByte(8);
 			}
-			if(last_lever_offset != Head_Status.Level_Offset)
-			{
-				AT24CXX_WriteOneByte(6,Head_Status.Level_Offset);   //当前容量
-				last_lever_offset = AT24CXX_ReadOneByte(6);
-			}
-			if(last_pitch_offset != Head_Status.Pitch_Offset)
-			{
-				AT24CXX_WriteOneByte(7,Head_Status.Pitch_Offset);
-				last_pitch_offset = AT24CXX_ReadOneByte(7);
-			}
+//			if(last_lever_offset != Head_Status.Level_Offset)
+//			{
+//				AT24CXX_WriteOneByte(6,Head_Status.Level_Offset);   //当前容量
+//				last_lever_offset = AT24CXX_ReadOneByte(6);
+//			}
+//			if(last_pitch_offset != Head_Status.Pitch_Offset)
+//			{
+//				AT24CXX_WriteOneByte(7,Head_Status.Pitch_Offset);
+//				last_pitch_offset = AT24CXX_ReadOneByte(7);
+//			}
 		}
 //		if((UsartToEnviro.Rx_Sta & 0x01) != 0)
 //		{

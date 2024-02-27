@@ -80,3 +80,4 @@
 ..\obj\app_headdone.o: ..\APP\Inc\app_system.h
 ..\obj\app_headdone.o: ..\APP\Inc\app_tim.h
 ..\obj\app_headdone.o: ..\APP\Inc\app_imu.h
+..\obj\app_headdone.o: ..\APP\Inc\app_key.h

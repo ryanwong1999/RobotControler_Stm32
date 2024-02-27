@@ -69,14 +69,12 @@
 ..\obj\main.o: ..\USER\includes.h
 ..\obj\main.o: ..\APP\Inc\app_24cxx.h
 ..\obj\main.o: ..\APP\Inc\app_usart.h
-..\obj\main.o: ..\APP\Inc\app_analysisCMD.h
 ..\obj\main.o: ..\APP\Inc\app_autoCharge.h
 ..\obj\main.o: ..\APP\Inc\app_cap.h
 ..\obj\main.o: ..\APP\Inc\app_exit.h
-..\obj\main.o: ..\APP\Inc\app_headDone.h
-..\obj\main.o: ..\APP\Inc\app_liftMoto.h
 ..\obj\main.o: ..\APP\Inc\app_motoDrv.h
 ..\obj\main.o: ..\APP\Inc\app_pms.h
 ..\obj\main.o: ..\APP\Inc\app_system.h
 ..\obj\main.o: ..\APP\Inc\app_tim.h
 ..\obj\main.o: ..\APP\Inc\app_imu.h
+..\obj\main.o: ..\APP\Inc\app_key.h
