@@ -32,9 +32,9 @@ void AnalysisCMD(void)
 	float period_inc_tmp;
 	uint16_t addr1, addr2;
 	uint8_t charge_tmp = 0;
-	uint8_t cmd_tmp ;
-	uint8_t Sdev_tmp ;  // 源地址
-	uint8_t Pdev_tmp ;  // 目地址	
+	uint8_t cmd_tmp;
+	uint8_t Sdev_tmp;  // 源地址
+	uint8_t Pdev_tmp;  // 目地址	
 	float l_speed, r_speed, angle_div;
 	int16_t rx_angle, rx_lear;
 	int16_t chg_dis, chg_angle;

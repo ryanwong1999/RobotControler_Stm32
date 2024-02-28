@@ -166,16 +166,10 @@ void DisplayRefreash(struct Menu_t *nowMenu, u8 selectItem, u8 scrollBar)
 	int i = 0;
 	static u8 lastSelectItem = 0;		//记录上次索引
 	
-	if(menuPoint != menuLast)
-	{
-//		LCD_Fill(0, 0, LCD_W, LCD_H, backColor);
-//		OLED_CLS();
-	}
-	
 	if(nowMenu == &MainUI)					//当回到主菜单时，由于没有全占屏，所以全部清屏，再画
 	{
 //		LCD_Fill(0, 0, LCD_W, LCD_H, backColor);
-		OLED_CLS();
+//		OLED_CLS();
 		MainUiSet();
 	}
 	else 

@@ -6,17 +6,18 @@ Odom_Data_type  Moto_Odom;    // 里程数据
 
 int main(void)
 { 
+	taskENTER_CRITICAL();		//进入临界区
+	
+	
 	System_Board_Init();		//初始化系统硬件资源
 	NVIC_Configuration();		//中断优先级配置
 	IWDG_Init(IWDG_Prescaler_64, 625);			//与分频数为64,重载值为500,溢出时间为1s	
 	delay_ms(200);
 	System_StartTips();			//系统启动蜂鸣器提示
-	OLED_CLS();
-	
+	MenuInit();
 
 	
-	
-	taskENTER_CRITICAL();		//进入临界区
+
 	
 	//创建开始任务
 	printf("ROBOT System starting!!\r\n"); 

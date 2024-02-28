@@ -106,9 +106,7 @@ void NVIC_Configuration(void)
 //备注：
 /************************************************/
 void System_Board_Init(void)
-{
-	taskENTER_CRITICAL();           		//进入临界区
-	
+{	
 	delay_init(168);  									//时钟初始化
 	LED_GPIO_Init();										//LED初始化
 	BEEP_GPIO_Init();										//蜂鸣器初始化
@@ -138,7 +136,6 @@ void System_Board_Init(void)
 //	my_mem_init(SRAMEX);								//初始化外部内存池
 	my_mem_init(SRAMCCM);								//初始化CCM内存池 
 
-	taskEXIT_CRITICAL();            //退出临界区	 
 	printf("Bsp init OK!\r\n");
 }
 
