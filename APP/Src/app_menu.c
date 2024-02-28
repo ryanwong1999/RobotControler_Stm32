@@ -35,7 +35,7 @@ struct Menu_t MainUI =
 {&MainUIProperty, "MainUI", NULL, NULL, NULL};
 
 //主菜单
-struct MenuProperty_t menuMainProperty = {4, 1};
+struct MenuProperty_t menuMainProperty = {4, 0};
 struct Menu_t menuMain[4] =
 {
 	{&menuMainProperty,"last menu     ", NULL, NULL, &MainUI, NULL},
@@ -44,7 +44,7 @@ struct Menu_t menuMain[4] =
 	{&menuMainProperty,"Time set      ", NULL, TimeSetInit, &MainUI, NULL}
 };
 //animal的子菜单
-struct MenuProperty_t setMenu1Property = {6, 3};
+struct MenuProperty_t setMenu1Property = {6, 2};
 struct Menu_t setMenu1[6] =
 {
 	{&setMenu1Property, "last menu     ", NULL, NULL, menuMain, NULL},
@@ -55,7 +55,7 @@ struct Menu_t setMenu1[6] =
 	{&setMenu1Property, "fish          ", NULL, NULL, menuMain, NULL}
 };
 //Pid的子菜单
-struct MenuProperty_t setMenu2Property = {5, 2};
+struct MenuProperty_t setMenu2Property = {5, 1};
 struct Menu_t setMenu2[5] =
 {
 	{&setMenu2Property, "last menu      ", NULL, 	NULL, 	menuMain, NULL},
@@ -65,7 +65,7 @@ struct Menu_t setMenu2[5] =
 	{&setMenu2Property, "PWM  0         ", NULL, 	NULL, 	menuMain, NULL},
 };
 //Time set的子菜单
-struct MenuProperty_t setMenu3Property = {8, 5};
+struct MenuProperty_t setMenu3Property = {8, 4};
 struct Menu_t setMenu3[8] =
 {
 	{&setMenu3Property, "last menu      ", NULL, NULL,			menuMain, NULL},
@@ -140,15 +140,14 @@ void TimeSetInit(void)
 void MainUiSet()
 {
 	int i;
-	u8 time_x = 18, time_y = 12, date_x = 26, date_y = 40;
-	for(i = 1; i < 14; i++)
+	for(i=1; i<16; i++)
 	{
 //		LCD_ShowChar(8*i, 0, '-', fontColor, backColor, 16, 1);
 //		LCD_ShowChar(8*i, 160, '-', fontColor, backColor, 16, 1);
-		OLED_P8x16Str(8*i, 0, "-");
-		OLED_P8x16Str(8*i, 6, "-");
+		OLED_ShowString(8*(i-1), 1, "-", 8, 1);
+		OLED_ShowString(8*(i-1), 188, "-", 8, 1);
 	}
-	OLED_P8x16Str(40, 3, "YZBOT");
+	OLED_ShowString(40, 90, "YZBOT", 16, 1);
 }
 
 /**
@@ -165,28 +164,27 @@ void DisplayRefreash(struct Menu_t *nowMenu, u8 selectItem, u8 scrollBar)
 {
 	int i = 0;
 	static u8 lastSelectItem = 0;		//记录上次索引
-	
+	if(menuPoint != menuLast)
+	{
+		OLED_Clear();
+	}
 	if(nowMenu == &MainUI)					//当回到主菜单时，由于没有全占屏，所以全部清屏，再画
 	{
-//		LCD_Fill(0, 0, LCD_W, LCD_H, backColor);
-//		OLED_CLS();
+		OLED_Clear();
 		MainUiSet();
 	}
 	else 
-	{	
-//		LCD_ShowChar(0, lastSelectItem*32, '>', backColor, backColor, 32, 1);		//清除上次索引
-//		LCD_ShowChar(0, selectItem*32, 		 '>', fontColor, backColor, 32, 1);		//画出这次索引
-		OLED_P6x8Str(0, lastSelectItem*8, ">");
-		OLED_P6x8Str(0, selectItem*8, ">");
+	{
+		OLED_ShowString(0, selectItem*16,		 ">", 16, 1);		//画出这次索引
+		
 		for(i=0; i<(nowMenu->MenuProperty->MenuLen-nowMenu->MenuProperty->scrollBarLen); i++)
 		{
-//			LCD_ShowString(20, i*32, nowMenu[i+scrollBar].displayString, fontColor, backColor, 32, 1);
-			OLED_P6x8Str(0, i*8, nowMenu[i+scrollBar].displayString);
+			OLED_ShowString(10, i*16, nowMenu[i+scrollBar].displayString, 16, 1);
 		}
 	}
-//	OLED_Refresh();
+	OLED_Refresh();
 	lastSelectItem = selectItem;
-	menuLast = menuPoint;
+//	menuLast = menuPoint;
 }
 
 /**
@@ -204,10 +202,9 @@ void DisplayRefreashData(struct Menu_t *nowMenu, u8 selectItem, u8 scrollBar)
 	int i = 0;
 	for(i=0; i<(nowMenu->MenuProperty->MenuLen-nowMenu->MenuProperty->scrollBarLen); i++)
 	{
-//		LCD_ShowString(20, i*32, nowMenu[i+scrollBar].displayString, fontColor, backColor, 32, 1);
-		OLED_P6x8Str(0, i*8, nowMenu[i+scrollBar].displayString);
+		OLED_ShowString(10, i*16, nowMenu[i+scrollBar].displayString, 16, 1);
 	}
-//	OLED_Refresh();
+	OLED_Refresh();
 }
 
 /**
@@ -269,7 +266,7 @@ void GuiDataDisplayRefresh()
 	else if(menuPoint == &MainUI)
 	{
 		MainUiSet();
-//		OLED_Refresh();
+		OLED_Refresh();
 	}
 }
 
