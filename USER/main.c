@@ -8,9 +8,10 @@ int main(void)
 { 
 	System_Board_Init();		//初始化系统硬件资源
 	NVIC_Configuration();		//中断优先级配置
-//	delay_ms(200);
-//	EN_OUT_ENABLE;					//硬开软关使能VCC-OUT
-//	System_StartTips();			//系统启动蜂鸣器提示
+	IWDG_Init(IWDG_Prescaler_64, 625);			//与分频数为64,重载值为500,溢出时间为1s	
+	delay_ms(200);
+	System_StartTips();			//系统启动蜂鸣器提示
+	OLED_CLS();
 	
 
 	

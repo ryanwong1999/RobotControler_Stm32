@@ -22,19 +22,21 @@ Dialog DLL:      TCM.DLL V1.53.0.0
  
 <h2>Project:</h2>
 D:\Desktop\KGH_Project\RobotController_Stm32\USER\FreeRTOS.uvprojx
-Project File Date:  02/27/2024
+Project File Date:  02/28/2024
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 7 (build 960)', folder: 'C:\AAAAAAAAPP\Keil5\ARM\ARMCC\Bin'
 Build target 'FreeRTOS'
-compiling bsp_gpio.c...
+compiling app_menu.c...
 ..\BSP\Inc\bsp_adc.h(38): warning:  #1-D: last line of file ends without a newline
   #endif
 ..\BSP\Inc\bsp_cap.h(28): warning:  #1-D: last line of file ends without a newline
   #endif
 ..\BSP\Inc\bsp_gpio.h(193): warning:  #1-D: last line of file ends without a newline
   #endif
-..\BSP\Inc\bsp_iic.h(24): warning:  #1-D: last line of file ends without a newline
+..\BSP\Inc\bsp_iic.h(33): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\BSP\Inc\bsp_iic2.h(26): warning:  #1-D: last line of file ends without a newline
   #endif
 ..\BSP\Inc\bsp_pwm.h(38): warning:  #1-D: last line of file ends without a newline
   #endif 
@@ -42,7 +44,7 @@ compiling bsp_gpio.c...
   #endif 
 ..\BSP\Inc\bsp_usart.h(10): warning:  #1-D: last line of file ends without a newline
   #endif
-..\APP\Inc\app_task.h(114): warning:  #1-D: last line of file ends without a newline
+..\APP\Inc\app_task.h(120): warning:  #1-D: last line of file ends without a newline
   #endif
 ..\APP\Inc\app_24cxx.h(30): warning:  #1-D: last line of file ends without a newline
   #endif
@@ -64,49 +66,21 @@ compiling bsp_gpio.c...
   #endif
 ..\APP\Inc\app_imu.h(6): warning:  #1-D: last line of file ends without a newline
   #endif 
-..\BSP\Src\bsp_gpio.c: 18 warnings, 0 errors
-compiling app_task.c...
-..\BSP\Inc\bsp_adc.h(38): warning:  #1-D: last line of file ends without a newline
+..\APP\Inc\app_menu.h(28): warning:  #1-D: last line of file ends without a newline
   #endif
-..\BSP\Inc\bsp_cap.h(28): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\BSP\Inc\bsp_gpio.h(193): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\BSP\Inc\bsp_iic.h(24): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\BSP\Inc\bsp_pwm.h(38): warning:  #1-D: last line of file ends without a newline
-  #endif 
-..\BSP\Inc\bsp_rs485.h(19): warning:  #1-D: last line of file ends without a newline
-  #endif 
-..\BSP\Inc\bsp_usart.h(10): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\APP\Inc\app_task.h(114): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\APP\Inc\app_24cxx.h(30): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\APP\Inc\app_usart.h(28): warning:  #1-D: last line of file ends without a newline
-  #endif 
-..\APP\Inc\app_autoCharge.h(73): warning:  #1-D: last line of file ends without a newline
-  #endif 
-..\APP\Inc\app_cap.h(6): warning:  #1-D: last line of file ends without a newline
-  #endif 
-..\APP\Inc\app_exit.h(26): warning:  #1-D: last line of file ends without a newline
-  #endif 
-..\APP\Inc\app_motoDrv.h(50): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\APP\Inc\app_pms.h(50): warning:  #1-D: last line of file ends without a newline
-  #endif 
-..\APP\Inc\app_system.h(87): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\APP\Inc\app_tim.h(6): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\APP\Inc\app_imu.h(6): warning:  #1-D: last line of file ends without a newline
-  #endif 
-..\APP\Src\app_task.c: 18 warnings, 0 errors
+..\APP\Src\app_menu.c(143): warning:  #177-D: variable "time_x"  was declared but never referenced
+  	u8 time_x = 18, time_y = 12, date_x = 26, date_y = 40;
+..\APP\Src\app_menu.c(143): warning:  #177-D: variable "time_y"  was declared but never referenced
+  	u8 time_x = 18, time_y = 12, date_x = 26, date_y = 40;
+..\APP\Src\app_menu.c(143): warning:  #177-D: variable "date_x"  was declared but never referenced
+  	u8 time_x = 18, time_y = 12, date_x = 26, date_y = 40;
+..\APP\Src\app_menu.c(143): warning:  #177-D: variable "date_y"  was declared but never referenced
+  	u8 time_x = 18, time_y = 12, date_x = 26, date_y = 40;
+..\APP\Src\app_menu.c: 24 warnings, 0 errors
 linking...
-Program Size: Code=16576 RO-data=460 RW-data=292 ZI-data=1187628  
+Program Size: Code=21206 RO-data=3414 RW-data=1196 ZI-data=1187620  
 FromELF: creating hex file...
-"..\OBJ\LED.axf" - 0 Error(s), 36 Warning(s).
+"..\OBJ\LED.axf" - 0 Error(s), 24 Warning(s).
 
 <h2>Software Packages used:</h2>
 

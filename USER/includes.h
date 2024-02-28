@@ -63,11 +63,13 @@
 #include "bsp_cap.h"
 #include "bsp_gpio.h"
 #include "bsp_iic.h"
+#include "bsp_iic2.h"
 #include "bsp_iwdg.h"
 #include "bsp_pwm.h"
 #include "bsp_rs485.h"
 #include "bsp_tim.h"
 #include "bsp_usart.h"
+#include "bsp_oled.h" 
 
 
 /**********************************************************************************************************
@@ -88,7 +90,7 @@
 #include "app_tim.h" 
 #include "app_imu.h" 
 #include "app_key.h" 
-
+#include "app_menu.h" 
 
 /**********************************************************************************************************
                                              define

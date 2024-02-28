@@ -60,11 +60,13 @@
 ..\obj\bsp_iwdg.o: ..\BSP\Inc\bsp_cap.h
 ..\obj\bsp_iwdg.o: ..\BSP\Inc\bsp_gpio.h
 ..\obj\bsp_iwdg.o: ..\BSP\Inc\bsp_iic.h
+..\obj\bsp_iwdg.o: ..\BSP\Inc\bsp_iic2.h
 ..\obj\bsp_iwdg.o: ..\BSP\Inc\bsp_iwdg.h
 ..\obj\bsp_iwdg.o: ..\BSP\Inc\bsp_pwm.h
 ..\obj\bsp_iwdg.o: ..\BSP\Inc\bsp_rs485.h
 ..\obj\bsp_iwdg.o: ..\BSP\Inc\bsp_tim.h
 ..\obj\bsp_iwdg.o: ..\BSP\Inc\bsp_usart.h
+..\obj\bsp_iwdg.o: ..\BSP\Inc\bsp_oled.h
 ..\obj\bsp_iwdg.o: ..\APP\Inc\app_task.h
 ..\obj\bsp_iwdg.o: ..\USER\includes.h
 ..\obj\bsp_iwdg.o: ..\APP\Inc\app_24cxx.h
@@ -78,3 +80,4 @@
 ..\obj\bsp_iwdg.o: ..\APP\Inc\app_tim.h
 ..\obj\bsp_iwdg.o: ..\APP\Inc\app_imu.h
 ..\obj\bsp_iwdg.o: ..\APP\Inc\app_key.h
+..\obj\bsp_iwdg.o: ..\APP\Inc\app_menu.h

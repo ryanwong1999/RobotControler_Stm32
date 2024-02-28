@@ -60,11 +60,13 @@
 ..\obj\main.o: ..\BSP\Inc\bsp_cap.h
 ..\obj\main.o: ..\BSP\Inc\bsp_gpio.h
 ..\obj\main.o: ..\BSP\Inc\bsp_iic.h
+..\obj\main.o: ..\BSP\Inc\bsp_iic2.h
 ..\obj\main.o: ..\BSP\Inc\bsp_iwdg.h
 ..\obj\main.o: ..\BSP\Inc\bsp_pwm.h
 ..\obj\main.o: ..\BSP\Inc\bsp_rs485.h
 ..\obj\main.o: ..\BSP\Inc\bsp_tim.h
 ..\obj\main.o: ..\BSP\Inc\bsp_usart.h
+..\obj\main.o: ..\BSP\Inc\bsp_oled.h
 ..\obj\main.o: ..\APP\Inc\app_task.h
 ..\obj\main.o: ..\USER\includes.h
 ..\obj\main.o: ..\APP\Inc\app_24cxx.h
@@ -78,3 +80,4 @@
 ..\obj\main.o: ..\APP\Inc\app_tim.h
 ..\obj\main.o: ..\APP\Inc\app_imu.h
 ..\obj\main.o: ..\APP\Inc\app_key.h
+..\obj\main.o: ..\APP\Inc\app_menu.h

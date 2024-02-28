@@ -52,12 +52,12 @@ void Start_Task(void *pvParameters)
 							(UBaseType_t    )TEST_TASK_PRIO,       			//任务优先级
 							(TaskHandle_t*  )&Test_Task_Handler);				//任务句柄  
 
-//	xTaskCreate((TaskFunction_t )Head_Ctrl_Task,            //任务函数
-//							(const char*    )"Head_Ctrl_Task",          //任务名称
-//							(uint16_t       )HEAD_CTRL_STK_SIZE,        //任务堆栈大小
-//							(void*          )NULL,                			//传递给任务函数的参数
-//							(UBaseType_t    )HEAD_CTRL_TASK_PRIO,       //任务优先级
-//							(TaskHandle_t*  )&Head_Ctrl_Task_Handler);	//任务句柄  
+	xTaskCreate((TaskFunction_t )Display_Task,            	//任务函数
+							(const char*    )"Display_Task",          	//任务名称
+							(uint16_t       )DISPLAY_STK_SIZE,        	//任务堆栈大小
+							(void*          )NULL,                			//传递给任务函数的参数
+							(UBaseType_t    )DISPLAY_TASK_PRIO,       	//任务优先级
+							(TaskHandle_t*  )&Display_Task_Handler);		//任务句柄  
 
 //	xTaskCreate((TaskFunction_t )LiftMoto_Task,            	//任务函数
 //							(const char*    )"LiftMoto_Task",          	//任务名称
@@ -116,7 +116,7 @@ void Err_Handle_Task(void *pvParameters)
 {
 	while(1)
 	{
-//		IWDG_Feed();//喂狗
+		IWDG_Feed();//喂狗
 		vTaskDelay(100);
 	}
 }
@@ -133,26 +133,53 @@ void Key_Task(void *p_arg)
 	while(1)
 	{
 		key = KEY_Scan(0);		//得到键值
+		LED2_OFF;
 		switch(key)
 		{				 
 			case KEY_UP_PRES:
 				printf("KEY_UP_PRES!!\r\n");
+				LED2_ON;
 				isKeyUp = 1;
 				break;
 			case KEY_DOWN_PRES:
 				printf("KEY_DOWN_PRES!!\r\n");
+				LED2_ON;
 				isKeyDown = 1;
 				break;
 			case KEY_ENTER_PRES:
 				printf("KEY_ENTER_PRES!!\r\n");
+				LED2_ON;
 			  isKeyEnter = 1;
 				break;
 //			default:
 //				break;
 		}
+		vTaskDelay(100);
+	}
+}
+
+
+/************************************************/
+//函数功能：显示任务
+//输入参数：
+//返回值：
+//备注：
+/************************************************/
+void Display_Task(void *pvParameters)
+{
+	while(1)
+	{
+		count1++;
+		count2++;
+		count3++;
+		count4++;
+		MenuControl();
+		GuiDataDisplayRefresh();
+//		MainUiSet();
 		vTaskDelay(10);
 	}
 }
+
 
 /************************************************/
 //函数功能：关机任务处理任务
@@ -249,21 +276,6 @@ void Test_Task(void *pvParameters)
 		vTaskDelay(100);
 	}
 }
-
-
-/************************************************/
-//函数功能：手动头部控制任务
-//输入参数：
-//返回值：
-//备注：
-/************************************************/
-//void Head_Ctrl_Task(void *pvParameters)
-//{
-//	while(1)
-//	{
-//		vTaskDelay(20);
-//	}
-//}
 
 
 /************************************************/
