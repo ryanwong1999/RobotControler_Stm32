@@ -38,8 +38,8 @@ void NVIC_Configuration(void)
 	NVIC_Init(&NVIC_InitStructure);	        
 	//UART5
 	NVIC_InitStructure.NVIC_IRQChannel = UART5_IRQn;           	// 配置USART为中断源 
-	NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 1;   // 抢占优先级为0
-	NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0;          // 子优先级为1
+	NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 0;   // 抢占优先级为0
+	NVIC_InitStructure.NVIC_IRQChannelSubPriority = 4;          // 子优先级为1
 	NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;             // 使能中断 
 	NVIC_Init(&NVIC_InitStructure);	                            // 初始化配置NVIC 	
 	//10us基本定时器
@@ -128,7 +128,7 @@ void System_Board_Init(void)
   USARTx_Cfg_Init(USART1, 115200);  	//USART to printf 
 //	USARTx_Cfg_Init(USART2, 9600);    	//USART to 噪声传感器
 //	USARTx_Cfg_Init(USART3, 9600);    	//USART to PC
-//	USARTx_Cfg_Init(UART5, 9600);       //USART to 环境传感器
+	USARTx_Cfg_Init(UART5, 9600);       //USART to imu
 //	RS485_Cfg_Init(115200);  						//UART4 to moto drv
 	
 	//内存初始化

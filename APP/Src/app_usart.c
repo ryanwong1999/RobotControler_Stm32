@@ -3,7 +3,7 @@
 Usart_TypeDef	UsartToPC;
 Usart_TypeDef UsartToTest;
 Usart_TypeDef UsartToDrv;
-//Usart_TypeDef UsartToEnviro;
+Usart_TypeDef UsartToImu;
 //Usart_TypeDef UsartToVoice;
 
 
@@ -214,8 +214,9 @@ void UART4_IRQHandler(void)
 		if(UsartToDrv.Usart_Rx_OK == false)
 		{
 			UsartToDrv.Rx_Buf[UsartToDrv.Rx_Len++] = dat;
-			TIM_SetCounter(TIM7,0);
+			TIM_SetCounter(TIM7, 0);
 			TIM_Cmd(TIM7,ENABLE);
 		}
 	}
 }
+

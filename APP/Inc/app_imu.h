@@ -1,6 +1,21 @@
-#ifndef __APP_CAP_H
-#define __APP_CAP_H
+#ifndef __APP_IMU_H
+#define __APP_IMU_H
 
-#include "includes.h"	
+#include "wt901.h"
 
+extern struct STime			stcTime;  
+extern struct SAcc 			stcAcc;
+extern struct SGyro 		stcGyro;
+extern struct SAngle 		stcAngle;
+extern struct SMag 			stcMag;
+extern struct SDStatus	stcDStatus;
+extern struct SPress 		stcPress;
+extern struct SLonLat 	stcLonLat;
+extern struct SGPSV 		stcGPSV;
+extern struct SQ       	stcQ;
+
+void accalsw(void);
+void savacalsw(void);
+
+	
 #endif 

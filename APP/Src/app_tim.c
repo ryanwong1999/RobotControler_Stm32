@@ -29,11 +29,11 @@ void TIM2_IRQHandler(void)
 		if(errom_cnt > 1000)		//1秒
 		{
 			errom_cnt = 0;
-			if(last_ultra_en != Robot_Sys.Ultra_Disable_Flag)
-			{
-				AT24CXX_WriteOneByte(8,Robot_Sys.Ultra_Disable_Flag);
-				last_ultra_en = AT24CXX_ReadOneByte(8);
-			}
+//			if(last_ultra_en != Robot_Sys.Ultra_Disable_Flag)
+//			{
+//				AT24CXX_WriteOneByte(8,Robot_Sys.Ultra_Disable_Flag);
+//				last_ultra_en = AT24CXX_ReadOneByte(8);
+//			}
 //			if(last_lever_offset != Head_Status.Level_Offset)
 //			{
 //				AT24CXX_WriteOneByte(6,Head_Status.Level_Offset);   //当前容量
@@ -143,6 +143,7 @@ void TIM7_IRQHandler(void)
 	if(TIM_GetITStatus(TIM7, TIM_IT_Update) != RESET)//是更新中断
 	{	 			   
 		UsartToDrv.Usart_Rx_OK = true;
+		UsartToImu.Usart_Rx_OK = true;
 		TIM_ClearITPendingBit(TIM7, TIM_IT_Update);  //清除TIM7更新中断标志    
 		TIM_Cmd(TIM7, DISABLE);  //关闭TIM7 
 	}	 

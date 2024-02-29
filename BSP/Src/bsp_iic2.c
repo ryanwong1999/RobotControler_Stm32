@@ -60,7 +60,7 @@ u8 IIC2_Wait_Ack(void)
 		ucErrTime++;
 		if(ucErrTime > 250)
 		{
-			printf("iic timeout\r\n");
+			printf("iic2 timeout\r\n");
 			IIC2_Stop();
 			return 1;
 		}

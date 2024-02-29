@@ -140,12 +140,10 @@ void TimeSetInit(void)
 void MainUiSet()
 {
 	int i;
-	for(i=1; i<16; i++)
+	for(i=1; i<15; i++)
 	{
-//		LCD_ShowChar(8*i, 0, '-', fontColor, backColor, 16, 1);
-//		LCD_ShowChar(8*i, 160, '-', fontColor, backColor, 16, 1);
-		OLED_ShowString(8*(i-1), 1, "-", 8, 1);
-		OLED_ShowString(8*(i-1), 188, "-", 8, 1);
+		OLED_ShowString(8*i, 1, 	"-", 8, 1);
+		OLED_ShowString(8*i, 188, "-", 8, 1);
 	}
 	OLED_ShowString(40, 90, "YZBOT", 16, 1);
 }
@@ -160,14 +158,14 @@ void MainUiSet()
   * @author  LQH
   * @Data    2022-01-27
   */
+static u8 lastSelectItem = 0;		//记录上次索引
 void DisplayRefreash(struct Menu_t *nowMenu, u8 selectItem, u8 scrollBar)
 {
 	int i = 0;
-	static u8 lastSelectItem = 0;		//记录上次索引
-	if(menuPoint != menuLast)
-	{
-		OLED_Clear();
-	}
+//	if(menuPoint != menuLast)
+//	{
+//		OLED_Clear();
+//	}
 	if(nowMenu == &MainUI)					//当回到主菜单时，由于没有全占屏，所以全部清屏，再画
 	{
 		OLED_Clear();
@@ -175,7 +173,8 @@ void DisplayRefreash(struct Menu_t *nowMenu, u8 selectItem, u8 scrollBar)
 	}
 	else 
 	{
-		OLED_ShowString(0, selectItem*16,		 ">", 16, 1);		//画出这次索引
+		OLED_ShowString(0, lastSelectItem*16,	" ", 16, 1);		//去除上次索引
+		OLED_ShowString(0, selectItem*16,		 	">", 16, 1);		//画出这次索引
 		
 		for(i=0; i<(nowMenu->MenuProperty->MenuLen-nowMenu->MenuProperty->scrollBarLen); i++)
 		{

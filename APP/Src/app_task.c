@@ -258,7 +258,7 @@ void Cammand_Task(void *pvParameters)
 {
 	while(1)
 	{
-		vTaskDelay(3);
+		vTaskDelay(10);
 	}
 }
 
@@ -271,9 +271,57 @@ void Cammand_Task(void *pvParameters)
 /************************************************/
 void Test_Task(void *pvParameters)
 {
+	u8 i=0;
 	while(1)
 	{
-		vTaskDelay(100);
+//		i++;
+//		if(i>20)
+//		{
+//			i = 0;
+//			printf("正在进行加速度校准\r\n");
+//			accalsw();
+////			delay_ms(100);//等待模块内部自动校准好，模块内部会自动计算需要一定的时间
+//			savacalsw();
+////			delay_ms(100);//保存当前配置
+//			printf("加速度校准完成\r\n");
+//		}
+		
+		
+//		//输出加速度
+//		//串口接受到的数据已经拷贝到对应的结构体的变量中了，根据说明书的协议，以加速度为例 stcAcc.a[0]/32768*16就是X轴的加速度，
+//		printf("Acc:%.3f %.3f %.3f\r\n", (float)stcAcc.a[0]/32768*16, (float)stcAcc.a[1]/32768*16, (float)stcAcc.a[2]/32768*16);
+//			delay_ms(10);
+//		//输出角速度
+//		printf("Gyro:%.3f %.3f %.3f\r\n", (float)stcGyro.w[0]/32768*2000, (float)stcGyro.w[1]/32768*2000, (float)stcGyro.w[2]/32768*2000);
+//			delay_ms(10);
+//		//输出角度
+//		printf("Angle:%.3f %.3f %.3f\r\n", (float)stcAngle.Angle[0]/32768*180, (float)stcAngle.Angle[1]/32768*180, (float)stcAngle.Angle[2]/32768*180);
+//			delay_ms(10);
+//		//输出磁场
+//		printf("Mag:%d %d %d\r\n",stcMag.h[0], stcMag.h[1], stcMag.h[2]);	
+//			delay_ms(10);
+		
+		
+//		//输出时间
+//		printf("Time:20%d-%d-%d %d:%d:%.3f\r\n", stcTime.ucYear, stcTime.ucMonth, stcTime.ucDay, stcTime.ucHour, stcTime.ucMinute, (float)stcTime.ucSecond+(float)stcTime.usMiliSecond/1000);
+//			delay_ms(10);
+//		//输出气压、高度
+//		printf("Pressure:%ld Height%.2f\r\n", stcPress.lPressure, (float)stcPress.lAltitude/100);
+//			delay_ms(10);
+//		//输出端口状态
+//		printf("DStatus:%d %d %d %d\r\n", stcDStatus.sDStatus[0], stcDStatus.sDStatus[1], stcDStatus.sDStatus[2], stcDStatus.sDStatus[3]);
+//			delay_ms(10);
+//		//输出经纬度
+//		printf("Longitude:%ldDeg%.5fm Lattitude:%ldDeg%.5fm\r\n", stcLonLat.lLon/10000000, (double)(stcLonLat.lLon % 10000000)/1e5, stcLonLat.lLat/10000000, (double)(stcLonLat.lLat % 10000000)/1e5);
+//			delay_ms(10);
+//		//输出地速
+//		printf("GPSHeight:%.1fm GPSYaw:%.1fDeg GPSV:%.3fkm/h\r\n", (float)stcGPSV.sGPSHeight/10, (float)stcGPSV.sGPSYaw/10, (float)stcGPSV.lGPSVelocity/1000);
+//			delay_ms(10);
+//		//输出四元素
+//		printf("Four elements:%.5f %.5f %.5f %.5f\r\n\r\n", (float)stcQ.q[0]/32768, (float)stcQ.q[1]/32768, (float)stcQ.q[2]/32768, (float)stcQ.q[3]/32768);
+//		  delay_ms(10);//等待传输完成
+
+		vTaskDelay(1000);
 	}
 }
 

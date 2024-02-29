@@ -22,7 +22,7 @@ typedef struct
 extern Usart_TypeDef UsartToPC;
 extern Usart_TypeDef UsartToTest;
 extern Usart_TypeDef UsartToDrv;
-//extern Usart_TypeDef UsartToEnviro;
+extern Usart_TypeDef UsartToImu;
 //extern Usart_TypeDef UsartToVoice;
 
 #endif 
