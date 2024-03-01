@@ -176,7 +176,7 @@ void Display_Task(void *pvParameters)
 		MenuControl();
 		GuiDataDisplayRefresh();
 //		MainUiSet();
-		vTaskDelay(10);
+		vTaskDelay(100);
 	}
 }
 

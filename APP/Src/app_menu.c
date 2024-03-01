@@ -44,14 +44,23 @@ struct Menu_t menuMain[4] =
 	{&menuMainProperty,"Time set      ", NULL, TimeSetInit, &MainUI, NULL}
 };
 //imu的子菜单
-struct MenuProperty_t setMenu1Property = {5, 1};
-struct Menu_t setMenu1[5] =
+struct MenuProperty_t setMenu1Property = {14, 10};
+struct Menu_t setMenu1[14] =
 {
 	{&setMenu1Property, "last menu     ", NULL, NULL, menuMain, NULL},
-	{&setMenu1Property, "Acc					 ", NULL, NULL, menuMain, NULL},
-	{&setMenu1Property, "Gyro          ", NULL, NULL, menuMain, NULL},
-	{&setMenu1Property, "Angle				 ", NULL, NULL, menuMain, NULL},
-	{&setMenu1Property, "quaternion		 ", NULL, NULL, menuMain, NULL}
+	{&setMenu1Property, "Acc	 0			 ", NULL, NULL, menuMain, NULL},
+	{&setMenu1Property, "       			 ", NULL, NULL, menuMain, NULL},
+	{&setMenu1Property, "       			 ", NULL, NULL, menuMain, NULL},
+	{&setMenu1Property, "Gyro  0       ", NULL, NULL, menuMain, NULL},
+	{&setMenu1Property, "       			 ", NULL, NULL, menuMain, NULL},
+	{&setMenu1Property, "       			 ", NULL, NULL, menuMain, NULL},
+	{&setMenu1Property, "Angle 0			 ", NULL, NULL, menuMain, NULL},
+	{&setMenu1Property, "       			 ", NULL, NULL, menuMain, NULL},
+	{&setMenu1Property, "       			 ", NULL, NULL, menuMain, NULL},
+	{&setMenu1Property, "Quat	 0			 ", NULL, NULL, menuMain, NULL},
+	{&setMenu1Property, "       			 ", NULL, NULL, menuMain, NULL},
+	{&setMenu1Property, "       			 ", NULL, NULL, menuMain, NULL},
+	{&setMenu1Property, "       			 ", NULL, NULL, menuMain, NULL}
 };
 //Pid的子菜单
 struct MenuProperty_t setMenu2Property = {5, 1};
@@ -161,7 +170,7 @@ static u8 lastSelectItem = 0;		//记录上次索引
 void DisplayRefreash(struct Menu_t *nowMenu, u8 selectItem, u8 scrollBar)
 {
 	int i = 0;
-	
+
 	if(menuPoint != menuLast) OLED_Clear();
 	
 	if(nowMenu == &MainUI)					//当回到主菜单时，由于没有全占屏，所以全部清屏，再画
@@ -235,10 +244,19 @@ void GuiDataDisplayRefresh()
 {
 	if(menuPoint == setMenu1)
 	{
-		sprintf((char*)setMenu1[1].displayString, "Acc   %3d     ", count1);
-		sprintf((char*)setMenu1[2].displayString, "Gyro  %3d     ", count2);
-		sprintf((char*)setMenu1[3].displayString, "Angle %3d     ", count3);
-		sprintf((char*)setMenu1[4].displayString, "Quat  %3d     ", count4);
+		sprintf((char*)setMenu1[1].displayString, 	"Acc   %.3f     ", (float)stcAcc.a[0]/32768*16);
+		sprintf((char*)setMenu1[2].displayString, 	"      %.3f     ", (float)stcAcc.a[1]/32768*16);
+		sprintf((char*)setMenu1[3].displayString, 	"      %.3f     ", (float)stcAcc.a[2]/32768*16);
+		sprintf((char*)setMenu1[4].displayString,		"Gyro  %.3f     ", (float)stcGyro.w[0]/32768*2000);
+		sprintf((char*)setMenu1[5].displayString, 	"      %.3f     ", (float)stcGyro.w[1]/32768*2000);
+		sprintf((char*)setMenu1[6].displayString, 	"      %.3f     ", (float)stcGyro.w[2]/32768*2000);
+		sprintf((char*)setMenu1[7].displayString, 	"Angle %.3f     ", (float)stcAngle.Angle[0]/32768*180);
+		sprintf((char*)setMenu1[8].displayString, 	"      %.3f     ", (float)stcAngle.Angle[1]/32768*180);
+		sprintf((char*)setMenu1[9].displayString, 	"      %.3f     ", (float)stcAngle.Angle[2]/32768*180);
+		sprintf((char*)setMenu1[10].displayString, 	"Quat  %.5f     ", (float)stcQ.q[0]/32768);
+		sprintf((char*)setMenu1[11].displayString, 	"      %.5f     ", (float)stcQ.q[1]/32768);
+		sprintf((char*)setMenu1[12].displayString, 	"      %.5f     ", (float)stcQ.q[2]/32768);
+		sprintf((char*)setMenu1[13].displayString, 	"      %.5f     ", (float)stcQ.q[3]/32768);
 		DisplayRefreashData(menuPoint, selectItem, scrollBar);
 	}
 	else if(menuPoint == setMenu2)
