@@ -59,6 +59,9 @@ void UART5_IRQHandler(void)
 					break;
 				case 0x53:	//输出角度
 					memcpy(&stcAngle, &ucRxBuffer[2], 8);	
+//					stcAngle.Angle[0] = (int16_t)((ucRxBuffer[2] << 8) | ucRxBuffer[3]);
+//					stcAngle.Angle[1] = (int16_t)((ucRxBuffer[4] << 8) | ucRxBuffer[5]);
+//					stcAngle.Angle[2] = (int16_t)((ucRxBuffer[6] << 8) | ucRxBuffer[7]);
 //					printf("Angle:%.3f %.3f %.3f\r\n",(float)stcAngle.Angle[0]/32768*180,(float)stcAngle.Angle[1]/32768*180,(float)stcAngle.Angle[2]/32768*180);
 					break;
 				case 0x54:	//输出磁场

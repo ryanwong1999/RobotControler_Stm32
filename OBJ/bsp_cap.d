@@ -54,6 +54,7 @@
 ..\obj\bsp_cap.o: ..\FreeRTOS\include\mpu_wrappers.h
 ..\obj\bsp_cap.o: ..\FreeRTOS\include\task.h
 ..\obj\bsp_cap.o: ..\FreeRTOS\include\list.h
+..\obj\bsp_cap.o: ..\FreeRTOS\include\queue.h
 ..\obj\bsp_cap.o: ..\SYSTEM\delay\delay.h
 ..\obj\bsp_cap.o: ..\SYSTEM\malloc\malloc.h
 ..\obj\bsp_cap.o: ..\BSP\Inc\bsp_adc.h
@@ -82,3 +83,4 @@
 ..\obj\bsp_cap.o: ..\APP\Inc\wt901.h
 ..\obj\bsp_cap.o: ..\APP\Inc\app_key.h
 ..\obj\bsp_cap.o: ..\APP\Inc\app_menu.h
+..\obj\bsp_cap.o: ..\APP\Inc\app_nav.h

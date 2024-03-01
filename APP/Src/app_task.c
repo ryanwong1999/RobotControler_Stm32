@@ -274,19 +274,18 @@ void Test_Task(void *pvParameters)
 	u8 i=0;
 	while(1)
 	{
-//		i++;
-//		if(i>20)
-//		{
-//			i = 0;
-//			printf("正在进行加速度校准\r\n");
-//			accalsw();
-////			delay_ms(100);//等待模块内部自动校准好，模块内部会自动计算需要一定的时间
-//			savacalsw();
-////			delay_ms(100);//保存当前配置
-//			printf("加速度校准完成\r\n");
-//		}
-		
-		
+		i++;
+		if(i>20)
+		{
+			i = 0;
+			printf("start ACC Cali\r\n");
+			accalsw();
+			delay_ms(100);	//等待模块内部自动校准好，模块内部会自动计算需要一定的时间
+			savacalsw();
+			delay_ms(100);	//保存当前配置
+		}
+
+
 //		//输出加速度
 //		//串口接受到的数据已经拷贝到对应的结构体的变量中了，根据说明书的协议，以加速度为例 stcAcc.a[0]/32768*16就是X轴的加速度，
 //		printf("Acc:%.3f %.3f %.3f\r\n", (float)stcAcc.a[0]/32768*16, (float)stcAcc.a[1]/32768*16, (float)stcAcc.a[2]/32768*16);
@@ -300,8 +299,8 @@ void Test_Task(void *pvParameters)
 //		//输出磁场
 //		printf("Mag:%d %d %d\r\n",stcMag.h[0], stcMag.h[1], stcMag.h[2]);	
 //			delay_ms(10);
-		
-		
+
+
 //		//输出时间
 //		printf("Time:20%d-%d-%d %d:%d:%.3f\r\n", stcTime.ucYear, stcTime.ucMonth, stcTime.ucDay, stcTime.ucHour, stcTime.ucMinute, (float)stcTime.ucSecond+(float)stcTime.usMiliSecond/1000);
 //			delay_ms(10);
@@ -317,7 +316,7 @@ void Test_Task(void *pvParameters)
 //		//输出地速
 //		printf("GPSHeight:%.1fm GPSYaw:%.1fDeg GPSV:%.3fkm/h\r\n", (float)stcGPSV.sGPSHeight/10, (float)stcGPSV.sGPSYaw/10, (float)stcGPSV.lGPSVelocity/1000);
 //			delay_ms(10);
-//		//输出四元素
+//		//输出四元数
 //		printf("Four elements:%.5f %.5f %.5f %.5f\r\n\r\n", (float)stcQ.q[0]/32768, (float)stcQ.q[1]/32768, (float)stcQ.q[2]/32768, (float)stcQ.q[3]/32768);
 //		  delay_ms(10);//等待传输完成
 

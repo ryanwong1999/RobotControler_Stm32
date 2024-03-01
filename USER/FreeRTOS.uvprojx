@@ -340,7 +340,7 @@
               <MiscControls></MiscControls>
               <Define>STM32F40_41xxx,USE_STDPERIPH_DRIVER</Define>
               <Undefine></Undefine>
-              <IncludePath>..\CORE;..\SYSTEM\delay;..\SYSTEM\sys;..\SYSTEM\usart;..\SYSTEM\malloc;..\USER;..\HARDWARE\LED;..\FWLIB\inc;..\FreeRTOS\include;..\FreeRTOS\portable\RVDS\ARM_CM4F;..\APP\Inc;..\BSP\Inc</IncludePath>
+              <IncludePath>..\CORE;..\SYSTEM\delay;..\SYSTEM\sys;..\SYSTEM\usart;..\SYSTEM\malloc;..\USER;..\HARDWARE\LED;..\FWLIB\inc;..\FreeRTOS\include;..\FreeRTOS\portable\RVDS\ARM_CM4F;..\APP\Inc;..\BSP\Inc;..\APP\SHARE</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -500,14 +500,24 @@
               <FilePath>..\APP\Src\app_key.c</FilePath>
             </File>
             <File>
+              <FileName>app_imu.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\APP\Src\app_imu.c</FilePath>
+            </File>
+            <File>
               <FileName>app_menu.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\APP\Src\app_menu.c</FilePath>
             </File>
             <File>
-              <FileName>app_imu.c</FileName>
+              <FileName>app_nav.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\APP\Src\app_imu.c</FilePath>
+              <FilePath>..\APP\Src\app_nav.c</FilePath>
+            </File>
+            <File>
+              <FileName>mymath.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\APP\SHARE\mymath.c</FilePath>
             </File>
           </Files>
         </Group>

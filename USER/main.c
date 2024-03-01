@@ -31,6 +31,9 @@ int main(void)
 
 	taskEXIT_CRITICAL();		//退出临界区	
   vTaskStartScheduler();	//开启任务调度
+							
+	//不会运行到这里
+	return 0;
 }
  
 

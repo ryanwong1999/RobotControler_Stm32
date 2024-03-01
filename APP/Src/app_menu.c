@@ -39,20 +39,19 @@ struct MenuProperty_t menuMainProperty = {4, 0};
 struct Menu_t menuMain[4] =
 {
 	{&menuMainProperty,"last menu     ", NULL, NULL, &MainUI, NULL},
-	{&menuMainProperty,"Animal        ", NULL, NULL, &MainUI, NULL},
+	{&menuMainProperty,"Imu        		", NULL, NULL, &MainUI, NULL},
 	{&menuMainProperty,"Pid           ", NULL, NULL, &MainUI, NULL},
 	{&menuMainProperty,"Time set      ", NULL, TimeSetInit, &MainUI, NULL}
 };
-//animal的子菜单
-struct MenuProperty_t setMenu1Property = {6, 2};
-struct Menu_t setMenu1[6] =
+//imu的子菜单
+struct MenuProperty_t setMenu1Property = {5, 1};
+struct Menu_t setMenu1[5] =
 {
 	{&setMenu1Property, "last menu     ", NULL, NULL, menuMain, NULL},
-	{&setMenu1Property, "bull          ", NULL, NULL, menuMain, NULL},
-	{&setMenu1Property, "bird          ", NULL, NULL, menuMain, NULL},
-	{&setMenu1Property, "dog           ", NULL, NULL, menuMain, NULL},
-	{&setMenu1Property, "bow           ", NULL, NULL, menuMain, NULL},
-	{&setMenu1Property, "fish          ", NULL, NULL, menuMain, NULL}
+	{&setMenu1Property, "Acc					 ", NULL, NULL, menuMain, NULL},
+	{&setMenu1Property, "Gyro          ", NULL, NULL, menuMain, NULL},
+	{&setMenu1Property, "Angle				 ", NULL, NULL, menuMain, NULL},
+	{&setMenu1Property, "quaternion		 ", NULL, NULL, menuMain, NULL}
 };
 //Pid的子菜单
 struct MenuProperty_t setMenu2Property = {5, 1};
@@ -162,10 +161,9 @@ static u8 lastSelectItem = 0;		//记录上次索引
 void DisplayRefreash(struct Menu_t *nowMenu, u8 selectItem, u8 scrollBar)
 {
 	int i = 0;
-//	if(menuPoint != menuLast)
-//	{
-//		OLED_Clear();
-//	}
+	
+	if(menuPoint != menuLast) OLED_Clear();
+	
 	if(nowMenu == &MainUI)					//当回到主菜单时，由于没有全占屏，所以全部清屏，再画
 	{
 		OLED_Clear();
@@ -174,7 +172,7 @@ void DisplayRefreash(struct Menu_t *nowMenu, u8 selectItem, u8 scrollBar)
 	else 
 	{
 		OLED_ShowString(0, lastSelectItem*16,	" ", 16, 1);		//去除上次索引
-		OLED_ShowString(0, selectItem*16,		 	">", 16, 1);		//画出这次索引
+		OLED_ShowString(0, selectItem*16,		 	">", 16, 1);		//画出这次索引 
 		
 		for(i=0; i<(nowMenu->MenuProperty->MenuLen-nowMenu->MenuProperty->scrollBarLen); i++)
 		{
@@ -183,7 +181,7 @@ void DisplayRefreash(struct Menu_t *nowMenu, u8 selectItem, u8 scrollBar)
 	}
 	OLED_Refresh();
 	lastSelectItem = selectItem;
-//	menuLast = menuPoint;
+	menuLast = menuPoint;
 }
 
 /**
@@ -237,11 +235,10 @@ void GuiDataDisplayRefresh()
 {
 	if(menuPoint == setMenu1)
 	{
-		sprintf((char*)setMenu1[1].displayString, "bull  %3d     ", count1);
-		sprintf((char*)setMenu1[2].displayString, "bird  %3d     ", count2);
-		sprintf((char*)setMenu1[3].displayString, "dog   %3d     ", count3);
-		sprintf((char*)setMenu1[4].displayString, "bow   %3d     ", count4);
-		sprintf((char*)setMenu1[5].displayString, "fish  %3d     ", count5);
+		sprintf((char*)setMenu1[1].displayString, "Acc   %3d     ", count1);
+		sprintf((char*)setMenu1[2].displayString, "Gyro  %3d     ", count2);
+		sprintf((char*)setMenu1[3].displayString, "Angle %3d     ", count3);
+		sprintf((char*)setMenu1[4].displayString, "Quat  %3d     ", count4);
 		DisplayRefreashData(menuPoint, selectItem, scrollBar);
 	}
 	else if(menuPoint == setMenu2)

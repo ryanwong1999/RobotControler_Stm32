@@ -8,6 +8,4 @@
 u8 KEY_Scan(u8 mode);  	//°´¼üÉ¨Ãèº¯Êý		
 
 
-void KeyScan(void);
-
 #endif

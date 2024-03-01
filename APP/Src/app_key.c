@@ -8,9 +8,14 @@ u8 KEY_Scan(u8 mode)
 	{
 		delay_ms(10);//去抖动 
 		key_null = 0;
-		if(KEY_UP_READ==0) return KEY_UP_PRES;
-		else if(KEY_DOWN_READ==0) return KEY_DOWN_PRES;
-		else if(KEY_ENTER_READ==1) return KEY_ENTER_PRES; 
+		if(KEY_UP_READ==0) 
+			return KEY_UP_PRES;
+		
+		else if(KEY_DOWN_READ==0) 
+			return KEY_DOWN_PRES;
+		
+		else if(KEY_ENTER_READ==1) 
+			return KEY_ENTER_PRES; 
 	}
 	else if(KEY_UP_READ==1 && KEY_DOWN_READ==1 && KEY_ENTER_READ==0) key_null=1; 	     
 	return 0;//无按键按下

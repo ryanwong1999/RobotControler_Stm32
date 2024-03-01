@@ -54,6 +54,7 @@
 ..\obj\app_system.o: ..\FreeRTOS\include\mpu_wrappers.h
 ..\obj\app_system.o: ..\FreeRTOS\include\task.h
 ..\obj\app_system.o: ..\FreeRTOS\include\list.h
+..\obj\app_system.o: ..\FreeRTOS\include\queue.h
 ..\obj\app_system.o: ..\SYSTEM\delay\delay.h
 ..\obj\app_system.o: ..\SYSTEM\malloc\malloc.h
 ..\obj\app_system.o: ..\BSP\Inc\bsp_adc.h
@@ -82,3 +83,4 @@
 ..\obj\app_system.o: ..\APP\Inc\wt901.h
 ..\obj\app_system.o: ..\APP\Inc\app_key.h
 ..\obj\app_system.o: ..\APP\Inc\app_menu.h
+..\obj\app_system.o: ..\APP\Inc\app_nav.h

@@ -54,6 +54,7 @@
 ..\obj\bsp_oled.o: ..\FreeRTOS\include\mpu_wrappers.h
 ..\obj\bsp_oled.o: ..\FreeRTOS\include\task.h
 ..\obj\bsp_oled.o: ..\FreeRTOS\include\list.h
+..\obj\bsp_oled.o: ..\FreeRTOS\include\queue.h
 ..\obj\bsp_oled.o: ..\SYSTEM\delay\delay.h
 ..\obj\bsp_oled.o: ..\SYSTEM\malloc\malloc.h
 ..\obj\bsp_oled.o: ..\BSP\Inc\bsp_adc.h
@@ -82,4 +83,5 @@
 ..\obj\bsp_oled.o: ..\APP\Inc\wt901.h
 ..\obj\bsp_oled.o: ..\APP\Inc\app_key.h
 ..\obj\bsp_oled.o: ..\APP\Inc\app_menu.h
+..\obj\bsp_oled.o: ..\APP\Inc\app_nav.h
 ..\obj\bsp_oled.o: ..\APP\Inc\oledfont.h

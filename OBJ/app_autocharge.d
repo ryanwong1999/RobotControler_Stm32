@@ -54,6 +54,7 @@
 ..\obj\app_autocharge.o: ..\FreeRTOS\include\mpu_wrappers.h
 ..\obj\app_autocharge.o: ..\FreeRTOS\include\task.h
 ..\obj\app_autocharge.o: ..\FreeRTOS\include\list.h
+..\obj\app_autocharge.o: ..\FreeRTOS\include\queue.h
 ..\obj\app_autocharge.o: ..\SYSTEM\delay\delay.h
 ..\obj\app_autocharge.o: ..\SYSTEM\malloc\malloc.h
 ..\obj\app_autocharge.o: ..\BSP\Inc\bsp_adc.h
@@ -82,3 +83,4 @@
 ..\obj\app_autocharge.o: ..\APP\Inc\wt901.h
 ..\obj\app_autocharge.o: ..\APP\Inc\app_key.h
 ..\obj\app_autocharge.o: ..\APP\Inc\app_menu.h
+..\obj\app_autocharge.o: ..\APP\Inc\app_nav.h

@@ -54,6 +54,7 @@
 ..\obj\bsp_gpio.o: ..\FreeRTOS\include\mpu_wrappers.h
 ..\obj\bsp_gpio.o: ..\FreeRTOS\include\task.h
 ..\obj\bsp_gpio.o: ..\FreeRTOS\include\list.h
+..\obj\bsp_gpio.o: ..\FreeRTOS\include\queue.h
 ..\obj\bsp_gpio.o: ..\SYSTEM\delay\delay.h
 ..\obj\bsp_gpio.o: ..\SYSTEM\malloc\malloc.h
 ..\obj\bsp_gpio.o: ..\BSP\Inc\bsp_adc.h
@@ -82,3 +83,4 @@
 ..\obj\bsp_gpio.o: ..\APP\Inc\wt901.h
 ..\obj\bsp_gpio.o: ..\APP\Inc\app_key.h
 ..\obj\bsp_gpio.o: ..\APP\Inc\app_menu.h
+..\obj\bsp_gpio.o: ..\APP\Inc\app_nav.h
