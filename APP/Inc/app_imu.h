@@ -14,8 +14,8 @@ extern struct SLonLat 	stcLonLat;
 extern struct SGPSV 		stcGPSV;
 extern struct SQ       	stcQ;
 
-void accalsw(void);
-void savacalsw(void);
+void imu_accalsw(void);
+void imu_savacalsw(void);
 
 	
 #endif 

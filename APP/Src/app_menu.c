@@ -269,12 +269,6 @@ void GuiDataDisplayRefresh()
 	}
 	else if(menuPoint == setMenu3)
 	{
-//		sprintf((char*)setMenu3[1].displayString, "Hour   %2d    ", myTimeTemp.Hour);	
-//		sprintf((char*)setMenu3[2].displayString, "Minute %2d    ", myTimeTemp.Minute);	
-//		sprintf((char*)setMenu3[3].displayString, "Second %2d    ", myTimeTemp.Second);	
-//		sprintf((char*)setMenu3[4].displayString, "Year   %4d    ", myTimeTemp.Year);
-//		sprintf((char*)setMenu3[5].displayString, "Month  %2d    ", myTimeTemp.Month);
-//		sprintf((char*)setMenu3[6].displayString, "Day    %2d    ", myTimeTemp.Day);
 		DisplayRefreashData(menuPoint, selectItem, scrollBar);
 	}
 	else if(menuPoint == &MainUI)

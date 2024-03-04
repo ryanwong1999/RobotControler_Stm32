@@ -137,17 +137,17 @@ void Key_Task(void *p_arg)
 		switch(key)
 		{				 
 			case KEY_UP_PRES:
-				printf("KEY_UP_PRES!!\r\n");
+//				printf("KEY_UP_PRES!!\r\n");
 				LED2_ON;
 				isKeyUp = 1;
 				break;
 			case KEY_DOWN_PRES:
-				printf("KEY_DOWN_PRES!!\r\n");
+//				printf("KEY_DOWN_PRES!!\r\n");
 				LED2_ON;
 				isKeyDown = 1;
 				break;
 			case KEY_ENTER_PRES:
-				printf("KEY_ENTER_PRES!!\r\n");
+//				printf("KEY_ENTER_PRES!!\r\n");
 				LED2_ON;
 			  isKeyEnter = 1;
 				break;
@@ -278,10 +278,10 @@ void Test_Task(void *pvParameters)
 		if(i>20)
 		{
 			i = 0;
-			printf("start ACC Cali\r\n");
-			accalsw();
+//			printf("start ACC Cali\r\n");
+			imu_accalsw();
 			delay_ms(100);	//等待模块内部自动校准好，模块内部会自动计算需要一定的时间
-			savacalsw();
+			imu_savacalsw();
 			delay_ms(100);	//保存当前配置
 		}
 

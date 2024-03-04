@@ -79,11 +79,11 @@ I (..\APP\Inc\app_motoDrv.h)(0x6478636A)
 I (..\APP\Inc\app_pms.h)(0x647813BB)
 I (..\APP\Inc\app_system.h)(0x65DFC9E8)
 I (..\APP\Inc\app_tim.h)(0x6470137D)
-I (..\APP\Inc\app_imu.h)(0x65E067E8)
+I (..\APP\Inc\app_imu.h)(0x65E52ED4)
 I (..\APP\Inc\wt901.h)(0x65DFE119)
 I (..\APP\Inc\app_key.h)(0x65E1718A)
 I (..\APP\Inc\app_menu.h)(0x65DFC9E8)
-I (..\APP\Inc\app_nav.h)(0x65E17153)
+I (..\APP\Inc\app_nav.h)(0x65E5283B)
 F (..\BSP\Src\bsp_cap.c)(0x6470137D)(-c --cpu Cortex-M4.fp.sp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\SYSTEM\malloc -I ..\USER -I ..\HARDWARE\LED -I ..\FWLIB\inc -I ..\FreeRTOS\include -I ..\FreeRTOS\portable\RVDS\ARM_CM4F -I ..\APP\Inc -I ..\BSP\Inc -I ..\APP\SHARE-IC:\Users\wangs\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\bsp_cap.o --omf_browse ..\obj\bsp_cap.crf --depend ..\obj\bsp_cap.d)
 I (..\USER\includes.h)(0x65E1704B)
 I (C:\AAAAAAAAPP\Keil5\ARM\ARMCC\include\stdio.h)(0x60252374)
@@ -163,11 +163,11 @@ I (..\APP\Inc\app_motoDrv.h)(0x6478636A)
 I (..\APP\Inc\app_pms.h)(0x647813BB)
 I (..\APP\Inc\app_system.h)(0x65DFC9E8)
 I (..\APP\Inc\app_tim.h)(0x6470137D)
-I (..\APP\Inc\app_imu.h)(0x65E067E8)
+I (..\APP\Inc\app_imu.h)(0x65E52ED4)
 I (..\APP\Inc\wt901.h)(0x65DFE119)
 I (..\APP\Inc\app_key.h)(0x65E1718A)
 I (..\APP\Inc\app_menu.h)(0x65DFC9E8)
-I (..\APP\Inc\app_nav.h)(0x65E17153)
+I (..\APP\Inc\app_nav.h)(0x65E5283B)
 F (..\BSP\Src\bsp_gpio.c)(0x65DFC9E8)(-c --cpu Cortex-M4.fp.sp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\SYSTEM\malloc -I ..\USER -I ..\HARDWARE\LED -I ..\FWLIB\inc -I ..\FreeRTOS\include -I ..\FreeRTOS\portable\RVDS\ARM_CM4F -I ..\APP\Inc -I ..\BSP\Inc -I ..\APP\SHARE-IC:\Users\wangs\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\bsp_gpio.o --omf_browse ..\obj\bsp_gpio.crf --depend ..\obj\bsp_gpio.d)
 I (..\USER\includes.h)(0x65E1704B)
 I (C:\AAAAAAAAPP\Keil5\ARM\ARMCC\include\stdio.h)(0x60252374)
@@ -247,11 +247,11 @@ I (..\APP\Inc\app_motoDrv.h)(0x6478636A)
 I (..\APP\Inc\app_pms.h)(0x647813BB)
 I (..\APP\Inc\app_system.h)(0x65DFC9E8)
 I (..\APP\Inc\app_tim.h)(0x6470137D)
-I (..\APP\Inc\app_imu.h)(0x65E067E8)
+I (..\APP\Inc\app_imu.h)(0x65E52ED4)
 I (..\APP\Inc\wt901.h)(0x65DFE119)
 I (..\APP\Inc\app_key.h)(0x65E1718A)
 I (..\APP\Inc\app_menu.h)(0x65DFC9E8)
-I (..\APP\Inc\app_nav.h)(0x65E17153)
+I (..\APP\Inc\app_nav.h)(0x65E5283B)
 F (..\BSP\Src\bsp_iic.c)(0x65DFFA2D)(-c --cpu Cortex-M4.fp.sp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\SYSTEM\malloc -I ..\USER -I ..\HARDWARE\LED -I ..\FWLIB\inc -I ..\FreeRTOS\include -I ..\FreeRTOS\portable\RVDS\ARM_CM4F -I ..\APP\Inc -I ..\BSP\Inc -I ..\APP\SHARE-IC:\Users\wangs\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\bsp_iic.o --omf_browse ..\obj\bsp_iic.crf --depend ..\obj\bsp_iic.d)
 I (..\USER\includes.h)(0x65E1704B)
 I (C:\AAAAAAAAPP\Keil5\ARM\ARMCC\include\stdio.h)(0x60252374)
@@ -331,11 +331,11 @@ I (..\APP\Inc\app_motoDrv.h)(0x6478636A)
 I (..\APP\Inc\app_pms.h)(0x647813BB)
 I (..\APP\Inc\app_system.h)(0x65DFC9E8)
 I (..\APP\Inc\app_tim.h)(0x6470137D)
-I (..\APP\Inc\app_imu.h)(0x65E067E8)
+I (..\APP\Inc\app_imu.h)(0x65E52ED4)
 I (..\APP\Inc\wt901.h)(0x65DFE119)
 I (..\APP\Inc\app_key.h)(0x65E1718A)
 I (..\APP\Inc\app_menu.h)(0x65DFC9E8)
-I (..\APP\Inc\app_nav.h)(0x65E17153)
+I (..\APP\Inc\app_nav.h)(0x65E5283B)
 F (..\BSP\Src\bsp_iic2.c)(0x65DFF2BA)(-c --cpu Cortex-M4.fp.sp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\SYSTEM\malloc -I ..\USER -I ..\HARDWARE\LED -I ..\FWLIB\inc -I ..\FreeRTOS\include -I ..\FreeRTOS\portable\RVDS\ARM_CM4F -I ..\APP\Inc -I ..\BSP\Inc -I ..\APP\SHARE-IC:\Users\wangs\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\bsp_iic2.o --omf_browse ..\obj\bsp_iic2.crf --depend ..\obj\bsp_iic2.d)
 I (..\USER\includes.h)(0x65E1704B)
 I (C:\AAAAAAAAPP\Keil5\ARM\ARMCC\include\stdio.h)(0x60252374)
@@ -415,11 +415,11 @@ I (..\APP\Inc\app_motoDrv.h)(0x6478636A)
 I (..\APP\Inc\app_pms.h)(0x647813BB)
 I (..\APP\Inc\app_system.h)(0x65DFC9E8)
 I (..\APP\Inc\app_tim.h)(0x6470137D)
-I (..\APP\Inc\app_imu.h)(0x65E067E8)
+I (..\APP\Inc\app_imu.h)(0x65E52ED4)
 I (..\APP\Inc\wt901.h)(0x65DFE119)
 I (..\APP\Inc\app_key.h)(0x65E1718A)
 I (..\APP\Inc\app_menu.h)(0x65DFC9E8)
-I (..\APP\Inc\app_nav.h)(0x65E17153)
+I (..\APP\Inc\app_nav.h)(0x65E5283B)
 F (..\BSP\Src\bsp_iwdg.c)(0x6470137D)(-c --cpu Cortex-M4.fp.sp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\SYSTEM\malloc -I ..\USER -I ..\HARDWARE\LED -I ..\FWLIB\inc -I ..\FreeRTOS\include -I ..\FreeRTOS\portable\RVDS\ARM_CM4F -I ..\APP\Inc -I ..\BSP\Inc -I ..\APP\SHARE-IC:\Users\wangs\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\bsp_iwdg.o --omf_browse ..\obj\bsp_iwdg.crf --depend ..\obj\bsp_iwdg.d)
 I (..\USER\includes.h)(0x65E1704B)
 I (C:\AAAAAAAAPP\Keil5\ARM\ARMCC\include\stdio.h)(0x60252374)
@@ -499,11 +499,11 @@ I (..\APP\Inc\app_motoDrv.h)(0x6478636A)
 I (..\APP\Inc\app_pms.h)(0x647813BB)
 I (..\APP\Inc\app_system.h)(0x65DFC9E8)
 I (..\APP\Inc\app_tim.h)(0x6470137D)
-I (..\APP\Inc\app_imu.h)(0x65E067E8)
+I (..\APP\Inc\app_imu.h)(0x65E52ED4)
 I (..\APP\Inc\wt901.h)(0x65DFE119)
 I (..\APP\Inc\app_key.h)(0x65E1718A)
 I (..\APP\Inc\app_menu.h)(0x65DFC9E8)
-I (..\APP\Inc\app_nav.h)(0x65E17153)
+I (..\APP\Inc\app_nav.h)(0x65E5283B)
 F (..\BSP\Src\bsp_pwm.c)(0x6470137D)(-c --cpu Cortex-M4.fp.sp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\SYSTEM\malloc -I ..\USER -I ..\HARDWARE\LED -I ..\FWLIB\inc -I ..\FreeRTOS\include -I ..\FreeRTOS\portable\RVDS\ARM_CM4F -I ..\APP\Inc -I ..\BSP\Inc -I ..\APP\SHARE-IC:\Users\wangs\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\bsp_pwm.o --omf_browse ..\obj\bsp_pwm.crf --depend ..\obj\bsp_pwm.d)
 I (..\USER\includes.h)(0x65E1704B)
 I (C:\AAAAAAAAPP\Keil5\ARM\ARMCC\include\stdio.h)(0x60252374)
@@ -583,11 +583,11 @@ I (..\APP\Inc\app_motoDrv.h)(0x6478636A)
 I (..\APP\Inc\app_pms.h)(0x647813BB)
 I (..\APP\Inc\app_system.h)(0x65DFC9E8)
 I (..\APP\Inc\app_tim.h)(0x6470137D)
-I (..\APP\Inc\app_imu.h)(0x65E067E8)
+I (..\APP\Inc\app_imu.h)(0x65E52ED4)
 I (..\APP\Inc\wt901.h)(0x65DFE119)
 I (..\APP\Inc\app_key.h)(0x65E1718A)
 I (..\APP\Inc\app_menu.h)(0x65DFC9E8)
-I (..\APP\Inc\app_nav.h)(0x65E17153)
+I (..\APP\Inc\app_nav.h)(0x65E5283B)
 F (..\BSP\Src\bsp_rs485.c)(0x6470137D)(-c --cpu Cortex-M4.fp.sp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\SYSTEM\malloc -I ..\USER -I ..\HARDWARE\LED -I ..\FWLIB\inc -I ..\FreeRTOS\include -I ..\FreeRTOS\portable\RVDS\ARM_CM4F -I ..\APP\Inc -I ..\BSP\Inc -I ..\APP\SHARE-IC:\Users\wangs\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\bsp_rs485.o --omf_browse ..\obj\bsp_rs485.crf --depend ..\obj\bsp_rs485.d)
 I (..\USER\includes.h)(0x65E1704B)
 I (C:\AAAAAAAAPP\Keil5\ARM\ARMCC\include\stdio.h)(0x60252374)
@@ -667,11 +667,11 @@ I (..\APP\Inc\app_motoDrv.h)(0x6478636A)
 I (..\APP\Inc\app_pms.h)(0x647813BB)
 I (..\APP\Inc\app_system.h)(0x65DFC9E8)
 I (..\APP\Inc\app_tim.h)(0x6470137D)
-I (..\APP\Inc\app_imu.h)(0x65E067E8)
+I (..\APP\Inc\app_imu.h)(0x65E52ED4)
 I (..\APP\Inc\wt901.h)(0x65DFE119)
 I (..\APP\Inc\app_key.h)(0x65E1718A)
 I (..\APP\Inc\app_menu.h)(0x65DFC9E8)
-I (..\APP\Inc\app_nav.h)(0x65E17153)
+I (..\APP\Inc\app_nav.h)(0x65E5283B)
 F (..\BSP\Src\bsp_tim.c)(0x6470137D)(-c --cpu Cortex-M4.fp.sp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\SYSTEM\malloc -I ..\USER -I ..\HARDWARE\LED -I ..\FWLIB\inc -I ..\FreeRTOS\include -I ..\FreeRTOS\portable\RVDS\ARM_CM4F -I ..\APP\Inc -I ..\BSP\Inc -I ..\APP\SHARE-IC:\Users\wangs\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\bsp_tim.o --omf_browse ..\obj\bsp_tim.crf --depend ..\obj\bsp_tim.d)
 I (..\USER\includes.h)(0x65E1704B)
 I (C:\AAAAAAAAPP\Keil5\ARM\ARMCC\include\stdio.h)(0x60252374)
@@ -751,11 +751,11 @@ I (..\APP\Inc\app_motoDrv.h)(0x6478636A)
 I (..\APP\Inc\app_pms.h)(0x647813BB)
 I (..\APP\Inc\app_system.h)(0x65DFC9E8)
 I (..\APP\Inc\app_tim.h)(0x6470137D)
-I (..\APP\Inc\app_imu.h)(0x65E067E8)
+I (..\APP\Inc\app_imu.h)(0x65E52ED4)
 I (..\APP\Inc\wt901.h)(0x65DFE119)
 I (..\APP\Inc\app_key.h)(0x65E1718A)
 I (..\APP\Inc\app_menu.h)(0x65DFC9E8)
-I (..\APP\Inc\app_nav.h)(0x65E17153)
+I (..\APP\Inc\app_nav.h)(0x65E5283B)
 F (..\BSP\Src\bsp_usart.c)(0x6470137D)(-c --cpu Cortex-M4.fp.sp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\SYSTEM\malloc -I ..\USER -I ..\HARDWARE\LED -I ..\FWLIB\inc -I ..\FreeRTOS\include -I ..\FreeRTOS\portable\RVDS\ARM_CM4F -I ..\APP\Inc -I ..\BSP\Inc -I ..\APP\SHARE-IC:\Users\wangs\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\bsp_usart.o --omf_browse ..\obj\bsp_usart.crf --depend ..\obj\bsp_usart.d)
 I (..\USER\includes.h)(0x65E1704B)
 I (C:\AAAAAAAAPP\Keil5\ARM\ARMCC\include\stdio.h)(0x60252374)
@@ -835,11 +835,11 @@ I (..\APP\Inc\app_motoDrv.h)(0x6478636A)
 I (..\APP\Inc\app_pms.h)(0x647813BB)
 I (..\APP\Inc\app_system.h)(0x65DFC9E8)
 I (..\APP\Inc\app_tim.h)(0x6470137D)
-I (..\APP\Inc\app_imu.h)(0x65E067E8)
+I (..\APP\Inc\app_imu.h)(0x65E52ED4)
 I (..\APP\Inc\wt901.h)(0x65DFE119)
 I (..\APP\Inc\app_key.h)(0x65E1718A)
 I (..\APP\Inc\app_menu.h)(0x65DFC9E8)
-I (..\APP\Inc\app_nav.h)(0x65E17153)
+I (..\APP\Inc\app_nav.h)(0x65E5283B)
 F (..\BSP\Src\bsp_oled.c)(0x65DFC9F9)(-c --cpu Cortex-M4.fp.sp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\SYSTEM\malloc -I ..\USER -I ..\HARDWARE\LED -I ..\FWLIB\inc -I ..\FreeRTOS\include -I ..\FreeRTOS\portable\RVDS\ARM_CM4F -I ..\APP\Inc -I ..\BSP\Inc -I ..\APP\SHARE-IC:\Users\wangs\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\bsp_oled.o --omf_browse ..\obj\bsp_oled.crf --depend ..\obj\bsp_oled.d)
 I (..\USER\includes.h)(0x65E1704B)
 I (C:\AAAAAAAAPP\Keil5\ARM\ARMCC\include\stdio.h)(0x60252374)
@@ -919,13 +919,13 @@ I (..\APP\Inc\app_motoDrv.h)(0x6478636A)
 I (..\APP\Inc\app_pms.h)(0x647813BB)
 I (..\APP\Inc\app_system.h)(0x65DFC9E8)
 I (..\APP\Inc\app_tim.h)(0x6470137D)
-I (..\APP\Inc\app_imu.h)(0x65E067E8)
+I (..\APP\Inc\app_imu.h)(0x65E52ED4)
 I (..\APP\Inc\wt901.h)(0x65DFE119)
 I (..\APP\Inc\app_key.h)(0x65E1718A)
 I (..\APP\Inc\app_menu.h)(0x65DFC9E8)
-I (..\APP\Inc\app_nav.h)(0x65E17153)
+I (..\APP\Inc\app_nav.h)(0x65E5283B)
 I (..\APP\Inc\oledfont.h)(0x65DFC9F9)
-F (..\APP\Src\app_task.c)(0x65E1A96F)(-c --cpu Cortex-M4.fp.sp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\SYSTEM\malloc -I ..\USER -I ..\HARDWARE\LED -I ..\FWLIB\inc -I ..\FreeRTOS\include -I ..\FreeRTOS\portable\RVDS\ARM_CM4F -I ..\APP\Inc -I ..\BSP\Inc -I ..\APP\SHARE-IC:\Users\wangs\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\app_task.o --omf_browse ..\obj\app_task.crf --depend ..\obj\app_task.d)
+F (..\APP\Src\app_task.c)(0x65E5373F)(-c --cpu Cortex-M4.fp.sp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\SYSTEM\malloc -I ..\USER -I ..\HARDWARE\LED -I ..\FWLIB\inc -I ..\FreeRTOS\include -I ..\FreeRTOS\portable\RVDS\ARM_CM4F -I ..\APP\Inc -I ..\BSP\Inc -I ..\APP\SHARE-IC:\Users\wangs\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\app_task.o --omf_browse ..\obj\app_task.crf --depend ..\obj\app_task.d)
 I (..\USER\includes.h)(0x65E1704B)
 I (C:\AAAAAAAAPP\Keil5\ARM\ARMCC\include\stdio.h)(0x60252374)
 I (C:\AAAAAAAAPP\Keil5\ARM\ARMCC\include\string.h)(0x6025237E)
@@ -1004,11 +1004,11 @@ I (..\APP\Inc\app_motoDrv.h)(0x6478636A)
 I (..\APP\Inc\app_pms.h)(0x647813BB)
 I (..\APP\Inc\app_system.h)(0x65DFC9E8)
 I (..\APP\Inc\app_tim.h)(0x6470137D)
-I (..\APP\Inc\app_imu.h)(0x65E067E8)
+I (..\APP\Inc\app_imu.h)(0x65E52ED4)
 I (..\APP\Inc\wt901.h)(0x65DFE119)
 I (..\APP\Inc\app_key.h)(0x65E1718A)
 I (..\APP\Inc\app_menu.h)(0x65DFC9E8)
-I (..\APP\Inc\app_nav.h)(0x65E17153)
+I (..\APP\Inc\app_nav.h)(0x65E5283B)
 F (..\APP\Src\app_24cxx.c)(0x6470137D)(-c --cpu Cortex-M4.fp.sp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\SYSTEM\malloc -I ..\USER -I ..\HARDWARE\LED -I ..\FWLIB\inc -I ..\FreeRTOS\include -I ..\FreeRTOS\portable\RVDS\ARM_CM4F -I ..\APP\Inc -I ..\BSP\Inc -I ..\APP\SHARE-IC:\Users\wangs\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\app_24cxx.o --omf_browse ..\obj\app_24cxx.crf --depend ..\obj\app_24cxx.d)
 I (..\USER\includes.h)(0x65E1704B)
 I (C:\AAAAAAAAPP\Keil5\ARM\ARMCC\include\stdio.h)(0x60252374)
@@ -1088,11 +1088,11 @@ I (..\APP\Inc\app_motoDrv.h)(0x6478636A)
 I (..\APP\Inc\app_pms.h)(0x647813BB)
 I (..\APP\Inc\app_system.h)(0x65DFC9E8)
 I (..\APP\Inc\app_tim.h)(0x6470137D)
-I (..\APP\Inc\app_imu.h)(0x65E067E8)
+I (..\APP\Inc\app_imu.h)(0x65E52ED4)
 I (..\APP\Inc\wt901.h)(0x65DFE119)
 I (..\APP\Inc\app_key.h)(0x65E1718A)
 I (..\APP\Inc\app_menu.h)(0x65DFC9E8)
-I (..\APP\Inc\app_nav.h)(0x65E17153)
+I (..\APP\Inc\app_nav.h)(0x65E5283B)
 F (..\APP\Src\app_usart.c)(0x65E049E0)(-c --cpu Cortex-M4.fp.sp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\SYSTEM\malloc -I ..\USER -I ..\HARDWARE\LED -I ..\FWLIB\inc -I ..\FreeRTOS\include -I ..\FreeRTOS\portable\RVDS\ARM_CM4F -I ..\APP\Inc -I ..\BSP\Inc -I ..\APP\SHARE-IC:\Users\wangs\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\app_usart.o --omf_browse ..\obj\app_usart.crf --depend ..\obj\app_usart.d)
 I (..\USER\includes.h)(0x65E1704B)
 I (C:\AAAAAAAAPP\Keil5\ARM\ARMCC\include\stdio.h)(0x60252374)
@@ -1172,11 +1172,11 @@ I (..\APP\Inc\app_motoDrv.h)(0x6478636A)
 I (..\APP\Inc\app_pms.h)(0x647813BB)
 I (..\APP\Inc\app_system.h)(0x65DFC9E8)
 I (..\APP\Inc\app_tim.h)(0x6470137D)
-I (..\APP\Inc\app_imu.h)(0x65E067E8)
+I (..\APP\Inc\app_imu.h)(0x65E52ED4)
 I (..\APP\Inc\wt901.h)(0x65DFE119)
 I (..\APP\Inc\app_key.h)(0x65E1718A)
 I (..\APP\Inc\app_menu.h)(0x65DFC9E8)
-I (..\APP\Inc\app_nav.h)(0x65E17153)
+I (..\APP\Inc\app_nav.h)(0x65E5283B)
 F (..\APP\Src\app_autoCharge.c)(0x6478618E)(-c --cpu Cortex-M4.fp.sp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\SYSTEM\malloc -I ..\USER -I ..\HARDWARE\LED -I ..\FWLIB\inc -I ..\FreeRTOS\include -I ..\FreeRTOS\portable\RVDS\ARM_CM4F -I ..\APP\Inc -I ..\BSP\Inc -I ..\APP\SHARE-IC:\Users\wangs\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\app_autocharge.o --omf_browse ..\obj\app_autocharge.crf --depend ..\obj\app_autocharge.d)
 I (..\USER\includes.h)(0x65E1704B)
 I (C:\AAAAAAAAPP\Keil5\ARM\ARMCC\include\stdio.h)(0x60252374)
@@ -1256,11 +1256,11 @@ I (..\APP\Inc\app_motoDrv.h)(0x6478636A)
 I (..\APP\Inc\app_pms.h)(0x647813BB)
 I (..\APP\Inc\app_system.h)(0x65DFC9E8)
 I (..\APP\Inc\app_tim.h)(0x6470137D)
-I (..\APP\Inc\app_imu.h)(0x65E067E8)
+I (..\APP\Inc\app_imu.h)(0x65E52ED4)
 I (..\APP\Inc\wt901.h)(0x65DFE119)
 I (..\APP\Inc\app_key.h)(0x65E1718A)
 I (..\APP\Inc\app_menu.h)(0x65DFC9E8)
-I (..\APP\Inc\app_nav.h)(0x65E17153)
+I (..\APP\Inc\app_nav.h)(0x65E5283B)
 F (..\APP\Src\app_cap.c)(0x6470137D)(-c --cpu Cortex-M4.fp.sp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\SYSTEM\malloc -I ..\USER -I ..\HARDWARE\LED -I ..\FWLIB\inc -I ..\FreeRTOS\include -I ..\FreeRTOS\portable\RVDS\ARM_CM4F -I ..\APP\Inc -I ..\BSP\Inc -I ..\APP\SHARE-IC:\Users\wangs\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\app_cap.o --omf_browse ..\obj\app_cap.crf --depend ..\obj\app_cap.d)
 I (..\USER\includes.h)(0x65E1704B)
 I (C:\AAAAAAAAPP\Keil5\ARM\ARMCC\include\stdio.h)(0x60252374)
@@ -1340,11 +1340,11 @@ I (..\APP\Inc\app_motoDrv.h)(0x6478636A)
 I (..\APP\Inc\app_pms.h)(0x647813BB)
 I (..\APP\Inc\app_system.h)(0x65DFC9E8)
 I (..\APP\Inc\app_tim.h)(0x6470137D)
-I (..\APP\Inc\app_imu.h)(0x65E067E8)
+I (..\APP\Inc\app_imu.h)(0x65E52ED4)
 I (..\APP\Inc\wt901.h)(0x65DFE119)
 I (..\APP\Inc\app_key.h)(0x65E1718A)
 I (..\APP\Inc\app_menu.h)(0x65DFC9E8)
-I (..\APP\Inc\app_nav.h)(0x65E17153)
+I (..\APP\Inc\app_nav.h)(0x65E5283B)
 F (..\APP\Src\app_exit.c)(0x647860F8)(-c --cpu Cortex-M4.fp.sp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\SYSTEM\malloc -I ..\USER -I ..\HARDWARE\LED -I ..\FWLIB\inc -I ..\FreeRTOS\include -I ..\FreeRTOS\portable\RVDS\ARM_CM4F -I ..\APP\Inc -I ..\BSP\Inc -I ..\APP\SHARE-IC:\Users\wangs\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\app_exit.o --omf_browse ..\obj\app_exit.crf --depend ..\obj\app_exit.d)
 I (..\USER\includes.h)(0x65E1704B)
 I (C:\AAAAAAAAPP\Keil5\ARM\ARMCC\include\stdio.h)(0x60252374)
@@ -1424,11 +1424,11 @@ I (..\APP\Inc\app_motoDrv.h)(0x6478636A)
 I (..\APP\Inc\app_pms.h)(0x647813BB)
 I (..\APP\Inc\app_system.h)(0x65DFC9E8)
 I (..\APP\Inc\app_tim.h)(0x6470137D)
-I (..\APP\Inc\app_imu.h)(0x65E067E8)
+I (..\APP\Inc\app_imu.h)(0x65E52ED4)
 I (..\APP\Inc\wt901.h)(0x65DFE119)
 I (..\APP\Inc\app_key.h)(0x65E1718A)
 I (..\APP\Inc\app_menu.h)(0x65DFC9E8)
-I (..\APP\Inc\app_nav.h)(0x65E17153)
+I (..\APP\Inc\app_nav.h)(0x65E5283B)
 F (..\APP\Src\app_pms.c)(0x647813BB)(-c --cpu Cortex-M4.fp.sp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\SYSTEM\malloc -I ..\USER -I ..\HARDWARE\LED -I ..\FWLIB\inc -I ..\FreeRTOS\include -I ..\FreeRTOS\portable\RVDS\ARM_CM4F -I ..\APP\Inc -I ..\BSP\Inc -I ..\APP\SHARE-IC:\Users\wangs\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\app_pms.o --omf_browse ..\obj\app_pms.crf --depend ..\obj\app_pms.d)
 I (..\USER\includes.h)(0x65E1704B)
 I (C:\AAAAAAAAPP\Keil5\ARM\ARMCC\include\stdio.h)(0x60252374)
@@ -1508,12 +1508,12 @@ I (..\APP\Inc\app_motoDrv.h)(0x6478636A)
 I (..\APP\Inc\app_pms.h)(0x647813BB)
 I (..\APP\Inc\app_system.h)(0x65DFC9E8)
 I (..\APP\Inc\app_tim.h)(0x6470137D)
-I (..\APP\Inc\app_imu.h)(0x65E067E8)
+I (..\APP\Inc\app_imu.h)(0x65E52ED4)
 I (..\APP\Inc\wt901.h)(0x65DFE119)
 I (..\APP\Inc\app_key.h)(0x65E1718A)
 I (..\APP\Inc\app_menu.h)(0x65DFC9E8)
-I (..\APP\Inc\app_nav.h)(0x65E17153)
-F (..\APP\Src\app_system.c)(0x65E065A5)(-c --cpu Cortex-M4.fp.sp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\SYSTEM\malloc -I ..\USER -I ..\HARDWARE\LED -I ..\FWLIB\inc -I ..\FreeRTOS\include -I ..\FreeRTOS\portable\RVDS\ARM_CM4F -I ..\APP\Inc -I ..\BSP\Inc -I ..\APP\SHARE-IC:\Users\wangs\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\app_system.o --omf_browse ..\obj\app_system.crf --depend ..\obj\app_system.d)
+I (..\APP\Inc\app_nav.h)(0x65E5283B)
+F (..\APP\Src\app_system.c)(0x65E52C9E)(-c --cpu Cortex-M4.fp.sp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\SYSTEM\malloc -I ..\USER -I ..\HARDWARE\LED -I ..\FWLIB\inc -I ..\FreeRTOS\include -I ..\FreeRTOS\portable\RVDS\ARM_CM4F -I ..\APP\Inc -I ..\BSP\Inc -I ..\APP\SHARE-IC:\Users\wangs\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\app_system.o --omf_browse ..\obj\app_system.crf --depend ..\obj\app_system.d)
 I (..\USER\includes.h)(0x65E1704B)
 I (C:\AAAAAAAAPP\Keil5\ARM\ARMCC\include\stdio.h)(0x60252374)
 I (C:\AAAAAAAAPP\Keil5\ARM\ARMCC\include\string.h)(0x6025237E)
@@ -1592,11 +1592,11 @@ I (..\APP\Inc\app_motoDrv.h)(0x6478636A)
 I (..\APP\Inc\app_pms.h)(0x647813BB)
 I (..\APP\Inc\app_system.h)(0x65DFC9E8)
 I (..\APP\Inc\app_tim.h)(0x6470137D)
-I (..\APP\Inc\app_imu.h)(0x65E067E8)
+I (..\APP\Inc\app_imu.h)(0x65E52ED4)
 I (..\APP\Inc\wt901.h)(0x65DFE119)
 I (..\APP\Inc\app_key.h)(0x65E1718A)
 I (..\APP\Inc\app_menu.h)(0x65DFC9E8)
-I (..\APP\Inc\app_nav.h)(0x65E17153)
+I (..\APP\Inc\app_nav.h)(0x65E5283B)
 F (..\APP\Src\app_tim.c)(0x65E0359C)(-c --cpu Cortex-M4.fp.sp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\SYSTEM\malloc -I ..\USER -I ..\HARDWARE\LED -I ..\FWLIB\inc -I ..\FreeRTOS\include -I ..\FreeRTOS\portable\RVDS\ARM_CM4F -I ..\APP\Inc -I ..\BSP\Inc -I ..\APP\SHARE-IC:\Users\wangs\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\app_tim.o --omf_browse ..\obj\app_tim.crf --depend ..\obj\app_tim.d)
 I (..\USER\includes.h)(0x65E1704B)
 I (C:\AAAAAAAAPP\Keil5\ARM\ARMCC\include\stdio.h)(0x60252374)
@@ -1676,11 +1676,11 @@ I (..\APP\Inc\app_motoDrv.h)(0x6478636A)
 I (..\APP\Inc\app_pms.h)(0x647813BB)
 I (..\APP\Inc\app_system.h)(0x65DFC9E8)
 I (..\APP\Inc\app_tim.h)(0x6470137D)
-I (..\APP\Inc\app_imu.h)(0x65E067E8)
+I (..\APP\Inc\app_imu.h)(0x65E52ED4)
 I (..\APP\Inc\wt901.h)(0x65DFE119)
 I (..\APP\Inc\app_key.h)(0x65E1718A)
 I (..\APP\Inc\app_menu.h)(0x65DFC9E8)
-I (..\APP\Inc\app_nav.h)(0x65E17153)
+I (..\APP\Inc\app_nav.h)(0x65E5283B)
 F (..\APP\Src\app_motoDrv.c)(0x65E16FE5)(-c --cpu Cortex-M4.fp.sp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\SYSTEM\malloc -I ..\USER -I ..\HARDWARE\LED -I ..\FWLIB\inc -I ..\FreeRTOS\include -I ..\FreeRTOS\portable\RVDS\ARM_CM4F -I ..\APP\Inc -I ..\BSP\Inc -I ..\APP\SHARE-IC:\Users\wangs\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\app_motodrv.o --omf_browse ..\obj\app_motodrv.crf --depend ..\obj\app_motodrv.d)
 I (..\USER\includes.h)(0x65E1704B)
 I (C:\AAAAAAAAPP\Keil5\ARM\ARMCC\include\stdio.h)(0x60252374)
@@ -1760,11 +1760,11 @@ I (..\APP\Inc\app_motoDrv.h)(0x6478636A)
 I (..\APP\Inc\app_pms.h)(0x647813BB)
 I (..\APP\Inc\app_system.h)(0x65DFC9E8)
 I (..\APP\Inc\app_tim.h)(0x6470137D)
-I (..\APP\Inc\app_imu.h)(0x65E067E8)
+I (..\APP\Inc\app_imu.h)(0x65E52ED4)
 I (..\APP\Inc\wt901.h)(0x65DFE119)
 I (..\APP\Inc\app_key.h)(0x65E1718A)
 I (..\APP\Inc\app_menu.h)(0x65DFC9E8)
-I (..\APP\Inc\app_nav.h)(0x65E17153)
+I (..\APP\Inc\app_nav.h)(0x65E5283B)
 F (..\APP\Src\app_key.c)(0x65E1722E)(-c --cpu Cortex-M4.fp.sp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\SYSTEM\malloc -I ..\USER -I ..\HARDWARE\LED -I ..\FWLIB\inc -I ..\FreeRTOS\include -I ..\FreeRTOS\portable\RVDS\ARM_CM4F -I ..\APP\Inc -I ..\BSP\Inc -I ..\APP\SHARE-IC:\Users\wangs\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\app_key.o --omf_browse ..\obj\app_key.crf --depend ..\obj\app_key.d)
 I (..\USER\includes.h)(0x65E1704B)
 I (C:\AAAAAAAAPP\Keil5\ARM\ARMCC\include\stdio.h)(0x60252374)
@@ -1844,12 +1844,12 @@ I (..\APP\Inc\app_motoDrv.h)(0x6478636A)
 I (..\APP\Inc\app_pms.h)(0x647813BB)
 I (..\APP\Inc\app_system.h)(0x65DFC9E8)
 I (..\APP\Inc\app_tim.h)(0x6470137D)
-I (..\APP\Inc\app_imu.h)(0x65E067E8)
+I (..\APP\Inc\app_imu.h)(0x65E52ED4)
 I (..\APP\Inc\wt901.h)(0x65DFE119)
 I (..\APP\Inc\app_key.h)(0x65E1718A)
 I (..\APP\Inc\app_menu.h)(0x65DFC9E8)
-I (..\APP\Inc\app_nav.h)(0x65E17153)
-F (..\APP\Src\app_imu.c)(0x65E12C6E)(-c --cpu Cortex-M4.fp.sp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\SYSTEM\malloc -I ..\USER -I ..\HARDWARE\LED -I ..\FWLIB\inc -I ..\FreeRTOS\include -I ..\FreeRTOS\portable\RVDS\ARM_CM4F -I ..\APP\Inc -I ..\BSP\Inc -I ..\APP\SHARE-IC:\Users\wangs\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\app_imu.o --omf_browse ..\obj\app_imu.crf --depend ..\obj\app_imu.d)
+I (..\APP\Inc\app_nav.h)(0x65E5283B)
+F (..\APP\Src\app_imu.c)(0x65E5373F)(-c --cpu Cortex-M4.fp.sp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\SYSTEM\malloc -I ..\USER -I ..\HARDWARE\LED -I ..\FWLIB\inc -I ..\FreeRTOS\include -I ..\FreeRTOS\portable\RVDS\ARM_CM4F -I ..\APP\Inc -I ..\BSP\Inc -I ..\APP\SHARE-IC:\Users\wangs\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\app_imu.o --omf_browse ..\obj\app_imu.crf --depend ..\obj\app_imu.d)
 I (..\USER\includes.h)(0x65E1704B)
 I (C:\AAAAAAAAPP\Keil5\ARM\ARMCC\include\stdio.h)(0x60252374)
 I (C:\AAAAAAAAPP\Keil5\ARM\ARMCC\include\string.h)(0x6025237E)
@@ -1928,12 +1928,12 @@ I (..\APP\Inc\app_motoDrv.h)(0x6478636A)
 I (..\APP\Inc\app_pms.h)(0x647813BB)
 I (..\APP\Inc\app_system.h)(0x65DFC9E8)
 I (..\APP\Inc\app_tim.h)(0x6470137D)
-I (..\APP\Inc\app_imu.h)(0x65E067E8)
+I (..\APP\Inc\app_imu.h)(0x65E52ED4)
 I (..\APP\Inc\wt901.h)(0x65DFE119)
 I (..\APP\Inc\app_key.h)(0x65E1718A)
 I (..\APP\Inc\app_menu.h)(0x65DFC9E8)
-I (..\APP\Inc\app_nav.h)(0x65E17153)
-F (..\APP\Src\app_menu.c)(0x65E1A68D)(-c --cpu Cortex-M4.fp.sp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\SYSTEM\malloc -I ..\USER -I ..\HARDWARE\LED -I ..\FWLIB\inc -I ..\FreeRTOS\include -I ..\FreeRTOS\portable\RVDS\ARM_CM4F -I ..\APP\Inc -I ..\BSP\Inc -I ..\APP\SHARE-IC:\Users\wangs\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\app_menu.o --omf_browse ..\obj\app_menu.crf --depend ..\obj\app_menu.d)
+I (..\APP\Inc\app_nav.h)(0x65E5283B)
+F (..\APP\Src\app_menu.c)(0x65E52FC7)(-c --cpu Cortex-M4.fp.sp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\SYSTEM\malloc -I ..\USER -I ..\HARDWARE\LED -I ..\FWLIB\inc -I ..\FreeRTOS\include -I ..\FreeRTOS\portable\RVDS\ARM_CM4F -I ..\APP\Inc -I ..\BSP\Inc -I ..\APP\SHARE-IC:\Users\wangs\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\app_menu.o --omf_browse ..\obj\app_menu.crf --depend ..\obj\app_menu.d)
 I (..\USER\includes.h)(0x65E1704B)
 I (C:\AAAAAAAAPP\Keil5\ARM\ARMCC\include\stdio.h)(0x60252374)
 I (C:\AAAAAAAAPP\Keil5\ARM\ARMCC\include\string.h)(0x6025237E)
@@ -2012,12 +2012,12 @@ I (..\APP\Inc\app_motoDrv.h)(0x6478636A)
 I (..\APP\Inc\app_pms.h)(0x647813BB)
 I (..\APP\Inc\app_system.h)(0x65DFC9E8)
 I (..\APP\Inc\app_tim.h)(0x6470137D)
-I (..\APP\Inc\app_imu.h)(0x65E067E8)
+I (..\APP\Inc\app_imu.h)(0x65E52ED4)
 I (..\APP\Inc\wt901.h)(0x65DFE119)
 I (..\APP\Inc\app_key.h)(0x65E1718A)
 I (..\APP\Inc\app_menu.h)(0x65DFC9E8)
-I (..\APP\Inc\app_nav.h)(0x65E17153)
-F (..\APP\Src\app_nav.c)(0x65E17161)(-c --cpu Cortex-M4.fp.sp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\SYSTEM\malloc -I ..\USER -I ..\HARDWARE\LED -I ..\FWLIB\inc -I ..\FreeRTOS\include -I ..\FreeRTOS\portable\RVDS\ARM_CM4F -I ..\APP\Inc -I ..\BSP\Inc -I ..\APP\SHARE-IC:\Users\wangs\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\app_nav.o --omf_browse ..\obj\app_nav.crf --depend ..\obj\app_nav.d)
+I (..\APP\Inc\app_nav.h)(0x65E5283B)
+F (..\APP\Src\app_nav.c)(0x65E52642)(-c --cpu Cortex-M4.fp.sp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\SYSTEM\malloc -I ..\USER -I ..\HARDWARE\LED -I ..\FWLIB\inc -I ..\FreeRTOS\include -I ..\FreeRTOS\portable\RVDS\ARM_CM4F -I ..\APP\Inc -I ..\BSP\Inc -I ..\APP\SHARE-IC:\Users\wangs\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\app_nav.o --omf_browse ..\obj\app_nav.crf --depend ..\obj\app_nav.d)
 I (..\USER\includes.h)(0x65E1704B)
 I (C:\AAAAAAAAPP\Keil5\ARM\ARMCC\include\stdio.h)(0x60252374)
 I (C:\AAAAAAAAPP\Keil5\ARM\ARMCC\include\string.h)(0x6025237E)
@@ -2096,11 +2096,11 @@ I (..\APP\Inc\app_motoDrv.h)(0x6478636A)
 I (..\APP\Inc\app_pms.h)(0x647813BB)
 I (..\APP\Inc\app_system.h)(0x65DFC9E8)
 I (..\APP\Inc\app_tim.h)(0x6470137D)
-I (..\APP\Inc\app_imu.h)(0x65E067E8)
+I (..\APP\Inc\app_imu.h)(0x65E52ED4)
 I (..\APP\Inc\wt901.h)(0x65DFE119)
 I (..\APP\Inc\app_key.h)(0x65E1718A)
 I (..\APP\Inc\app_menu.h)(0x65DFC9E8)
-I (..\APP\Inc\app_nav.h)(0x65E17153)
+I (..\APP\Inc\app_nav.h)(0x65E5283B)
 F (..\APP\SHARE\mymath.c)(0x65E14814)(-c --cpu Cortex-M4.fp.sp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\SYSTEM\malloc -I ..\USER -I ..\HARDWARE\LED -I ..\FWLIB\inc -I ..\FreeRTOS\include -I ..\FreeRTOS\portable\RVDS\ARM_CM4F -I ..\APP\Inc -I ..\BSP\Inc -I ..\APP\SHARE-IC:\Users\wangs\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\mymath.o --omf_browse ..\obj\mymath.crf --depend ..\obj\mymath.d)
 I (..\APP\SHARE\mymath.h)(0x65E145F2)
 I (..\USER\includes.h)(0x65E1704B)
@@ -2181,11 +2181,11 @@ I (..\APP\Inc\app_motoDrv.h)(0x6478636A)
 I (..\APP\Inc\app_pms.h)(0x647813BB)
 I (..\APP\Inc\app_system.h)(0x65DFC9E8)
 I (..\APP\Inc\app_tim.h)(0x6470137D)
-I (..\APP\Inc\app_imu.h)(0x65E067E8)
+I (..\APP\Inc\app_imu.h)(0x65E52ED4)
 I (..\APP\Inc\wt901.h)(0x65DFE119)
 I (..\APP\Inc\app_key.h)(0x65E1718A)
 I (..\APP\Inc\app_menu.h)(0x65DFC9E8)
-I (..\APP\Inc\app_nav.h)(0x65E17153)
+I (..\APP\Inc\app_nav.h)(0x65E5283B)
 F (.\main.c)(0x65E13246)(-c --cpu Cortex-M4.fp.sp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\SYSTEM\malloc -I ..\USER -I ..\HARDWARE\LED -I ..\FWLIB\inc -I ..\FreeRTOS\include -I ..\FreeRTOS\portable\RVDS\ARM_CM4F -I ..\APP\Inc -I ..\BSP\Inc -I ..\APP\SHARE-IC:\Users\wangs\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\main.o --omf_browse ..\obj\main.crf --depend ..\obj\main.d)
 I (includes.h)(0x65E1704B)
 I (C:\AAAAAAAAPP\Keil5\ARM\ARMCC\include\stdio.h)(0x60252374)
@@ -2266,11 +2266,11 @@ I (..\APP\Inc\app_motoDrv.h)(0x6478636A)
 I (..\APP\Inc\app_pms.h)(0x647813BB)
 I (..\APP\Inc\app_system.h)(0x65DFC9E8)
 I (..\APP\Inc\app_tim.h)(0x6470137D)
-I (..\APP\Inc\app_imu.h)(0x65E067E8)
+I (..\APP\Inc\app_imu.h)(0x65E52ED4)
 I (..\APP\Inc\wt901.h)(0x65DFE119)
 I (..\APP\Inc\app_key.h)(0x65E1718A)
 I (..\APP\Inc\app_menu.h)(0x65DFC9E8)
-I (..\APP\Inc\app_nav.h)(0x65E17153)
+I (..\APP\Inc\app_nav.h)(0x65E5283B)
 F (.\stm32f4xx_it.c)(0x6470137D)(-c --cpu Cortex-M4.fp.sp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\SYSTEM\malloc -I ..\USER -I ..\HARDWARE\LED -I ..\FWLIB\inc -I ..\FreeRTOS\include -I ..\FreeRTOS\portable\RVDS\ARM_CM4F -I ..\APP\Inc -I ..\BSP\Inc -I ..\APP\SHARE-IC:\Users\wangs\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\stm32f4xx_it.o --omf_browse ..\obj\stm32f4xx_it.crf --depend ..\obj\stm32f4xx_it.d)
 I (stm32f4xx_it.h)(0x6470137D)
 I (stm32f4xx.h)(0x6470137D)

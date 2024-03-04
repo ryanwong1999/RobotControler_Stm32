@@ -27,6 +27,54 @@ Project File Date:  03/01/2024
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 7 (build 960)', folder: 'C:\AAAAAAAAPP\Keil5\ARM\ARMCC\Bin'
 Build target 'FreeRTOS'
+compiling app_imu.c...
+..\BSP\Inc\bsp_adc.h(38): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\BSP\Inc\bsp_cap.h(28): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\BSP\Inc\bsp_gpio.h(193): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\BSP\Inc\bsp_iic.h(33): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\BSP\Inc\bsp_iic2.h(26): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\BSP\Inc\bsp_pwm.h(38): warning:  #1-D: last line of file ends without a newline
+  #endif 
+..\BSP\Inc\bsp_rs485.h(19): warning:  #1-D: last line of file ends without a newline
+  #endif 
+..\BSP\Inc\bsp_usart.h(10): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\APP\Inc\app_task.h(120): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\APP\Inc\app_24cxx.h(30): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\APP\Inc\app_usart.h(28): warning:  #1-D: last line of file ends without a newline
+  #endif 
+..\APP\Inc\app_autoCharge.h(73): warning:  #1-D: last line of file ends without a newline
+  #endif 
+..\APP\Inc\app_cap.h(6): warning:  #1-D: last line of file ends without a newline
+  #endif 
+..\APP\Inc\app_exit.h(26): warning:  #1-D: last line of file ends without a newline
+  #endif 
+..\APP\Inc\app_motoDrv.h(50): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\APP\Inc\app_pms.h(50): warning:  #1-D: last line of file ends without a newline
+  #endif 
+..\APP\Inc\app_system.h(87): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\APP\Inc\app_tim.h(6): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\APP\Inc\app_imu.h(21): warning:  #1-D: last line of file ends without a newline
+  #endif 
+..\APP\Inc\app_menu.h(28): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\APP\Inc\app_nav.h(12): warning:  #1-D: last line of file ends without a newline
+  #endif 
+..\APP\Src\app_imu.c(27): warning:  #177-D: variable "dat"  was declared but never referenced
+  	static uint8_t dat;
+..\APP\Src\app_imu.c(154): warning:  #1-D: last line of file ends without a newline
+  }
+..\APP\Src\app_imu.c: 23 warnings, 0 errors
 compiling app_task.c...
 ..\BSP\Inc\bsp_adc.h(38): warning:  #1-D: last line of file ends without a newline
   #endif
@@ -71,54 +119,10 @@ compiling app_task.c...
 ..\APP\Inc\app_nav.h(12): warning:  #1-D: last line of file ends without a newline
   #endif 
 ..\APP\Src\app_task.c: 21 warnings, 0 errors
-compiling app_menu.c...
-..\BSP\Inc\bsp_adc.h(38): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\BSP\Inc\bsp_cap.h(28): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\BSP\Inc\bsp_gpio.h(193): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\BSP\Inc\bsp_iic.h(33): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\BSP\Inc\bsp_iic2.h(26): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\BSP\Inc\bsp_pwm.h(38): warning:  #1-D: last line of file ends without a newline
-  #endif 
-..\BSP\Inc\bsp_rs485.h(19): warning:  #1-D: last line of file ends without a newline
-  #endif 
-..\BSP\Inc\bsp_usart.h(10): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\APP\Inc\app_task.h(120): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\APP\Inc\app_24cxx.h(30): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\APP\Inc\app_usart.h(28): warning:  #1-D: last line of file ends without a newline
-  #endif 
-..\APP\Inc\app_autoCharge.h(73): warning:  #1-D: last line of file ends without a newline
-  #endif 
-..\APP\Inc\app_cap.h(6): warning:  #1-D: last line of file ends without a newline
-  #endif 
-..\APP\Inc\app_exit.h(26): warning:  #1-D: last line of file ends without a newline
-  #endif 
-..\APP\Inc\app_motoDrv.h(50): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\APP\Inc\app_pms.h(50): warning:  #1-D: last line of file ends without a newline
-  #endif 
-..\APP\Inc\app_system.h(87): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\APP\Inc\app_tim.h(6): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\APP\Inc\app_imu.h(21): warning:  #1-D: last line of file ends without a newline
-  #endif 
-..\APP\Inc\app_menu.h(28): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\APP\Inc\app_nav.h(12): warning:  #1-D: last line of file ends without a newline
-  #endif 
-..\APP\Src\app_menu.c: 21 warnings, 0 errors
 linking...
-Program Size: Code=25768 RO-data=8332 RW-data=1568 ZI-data=1189040  
+Program Size: Code=26028 RO-data=8332 RW-data=1524 ZI-data=1189052  
 FromELF: creating hex file...
-"..\OBJ\LED.axf" - 0 Error(s), 42 Warning(s).
+"..\OBJ\LED.axf" - 0 Error(s), 44 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -131,7 +135,7 @@ Package Vendor: Keil
   C:/Users/wangs/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.16.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include
 
 <h2>Collection of Component Files used:</h2>
-Build Time Elapsed:  00:00:02
+Build Time Elapsed:  00:00:01
 </pre>
 </body>
 </html>
