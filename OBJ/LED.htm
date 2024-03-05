@@ -3,7 +3,7 @@
 <title>Static Call Graph - [..\OBJ\LED.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image ..\OBJ\LED.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060960: Last Updated: Mon Mar 04 10:51:44 2024
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060960: Last Updated: Mon Mar 04 11:32:00 2024
 <BR><P>
 <H3>Maximum Stack Usage =        424 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -592,7 +592,6 @@ Global Symbols
 <LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskDelay
 <LI><a href="#[113]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortExitCritical
 <LI><a href="#[110]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortEnterCritical
-<LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Test_Task
 <LI><a href="#[139]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskStartScheduler
 <LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 <LI><a href="#[14f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvInitialiseNewTask
@@ -797,8 +796,8 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[8f]"></a>__rt_locale</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, rt_locale_intlibspace.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_fp_dec_real
-<LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_lib_init_lc_common
+<BR><BR>[Called By]<UL><LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_lib_init_lc_common
+<LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_fp_dec_real
 </UL>
 
 <P><STRONG><a name="[b2]"></a>_ll_udiv10</STRONG> (Thumb, 138 bytes, Stack size 12 bytes, lludiv10.o(.text))
@@ -1881,16 +1880,14 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;System_Board_Init
 </UL>
 
-<P><STRONG><a name="[77]"></a>Test_Task</STRONG> (Thumb, 454 bytes, Stack size 32 bytes, app_task.o(i.Test_Task))
-<BR><BR>[Stack]<UL><LI>Max Depth = 248 + Unknown Stack Size
+<P><STRONG><a name="[77]"></a>Test_Task</STRONG> (Thumb, 44 bytes, Stack size 0 bytes, app_task.o(i.Test_Task))
+<BR><BR>[Stack]<UL><LI>Max Depth = 216 + Unknown Stack Size
 <LI>Call Chain = Test_Task &rArr; delay_ms &rArr; vTaskDelay &rArr; xTaskResumeAll &rArr; xTaskIncrementTick &rArr; __2printf &rArr; _printf_char_file &rArr; _printf_char_common &rArr; __printf
 </UL>
 <BR>[Calls]<UL><LI><a href="#[f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_ms
 <LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskDelay
 <LI><a href="#[126]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;imu_savacalsw
 <LI><a href="#[125]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;imu_accalsw
-<LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_f2d
-<LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> app_task.o(i.Start_Task)
 </UL>
@@ -1911,7 +1908,7 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f40_41xxx.o(RESET)
 </UL>
-<P><STRONG><a name="[50]"></a>UART5_IRQHandler</STRONG> (Thumb, 64 bytes, Stack size 16 bytes, app_imu.o(i.UART5_IRQHandler))
+<P><STRONG><a name="[50]"></a>UART5_IRQHandler</STRONG> (Thumb, 228 bytes, Stack size 16 bytes, app_imu.o(i.UART5_IRQHandler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = UART5_IRQHandler &rArr; USART_GetITStatus
 </UL>
 <BR>[Calls]<UL><LI><a href="#[12e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_ReceiveData
@@ -2742,7 +2739,6 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = __aeabi_f2d
 </UL>
 <BR>[Called By]<UL><LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GuiDataDisplayRefresh
-<LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Test_Task
 </UL>
 
 <P><STRONG><a name="[178]"></a>_f2d</STRONG> (Thumb, 86 bytes, Stack size 16 bytes, f2d.o(x$fpl$f2d), UNUSED)
